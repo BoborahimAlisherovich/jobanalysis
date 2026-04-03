@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .cat-bar { background-color: #0ea5e9; height: 16px; border-radius: 4px; transition: 0.3s; }
+    .cat-item:hover .cat-bar { background-color: #3b82f6; cursor: pointer; }
+</style>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    
+    <!-- Top Bar Summary -->
+    <div class="col-span-3 bg-[#1a1e35] py-4 px-8 rounded-xl shadow-lg border border-gray-800 flex justify-between items-center text-sm font-semibold text-gray-300">
+        <div><span class="text-gray-500 mr-2">No.</span> Top Profession</div>
+        <div>Vacancies</div>
+        <div>Avg Salary</div>
+        <div>Growth</div>
+    </div>
+    
+    {% for cat in categories|slice:":1" %}
+    <!-- Fake top selected bar row just to simulate image -->
+    <div class="col-span-3 bg-[#181d33] py-4 px-8 -mt-2 rounded-xl shadow-md border border-gray-800 flex justify-between items-center text-md font-bold text-white">
+        <div class="flex items-center"><span class="w-6 text-gray-500">1</span> {{ cat.name }}</div>
+        <div>{{ cat.job_count }}</div>
+        <div class="text-green-400">$3,450</div>
+        <div class="text-indigo-400">{{ cat.trend_score }}%</div>
+    </div>
+    {% endfor %}
+
+    <!-- Top Job Categories (Left Chart visually built with HTML/CSS) -->
+    <div class="col-span-2 bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743]">
+        <h2 class="text-lg font-bold mb-6 text-white tracking-widest shrink-0">Top Job Categories <span class="text-xs font-normal text-gray-400 ml-2">(Click a category for details)</span></h2>
+        
+        <div class="space-y-5">
+            {% for cat in categories %}
+            <!-- For bar width percentage calculation, we can just assume max is roughly 400 for 100% -->
+            <a href="{% url 'category_analytics' cat.id %}" class="cat-item group flex items-center justify-between no-underline">
+                <div class="text-sm font-medium text-gray-300 w-48 text-right pr-4 shrink-0 group-hover:text-cyan-400 transition">{{ cat.name }}</div>
+                <div class="flex-grow flex items-center shrink-0">
+                    <div class="cat-bar" style="width: {% if cat.job_count > 0 %}calc( ({{ cat.job_count }} / 400) * 100% ){% else %}0%{% endif %}; min-width: 5px;"></div>
+                    <span class="ml-3 text-xs font-mono text-gray-400">{{ cat.job_count }} vacancies</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        
+        <!-- Bottom axis labels -->
+        <div class="flex ml-48 mt-4 border-t border-gray-700 pt-2 text-xs text-gray-500 font-mono">
+            <div class="flex-1">0</div>
+            <div class="flex-1 text-center">100</div>
+            <div class="flex-1 text-center">200</div>
+            <div class="flex-1 text-center">300</div>
+            <div class="flex-1 text-right">400+</div>
+        </div>
+    </div>
+
+    <!-- Top Countries (Donut Chart) -->
+    <div class="col-span-1 bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743] flex flex-col items-center">
+        <h2 class="text-lg font-bold mb-6 w-full text-white tracking-widest">Top Countries</h2>
+        <div class="relative w-full aspect-square flex items-center justify-center p-4">
+            <canvas id="countriesChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    Chart.defaults.color = '#9ca3af';
+    const ctxCountries = document.getElementById('countriesChart').getContext('2d');
+    new Chart(ctxCountries, {
+        type: 'doughnut',
+        data: {
+            labels: {{ country_labels|safe }},
+            datasets: [{
+                data: {{ country_data|safe }},
+                backgroundColor: [
+                    '#06b6d4', '#8b5cf6', '#a855f7', '#ec4899', '#f43f5e', '#eab308', '#22c55e', '#3b82f6'
+                ],
+                borderWidth: 0,
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '60%',
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: { color: '#9ca3af', font: { size: 10 }, usePointStyle: true, boxWidth: 8 }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

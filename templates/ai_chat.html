@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-4">
+    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+        ← Bosh sahifaga Qaytish
+    </a>
+</div>
+
+<div class="bg-[#1a1e35] max-w-4xl mx-auto p-8 rounded-xl shadow-lg border border-[#232743]">
+    <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide text-center">🎯 AI Sizning Natijangiz</h1>
+    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6 text-center text-sm">Sun'iy intellekt sizning test javoblaringizni o'qib chiqdi.</p>
+
+    <div class="bg-gradient-to-r from-blue-900 to-purple-900 border border-indigo-500 rounded-xl p-8 mb-8 text-center shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+        <h2 class="text-sm font-semibold tracking-widest text-indigo-300 uppercase mb-2">Tavsiya etilgan kasb:</h2>
+        <p class="text-4xl font-extrabold text-white mb-4">{{ rec_job }}</p>
+        <p class="text-gray-300">
+            {{ rec_reason }}
+        </p>
+    </div>
+
+    <!-- Chat Interface -->
+    <div class="bg-[#131526] border border-gray-800 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center"><span class="mr-2">💬</span> AI Maslahatchisi bilan Suhbat</h3>
+        
+        <div id="chatHistory" class="space-y-4 mb-4 h-64 overflow-y-auto pr-2 custom-scrollbar">
+            <!-- AI xabari -->
+            <div class="flex justify-start">
+                <div class="bg-[#242b4d] text-gray-200 p-4 rounded-xl rounded-tl-none max-w-lg border border-gray-700 shadow-md">
+                    Assalomu alaykum! Men sizga <strong>{{ rec_job }}</strong> yo'nalishini tayinladim. Shu soha bo'yicha yana qanday maslahatlar, portfolio yoki kelajak rejalari qiziqtiradi? Savol bering!
+                </div>
+            </div>
+        </div>
+
+        <form id="chatForm" onsubmit="event.preventDefault(); sendMessage();" class="mt-4 flex gap-4">
+            <input type="text" id="userInput" class="flex-grow bg-[#1a1e35] text-white border border-gray-700 rounded-lg p-4 focus:outline-none focus:border-cyan-400 transition" placeholder="O'z savolingizni shu yerga yozing..." required autocomplete="off">
+            <button type="submit" class="bg-indigo-600 hover:bg-cyan-500 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition duration-200">Yuborish</button>
+        </form>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const chatHistory = document.getElementById('chatHistory');
+            
+            // Add user message
+            chatHistory.innerHTML += `
+                <div class="flex justify-end">
+                    <div class="bg-cyan-600 text-white p-4 rounded-xl rounded-tr-none max-w-lg shadow-md border border-cyan-500 font-medium">
+                        ${msg}
+                    </div>
+                </div>
+            `;
+            
+            input.value = '';
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            // Add fake AI typing and response
+            setTimeout(() => {
+                const responses = [
+                    "Ajoyib savol! Ushbu lavozimda siz asosan tizimning qanday ishlashiga javob berasiz.",
+                    "Siz ushbu kasbdagi vakansiyalarni bosh sahifamizdan, davlatlar bo'yicha filter qilib qidirishingiz eng zo'r yechimdir.",
+                    "Albatta, 6 oy malaka oshirgan holda siz kamida $1500 maosh bilan ishlashingiz mumkin bo'ladi.",
+                    "Eng asosiy skill sizda allaqachon mavjud - bu qiziqish va izlanuvchanlik. Menga ishonishingiz mumkin."
+                ];
+                const aiResp = responses[Math.floor(Math.random() * responses.length)];
+                
+                chatHistory.innerHTML += `
+                    <div class="flex justify-start">
+                        <div class="bg-[#242b4d] text-gray-200 p-4 rounded-xl rounded-tl-none max-w-lg border border-gray-700 shadow-md">
+                            ${aiResp}
+                        </div>
+                    </div>
+                `;
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            }, 1000);
+        }
+    </script>
+</div>
+<style>
+    /* Scrollbar Style */
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #131526; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+</style>
+{% endblock %}

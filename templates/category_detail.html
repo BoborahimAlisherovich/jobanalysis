@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-4">
+    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+        ← Orqaga Qaytish
+    </a>
+</div>
+
+<div class="bg-[#1a1e35] p-8 rounded-xl shadow-lg border border-[#232743]">
+    <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide">{{ category.name }} <span class="text-gray-500 font-normal text-xl">Analitikasi</span></h1>
+    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6">Jami mavjud vakansiyalar soni: <span class="text-blue-400 font-bold text-xl ml-2">{{ jobs|length }}</span></p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-indigo-500 shadow-md">
+            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Talab o'sish treki</div>
+            <div class="text-3xl font-bold text-white">{{ category.trend_score }}% <span class="text-green-500 text-lg">↑</span></div>
+        </div>
+
+        <!-- Fake salary calculation -->
+        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-green-500 shadow-md">
+            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">O'rtacha Maosh</div>
+            <div class="text-3xl font-bold text-white">~ $2,500 <span class="text-sm text-gray-500 block normal-case font-normal mt-1">(Bozor tajribasiga qarab)</span></div>
+        </div>
+        
+        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-pink-500 shadow-md">
+            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Top Davlat</div>
+            <div class="text-3xl font-bold text-white">Uzbekistan</div>
+        </div>
+
+        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-yellow-500 shadow-md">
+            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Ish formatlari</div>
+            <div class="flex justify-around mt-4">
+                <div class="text-center"><span class="block text-xl text-white font-bold">60%</span> <span class="text-xs text-gray-400">Ofis</span></div>
+                <div class="text-center"><span class="block text-xl text-white font-bold">40%</span> <span class="text-xs text-gray-400">Remote</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vakansiyalar ro'yxati -->
+<div class="bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743] mt-8">
+    <h2 class="text-xl font-bold text-white mb-6">Mavjud Vakansiyalar Ro'yxati</h2>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left">
+            <thead>
+                <tr class="text-xs font-semibold tracking-wide text-gray-400 uppercase border-b border-gray-800">
+                    <th class="px-4 py-3">Kompaniya & Lavozim</th>
+                    <th class="px-4 py-3">Lokatsiya / Format</th>
+                    <th class="px-4 py-3">Maosh Diapazoni</th>
+                    <th class="px-4 py-3 text-right">Harakat</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+                {% for job in jobs|slice:":10" %}
+                <tr class="hover:bg-[#131526] transition duration-200">
+                    <td class="px-4 py-4">
+                        <div class="flex items-center">
+                            <div>
+                                <p class="font-bold text-gray-200">{{ job.title }}</p>
+                                <p class="text-xs text-gray-500">{{ job.company }}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 text-sm text-gray-300">
+                        {{ job.country.name }} <span class="text-gray-600 block text-xs mt-1">{{ job.get_job_type_display }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-sm text-green-400 font-mono">
+                        {% if job.salary_min %}${{ job.salary_min }} - ${{ job.salary_max }}{% else %}Belgilanmagan{% endif %}
+                    </td>
+                    <td class="px-4 py-3 text-right">
+                        <a href="{{ job.source_url }}" target="_blank" class="px-3 py-1 bg-cyan-600 text-white rounded text-xs font-bold hover:bg-cyan-500 transition">Topshirish</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

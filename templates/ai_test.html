@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-4">
+    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+        ← Orqaga Qaytish
+    </a>
+</div>
+
+<div class="bg-[#1a1e35] max-w-3xl mx-auto p-8 rounded-xl shadow-lg border border-[#232743]">
+    <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide text-center">🤖 AI Job Test</h1>
+    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6 text-center text-sm">Ushbu sun'iy intellekt testi orqali o'zingizga qaysi soha eng qulay ekanligini bilib oling va maslahatlar oling.</p>
+
+    <form method="POST" action="{% url 'ai_test' %}">
+        {% csrf_token %}
+        <div class="mb-8">
+            <label class="block text-gray-300 text-sm font-bold mb-4 uppercase tracking-wider">Sizga asosan nima yoqadi? Nimalarga qiziqasiz?</label>
+            <textarea name="q1" rows="4" class="w-full bg-[#131526] text-white border border-gray-700 rounded-lg p-4 focus:outline-none focus:border-cyan-400 transition" placeholder="Masalan: Men rasm chizishni, foydalanuvchi interfeysini ko'rishni xohlayman... yoki men faqat logikalar, ma'lumotlar bilan ishlashga qiziqaman" required></textarea>
+        </div>
+
+        <div class="mb-8">
+            <label class="block text-gray-300 text-sm font-bold mb-4 uppercase tracking-wider">Qaysi ko'nikma / tillarni bilasiz yoki o'rganmoqchisiz?</label>
+            <input type="text" name="q2" class="w-full bg-[#131526] text-white border border-gray-700 rounded-lg p-4 focus:outline-none focus:border-cyan-400 transition" placeholder="Python, Django, React, Figma, Data Science..." required>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200">
+            Tahlil qilish va Natijani ko'rish
+        </button>
+    </form>
+</div>
+{% endblock %}

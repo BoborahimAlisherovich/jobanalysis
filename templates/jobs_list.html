@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-4">
+    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+        ← Bosh sahifaga Qaytish
+    </a>
+</div>
+
+<div class="bg-[#1a1e35] p-8 rounded-xl shadow-lg border border-[#232743]">
+    <div class="flex justify-between items-center mb-6 border-b border-gray-800 pb-4">
+        <h1 class="text-2xl font-extrabold text-white tracking-wide">💼 Barcha Vakansiyalar Ro'yxati</h1>
+        
+        <form method="GET" action="{% url 'all_jobs' %}" class="flex space-x-2">
+            <input type="text" name="q" value="{{ query }}" placeholder="Kasb nomini qidirish..." class="bg-[#131526] text-white border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-cyan-400 transition w-64 text-sm hidden md:block">
+            <button type="submit" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg font-bold shadow-md transition text-sm">Qidirish</button>
+        </form>
+    </div>
+
+    <!-- Vakansiyalar jadvali -->
+    <div class="overflow-x-auto">
+        <table class="w-full text-left">
+            <thead>
+                <tr class="text-xs font-semibold tracking-wide text-gray-400 uppercase border-b border-gray-800">
+                    <th class="px-4 py-3">Kasb & Kompaniya</th>
+                    <th class="px-4 py-3">Kategoriya</th>
+                    <th class="px-4 py-3">Davlat / Format</th>
+                    <th class="px-4 py-3">Taklif qilingan maosh</th>
+                    <th class="px-4 py-3 text-right">Manba</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+                {% for job in page_obj %}
+                <tr class="hover:bg-[#131526] transition duration-200">
+                    <td class="px-4 py-4">
+                        <div class="flex items-center">
+                            <div>
+                                <p class="font-bold text-gray-200 text-base">{{ job.title }}</p>
+                                <p class="text-xs text-gray-500">{{ job.company }}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-4 py-3 text-sm text-indigo-400">
+                        {{ job.category.name }}
+                    </td>
+                    <td class="px-4 py-3 text-sm text-gray-300">
+                        {{ job.country.name }} <span class="text-gray-600 block text-xs mt-1">{{ job.get_job_type_display }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-sm text-green-400 font-mono font-bold">
+                        {% if job.salary_min %}${{ job.salary_min }} - ${{ job.salary_max }}{% else %}Suhbat asosida{% endif %}
+                    </td>
+                    <td class="px-4 py-3 text-right">
+                        <div class="flex flex-col items-end">
+                            <span class="text-xs text-gray-500 mb-1 border border-gray-700 px-2 py-0.5 rounded">{{ job.source }}</span>
+                            <a href="{{ job.source_url }}" target="_blank" class="text-cyan-500 hover:text-cyan-300 text-xs font-bold transition">Saytidan o'qish →</a>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="py-10 text-center text-gray-500">Hech qanday ma'lumot topilmadi.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Paginatsiya (Sahifalash) -->
+    <div class="flex justify-between items-center mt-6 pt-4 border-t border-gray-800">
+        <div class="text-sm text-gray-400">
+            Sahifa {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+        </div>
+        <div class="flex space-x-2">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}" class="bg-[#242b4d] hover:bg-[#343e6b] text-gray-300 px-4 py-1 rounded transition text-sm">Oldingi</a>
+            {% endif %}
+            
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}" class="bg-indigo-600 hover:bg-cyan-500 text-white px-4 py-1 rounded shadow-md transition text-sm">Keyingi →</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

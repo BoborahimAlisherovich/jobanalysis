@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MMT - Marketing Ma'lumotlar Tahlili{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-[#131526] text-gray-200 font-sans">
+    
+    <nav class="bg-[#1a1e35] text-white shadow-lg border-b border-gray-800">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-blue-400 font-extrabold tracking-widest text-xl">Jobs</span><span class="text-white font-semibold text-xl tracking-widest">Analytics</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/jobs/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-2 transition">💼 Barcha Vakansiyalar</a>
+                    <a href="/sources/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-4 transition">📊 Manbalar ro'yxati</a>
+                    <a href="/ai-test/" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-4 py-1.5 rounded-lg text-sm text-white font-bold transition mr-4 shadow-lg flex items-center gap-2">🤖 AI Job Test & Chat</a>
+                    <span class="text-gray-400 text-sm">Last updated: 2026-04-03 11:45</span>
+                    <a href="/" class="bg-[#242b4d] hover:bg-[#343e6b] px-4 py-1.5 rounded-lg text-sm font-semibold transition ml-4 border border-gray-700">Refresh Data</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="bg-[#1a1e35] border-t border-gray-800 py-6 mt-12 text-center text-sm text-gray-500">
+        <p>&copy; 2026 MMT - Davlat Strategik Analitika Platformasi.</p>
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
