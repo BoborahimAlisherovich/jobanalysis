@@ -1,0 +1,71 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<div class="min-h-[80vh] flex items-center justify-center my-8">
+    <div class="w-full max-w-lg bg-[#1a1e35] p-8 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-[#2c3258]">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">Ro'yxatdan O'tish</h2>
+            <p class="text-gray-400 mt-2 text-sm">Platformadan to'liq foydalanish uchun ma'lumotlarni kiriting</p>
+        </div>
+
+        <form method="post" action="{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="space-y-4">
+            {% csrf_token %}
+            <div class="space-y-4 text-gray-300
+                [&_label]:block [&_label]:text-sm [&_label]:font-semibold [&_label]:mb-1 [&_label]:text-gray-400
+                [&_input]:bg-[#131526] [&_input]:p-3 [&_input]:w-full [&_input]:rounded-xl [&_input]:border [&_input]:border-[#2c3258] [&_input]:transition-all [&_input]:duration-300
+                focus:[&_input]:border-green-500 focus:[&_input]:ring-1 focus:[&_input]:ring-green-500 focus:[&_input]:outline-none
+                [&_.errorlist]:text-red-500 [&_.errorlist]:text-xs [&_.errorlist]:mt-1 [&_.errorlist]:font-semibold [&_.errorlist]:list-disc [&_.errorlist]:ml-4">
+                {{ form.as_p }}
+            </div>
+            
+            <button type="submit" class="w-full relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-xl group bg-gradient-to-br from-green-500 to-emerald-500 group-hover:from-green-500 group-hover:to-emerald-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 transition-all shadow-[0_0_15px_rgba(16,185,129,0.4)] hover:shadow-[0_0_25px_rgba(16,185,129,0.6)] mt-6">
+                <span class="relative w-full px-5 py-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-[10px] group-hover:bg-opacity-0 text-md font-bold flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/></svg>
+                    A'zo bo'lish
+                </span>
+            </button>
+        </form>
+        
+        <p class="mt-6 text-center text-sm text-gray-400">
+            Akkauntingiz bormi? 
+            <a href="/login/{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" class="text-green-400 hover:text-green-300 font-semibold transition underline decoration-green-400/30 underline-offset-4">Kirish</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const passwordInputs = document.querySelectorAll('input[type="password"]');
+        passwordInputs.forEach(input => {
+            const wrapper = document.createElement('div');
+            wrapper.style.position = 'relative';
+            wrapper.style.display = 'flex';
+            wrapper.style.alignItems = 'center';
+            wrapper.style.width = '100%';
+            
+            input.parentNode.insertBefore(wrapper, input);
+            wrapper.appendChild(input);
+
+            const icon = document.createElement('div');
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 hover:text-green-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`;
+            icon.style.position = 'absolute';
+            icon.style.right = '12px';
+            icon.style.cursor = 'pointer';
+            icon.style.userSelect = 'none';
+            icon.style.display = 'flex';
+            icon.style.alignItems = 'center';
+
+            icon.addEventListener('click', function() {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" /></svg>`;
+                } else {
+                    input.type = 'password';
+                    icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 hover:text-green-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`;
+                }
+            });
+
+            wrapper.appendChild(icon);
+        });
+    });
+</script>
+{% endblock %}

@@ -5,16 +5,10 @@ from .models import Job, Category, Country
 import re
 
 def clean_job_category(raw_title):
-    """
-    Qanday nomdagi ish kelishidan qatiy nazar (katta-kichik harflarda yozilgan bo'lsa ham),
-    API dan kelgan ma'lumotni olib (cleaning) uni markaziy ro'yxatdagi kasblarga tirkash funksiyasi.
-    """
     title = raw_title.lower()
-    
-    # Tartib bo'yicha filterlarni solishtirib chiqamiz
     if re.search(r'\b(backend|python|django|node|php|ruby|java backend|golang)\b', title):
         return 'Backend Developer'
-    elif re.search(r'\b(frontend|react|vue|angular|html|css|ui dev)\b', title):
+    elif re.search(r'\b(frontend|react|vue|angular|html|css|ui dev)\b', title): 
         return 'Frontend Developer'
     elif re.search(r'\b(mobile|flutter|ios|android|swift|kotlin|react native)\b', title):
         return 'Mobile App Developer'
@@ -28,53 +22,78 @@ def clean_job_category(raw_title):
         return 'AI Engineer'
     elif re.search(r'\b(prompt|promt|gpt|llm engineer)\b', title):
         return 'Prompt Engineer'
-    elif re.search(r'\b(ux|ui/ux|web designer|product designer)\b', title):
+    elif re.search(r'\b(product designer)\b', title):
+        return 'Product Designer'
+    elif re.search(r'\b(ux|ui/ux|web designer)\b', title):
         return 'UI/UX Designer'
     elif re.search(r'\b(game|unity|unreal|c\+\+ developer)\b', title):
         return 'Game Developer'
     elif re.search(r'\b(product manager|po|pm)\b', title):
         return 'Product Manager'
-    elif re.search(r'\b(software engineer|software developer|c#|.net)\b', title):
+    elif re.search(r'\b(software engineer|software developer|c#|\.net)\b', title):
         return 'Software Engineer'
     elif re.search(r'\b(bi developer|business intelligence|power bi|tableau)\b', title):
         return 'Business Intelligence (BI) Developer'
-    elif re.search(r'\b(cybersecurity|security|pentester|infosec)\b', title):
+    elif re.search(r'\b(cybersecurity|security|pentester|infosec)\b', title):   
         return 'Cybersecurity Specialist'
     elif re.search(r'\b(business analyst|ba)\b', title):
         return 'Business Analyst'
-    elif re.search(r'\b(blockchain|web3|solidity|smart contract)\b', title):
+    elif re.search(r'\b(blockchain|web3|solidity|smart contract)\b', title):    
         return 'Blockchain Developer'
-    elif re.search(r'\b(qa|tester|quality assurance|avtotest)\b', title):
+    elif re.search(r'\b(qa|tester|quality assurance|avtotest)\b', title):       
         return 'QA Engineer'
-        
-    return 'Software Engineer' # Agar mos tushmasa umumiy qilib oladi
+
+    return 'Software Engineer'
 
 def scrape_hh_uz_jobs():
-    url = "https://api.hh.ru/vacancies?area=97&text=IT" # O'zbekiston (97) IT vakansiyalari
-    response = requests.get(url).json()
-    
+    queries = [
+        'Data Analyst', 'AI Engineer', 'Blockchain Developer', 'Business Analyst',
+        'Business Intelligence', 'Cybersecurity', 'Game Developer', 
+        'Product Designer', 'Prompt Engineer', 'IT'
+    ]
+    url_base = 'https://api.hh.ru/vacancies'
     country, _ = Country.objects.get_or_create(name='Uzbekistan')
+    total_added = 0
 
-    for item in response.get('items', []):
-        raw_title = item['name']
-        cleaned_category_name = clean_job_category(raw_title)
-        
-        # Tozalanan kategoriyani bazadan oladi yoki kerakli nomda bilsa yaratadi.
-        category, _ = Category.objects.get_or_create(name=cleaned_category_name)
-        
-        # Agar bu vakansiya bazada bo'lsa, o'tkazib yuboramiz (Ignore duplicate)
-        if Job.objects.filter(source_url=item['alternate_url']).exists():
-            continue
-            
-        Job.objects.create(
-            title=raw_title, # Original nom saqlanamiz, lekin kategoriya qattiq biriktirildi
-            company=item['employer']['name'],
-            category=category,
-            source='hh.uz',
-            country=country,
-            source_url=item['alternate_url'],
-            salary_min=item['salary']['from'] if item['salary'] else None,
-            salary_max=item['salary']['to'] if item['salary'] else None,
-            description=item.get('snippet', {}).get('requirement', '') or 'Izohsiz'
-        )
-    return "Scraping yakunlandi!"
+    for q in queries:
+        try:
+            response = requests.get(url_base + '?area=97&text=' + q + '&per_page=20').json()
+            items = response.get('items', [])
+            if not items:
+                response = requests.get(url_base + '?text=' + q + '&per_page=10').json()
+                items = response.get('items', [])
+
+            for item in items:
+                raw_title = item['name']
+                cleaned_category_name = clean_job_category(raw_title)
+
+                category, _ = Category.objects.get_or_create(name=cleaned_category_name)
+                alt_url = item.get('alternate_url')
+                if not alt_url or Job.objects.filter(source_url=alt_url).exists():
+                    continue
+
+                job_kwargs = {
+                    'title': raw_title,
+                    'company': item.get('employer', {}).get('name', 'Noma\'lum'),  
+                    'category': category,
+                    'source': 'hh.uz',
+                    'country': country,
+                    'source_url': alt_url,
+                    'description': item.get('snippet', {}).get('requirement', '') or 'Izohsiz'
+                }
+                
+                if item.get('salary'):
+                    job_kwargs['salary_min'] = item['salary'].get('from')
+                    job_kwargs['salary_max'] = item['salary'].get('to')
+                    job_kwargs['currency'] = item['salary'].get('currency', 'USD')
+                else:
+                    job_kwargs['salary_min'] = None
+                    job_kwargs['salary_max'] = None
+                    job_kwargs['currency'] = 'USD'
+
+                Job.objects.create(**job_kwargs)
+                total_added += 1
+        except Exception as e:
+            print('Xato:', e)
+
+    return 'Scraping yakunlandi. ' + str(total_added) + ' ta elon qoshildi.'

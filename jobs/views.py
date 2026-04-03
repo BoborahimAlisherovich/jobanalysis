@@ -28,7 +28,15 @@ def job_analytics_api(request):
     """
     Returns clean structured JSON with job analytics.
     """
-    categories = Category.objects.all()
+    TARGET_ROLES = [
+        'Backend Developer', 'Frontend Developer', 'Mobile App Developer', 'Data Analyst', 
+        'Data Scientist', 'DevOps Engineer', 'AI Engineer', 'Prompt Engineer', 'UI/UX Designer', 
+        'Game Developer', 'Product Manager', 'Software Engineer', 'Business Intelligence (BI) Developer', 
+        'Cybersecurity Specialist', 'Product Designer', 'Business Analyst', 'Blockchain Developer', 'QA Engineer'
+    ]
+    
+    # Bizning ro'yxatga kirmaganlarini tashlab yuboramiz. (Masalan, xato ketgan bo'lsa)
+    categories = Category.objects.filter(name__in=TARGET_ROLES)
     results = []
 
     for cat in categories:
@@ -36,6 +44,16 @@ def job_analytics_api(request):
         vacancy_count = jobs.count()
 
         if vacancy_count == 0:
+            results.append({
+                "role": cat.name,
+                "category": get_macro_category(cat.name),
+                "vacancies": 0,
+                "average_salary": "unknown",
+                "salary_range": {"min": "unknown", "max": "unknown"},
+                "top_companies": [],
+                "skills": [],
+                "trend": "stable"
+            })
             continue
 
         # Salary aggregations
@@ -100,17 +118,33 @@ def all_jobs_view(request):
     return render(request, 'jobs_list.html', {'page_obj': page_obj, 'query': query})
 
 def sources_list_view(request):
+    source_domains = {
+        'LinkedIn': 'linkedin.com', 'Indeed': 'indeed.com', 'Glassdoor': 'glassdoor.com',
+        'Monster': 'monster.com', 'ZipRecruiter': 'ziprecruiter.com', 'SimplyHired': 'simplyhired.com',
+        'Stack Overflow Jobs': 'stackoverflow.com', 'GitHub Jobs': 'github.com', 'AngelList': 'angel.co',
+        'Hired': 'hired.com', 'Wellfound': 'wellfound.com', 'Upwork': 'upwork.com',
+        'Fiverr': 'fiverr.com', 'Kwork': 'kwork.com', 'Freelancer': 'freelancer.com',
+        'Toptal': 'toptal.com', 'PeoplePerHour': 'peopleperhour.com', 'We Work Remotely': 'weworkremotely.com',
+        'Remote OK': 'remoteok.com', 'Remotive': 'remotive.com', 'FlexJobs': 'flexjobs.com',
+        'hh.uz': 'hh.uz', 'OLX.uz': 'olx.uz', 'Zarplata.uz': 'zarplata.uz',
+        'Rabota.uz': 'rabota.uz', 'SuperJob': 'superjob.ru', 't.me/teamwork_uz': 't.me/teamwork_uz'
+    }
+    
     sources = Job.objects.values('source').annotate(job_count=Count('id')).order_by('-job_count')
-    # Pre-calculate top country per source
+    
     enriched_sources = []
     for s in sources:
-        top_country = Job.objects.filter(source=s['source']).values('country__name').annotate(cnt=Count('id')).order_by('-cnt').first()
+        src_name = s['source']
+        top_country = Job.objects.filter(source=src_name).values('country__name').annotate(cnt=Count('id')).order_by('-cnt').first()
         top_c_name = top_country['country__name'] if top_country else 'Noma\'lum'
         
+        domain = source_domains.get(src_name, src_name.lower().replace(' ', '') + '.com')
+
         enriched_sources.append({
-            'source': s['source'],
+            'source': src_name,
             'job_count': s['job_count'],
-            'top_country': top_c_name
+            'top_country': top_c_name,
+            'domain': domain
         })
-        
+
     return render(request, 'sources.html', {'sources': enriched_sources})

@@ -21,12 +21,54 @@
                     <a href="/jobs/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-2 transition">💼 Barcha Vakansiyalar</a>
                     <a href="/sources/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-4 transition">📊 Manbalar ro'yxati</a>
                     <a href="/ai-test/" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-4 py-1.5 rounded-lg text-sm text-white font-bold transition mr-4 shadow-lg flex items-center gap-2">🤖 AI Job Test & Chat</a>
-                    <span class="text-gray-400 text-sm">Last updated: 2026-04-03 11:45</span>
+                    
+                    {% if user.is_authenticated %}
+                        <div class="flex items-center space-x-2 text-blue-400 font-semibold mr-2 border border-blue-400 px-3 py-1 rounded-full bg-[#131526]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                            </svg>
+                            <span>{{ user.username }}</span>
+                        </div>
+                        <a href="/logout/" class="text-red-400 hover:text-red-300 text-sm font-bold">Chiqish</a>
+                    {% else %}
+                        <a href="/login/" class="text-green-400 hover:text-green-300 text-sm font-bold mr-2">Kirish</a>
+                        <a href="/register/" class="text-blue-400 hover:text-blue-300 text-sm font-bold">Ro'yxatdan o'tish</a>
+                    {% endif %}
                     <a href="/" class="bg-[#242b4d] hover:bg-[#343e6b] px-4 py-1.5 rounded-lg text-sm font-semibold transition ml-4 border border-gray-700">Refresh Data</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Django Messages -->
+    {% if messages %}
+    <div class="fixed top-20 right-4 z-50 flex flex-col gap-2">
+        {% for message in messages %}
+        <div class="p-4 rounded-lg shadow-lg text-white font-semibold transition-all duration-500 transform translate-x-0 opacity-100 message-toast
+            {% if message.tags == 'error' %}bg-red-500/90 border border-red-400{% elif message.tags == 'success' %}bg-green-500/90 border border-green-400{% else %}bg-blue-500/90 border border-blue-400{% endif %}">
+            <div class="flex items-center space-x-2">
+                {% if message.tags == 'error' %}
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                {% else %}
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                {% endif %}
+                <span>{{ message }}</span>
+                <button onclick="this.parentElement.parentElement.style.display='none'" class="ml-4 hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelectorAll('.message-toast').forEach(el => {
+                el.style.opacity = '0';
+                setTimeout(() => el.remove(), 500);
+            });
+        }, 4000);
+    </script>
+    {% endif %}
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {% block content %}

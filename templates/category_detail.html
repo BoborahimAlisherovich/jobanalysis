@@ -1,19 +1,20 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
 {% block content %}
 <div class="mb-4">
     <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
-        ← Orqaga Qaytish
+        &larr; Orqaga Qaytish
     </a>
 </div>
 
-<div class="bg-[#1a1e35] p-8 rounded-xl shadow-lg border border-[#232743]">
+<div class="bg-[#1a1e35] p-8 rounded-xl shadow-lg border border-[#232743]">     
     <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide">{{ category.name }} <span class="text-gray-500 font-normal text-xl">Analitikasi</span></h1>
-    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6">Jami mavjud vakansiyalar soni: <span class="text-blue-400 font-bold text-xl ml-2">{{ jobs|length }}</span></p>
+    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6">Jami mavjud vakansiyalar soni: <span class="text-blue-400 font-bold text-xl ml-2">{{ page_obj.paginator.count }}</span></p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- CHART AND STATS SECTION --> 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-indigo-500 shadow-md">
             <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Talab o'sish treki</div>
-            <div class="text-3xl font-bold text-white">{{ category.trend_score }}% <span class="text-green-500 text-lg">↑</span></div>
+            <div class="text-3xl font-bold text-white">{{ category.trend_score }}% <span class="text-green-500 text-lg">&uarr;</span></div>
         </div>
 
         <!-- Fake salary calculation -->
@@ -21,17 +22,16 @@
             <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">O'rtacha Maosh</div>
             <div class="text-3xl font-bold text-white">~ $2,500 <span class="text-sm text-gray-500 block normal-case font-normal mt-1">(Bozor tajribasiga qarab)</span></div>
         </div>
-        
+
         <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-pink-500 shadow-md">
             <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Top Davlat</div>
-            <div class="text-3xl font-bold text-white">Uzbekistan</div>
+            <div class="text-3xl font-bold text-white">{% if country_labels %}{{ country_labels.0 }}{% else %}N/A{% endif %}</div>
         </div>
 
         <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-yellow-500 shadow-md">
-            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Ish formatlari</div>
-            <div class="flex justify-around mt-4">
-                <div class="text-center"><span class="block text-xl text-white font-bold">60%</span> <span class="text-xs text-gray-400">Ofis</span></div>
-                <div class="text-center"><span class="block text-xl text-white font-bold">40%</span> <span class="text-xs text-gray-400">Remote</span></div>
+            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Davlatlar (Statistika)</div>
+            <div class="relative h-32 w-full flex justify-center mt-2">
+                <canvas id="countryChart"></canvas>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
 <!-- Vakansiyalar ro'yxati -->
 <div class="bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743] mt-8">
     <h2 class="text-xl font-bold text-white mb-6">Mavjud Vakansiyalar Ro'yxati</h2>
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto mb-4">
         <table class="w-full text-left">
             <thead>
                 <tr class="text-xs font-semibold tracking-wide text-gray-400 uppercase border-b border-gray-800">
@@ -51,7 +51,7 @@
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-800">
-                {% for job in jobs|slice:":10" %}
+                {% for job in page_obj %}
                 <tr class="hover:bg-[#131526] transition duration-200">
                     <td class="px-4 py-4">
                         <div class="flex items-center">
@@ -64,8 +64,8 @@
                     <td class="px-4 py-3 text-sm text-gray-300">
                         {{ job.country.name }} <span class="text-gray-600 block text-xs mt-1">{{ job.get_job_type_display }}</span>
                     </td>
-                    <td class="px-4 py-3 text-sm text-green-400 font-mono">
-                        {% if job.salary_min %}${{ job.salary_min }} - ${{ job.salary_max }}{% else %}Belgilanmagan{% endif %}
+                    <td class="px-4 py-3 text-sm text-green-400 font-mono">     
+                        {% if job.salary_min %}{{ job.salary_min }} - {{ job.salary_max }} {{ job.currency }}{% else %}Belgilanmagan{% endif %}
                     </td>
                     <td class="px-4 py-3 text-right">
                         <a href="{{ job.source_url }}" target="_blank" class="px-3 py-1 bg-cyan-600 text-white rounded text-xs font-bold hover:bg-cyan-500 transition">Topshirish</a>
@@ -75,5 +75,73 @@
             </tbody>
         </table>
     </div>
+    
+    <!-- Paginator UI -->
+    <div class="flex justify-between items-center text-sm text-gray-400 mt-6 border-t border-gray-800 pt-4">
+        <span class="font-semibold text-gray-500">
+            Jami {{ page_obj.paginator.count }} ta vakansiya. (Sahifa: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }})
+        </span>
+        <div class="flex space-x-2">
+            {% if page_obj.has_previous %}
+                <a href="?page=1" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">&laquo; Boshiga</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Orqaga</a>
+            {% else %}
+                <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">&laquo; Boshiga</button>
+                <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Orqaga</button>
+            {% endif %}
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Keyingisi</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Oxiriga &raquo;</a>
+            {% else %}
+                 <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Keyingisi</button>
+                 <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Oxiriga &raquo;</button>
+            {% endif %}
+        </div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const ctx = document.getElementById('countryChart').getContext('2d');
+        const countryChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: {{ country_labels|safe }},
+                datasets: [{
+                    label: 'Vakansiyalar soni',
+                    data: {{ country_data|safe }},
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.8)', // blue-500
+                        'rgba(16, 185, 129, 0.8)', // emerald-500
+                        'rgba(245, 158, 11, 0.8)', // amber-500
+                        'rgba(239, 68, 68, 0.8)',  // red-500
+                        'rgba(139, 92, 246, 0.8)', // violet-500
+                        'rgba(236, 72, 153, 0.8)'  // pink-500
+                    ],
+                    borderColor: '#131526',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false // Hide text to fit small space
+                    },
+                    tooltip: {
+                         callbacks: {
+                            label: function(context) {
+                                return \ \: \ta\;
+                            }
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+    });
+</script>
 {% endblock %}
