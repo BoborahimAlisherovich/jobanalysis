@@ -6,39 +6,23 @@
 
     <form method="POST">
         {% csrf_token %}
-        <div class="mb-6 space-y-4">
-            <h3 class="text-xl font-bold text-gray-200">1. Qaysi yo'nalish sizni ko'proq ilhomlantiradi?</h3>
-            <label class="block cursor-pointer"><input type="radio" name="q1" value="a" required> Tizimlar, dasturiy ta'minot arxitekturasi va kod mantiqlari</label>
-            <label class="block cursor-pointer"><input type="radio" name="q1" value="b"> Katta hajmdagi raqamlar, trendlar va matematik tahlillar</label>
-            <label class="block cursor-pointer"><input type="radio" name="q1" value="c"> O'zini-o'zi o'rganadigan intellektual tizimlar</label>
-            <label class="block cursor-pointer"><input type="radio" name="q1" value="d"> Loyiha strategiyasi, xarajatlar va daromadlar analitikasi</label>
+        
+        {% for q in questions %}
+        <div class="mb-6 space-y-4 bg-[#232743] p-6 rounded-lg shadow-md border border-[#2a2f50]">
+            <h3 class="text-xl font-bold text-gray-200">{{ q.id }}. {{ q.question }}</h3>
+            <p class="text-xs text-blue-400 mb-4">{{ q.category }}</p>
+            {% for opt in q.options %}
+            <label class="block cursor-pointer flex items-center space-x-3 p-3 rounded-md hover:bg-[#1a1e35] transition">
+                <input type="radio" name="q{{ q.id }}" value="{{ opt.value }}" class="form-radio text-blue-500 bg-[#1a1e35] border-gray-600 focus:ring-blue-500" required> 
+                <span class="text-gray-300">{{ opt.text }}</span>
+            </label>
+            {% endfor %}
         </div>
+        {% endfor %}
 
-        <div class="mb-6 space-y-4">
-            <h3 class="text-xl font-bold text-gray-200">2. Muvaffaqiyatli mutaxassis sifatidagi tasavvuringiz:</h3>
-            <label class="block cursor-pointer"><input type="radio" name="q2" value="a" required> Backendda mukammal API va loyiha tuzilmasi qurish</label>
-            <label class="block cursor-pointer"><input type="radio" name="q2" value="b"> SQL yordamida gipotezalarni faktlarga tayangan holda isbotlash</label>
-            <label class="block cursor-pointer"><input type="radio" name="q2" value="c"> Deep learning modellarini yaratish va o'rgatish</label>
-            <label class="block cursor-pointer"><input type="radio" name="q2" value="d"> Biznes-jarayonlarni tuzish va mahsulot samaradorligini tahlil qilish</label>
+        <div class="sticky bottom-4 z-50 mt-8">
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 py-4 rounded-xl text-white font-bold text-lg transition shadow-2xl border border-blue-400">Natijani Analiz Qilish va Chatga O'tish</button>
         </div>
-
-        <div class="mb-6 space-y-4">
-            <h3 class="text-xl font-bold text-gray-200">3. Odatda muammolarni qanday yechar edingiz?</h3>
-            <label class="block cursor-pointer"><input type="radio" name="q3" value="a" required> Qiziq tomonlar ro'yxatini tuzib, jamoani to'g'ri yo'naltirish</label>
-            <label class="block cursor-pointer"><input type="radio" name="q3" value="b"> Asab tarmog'i modelini to'g'rilab xatolik foizini kamaytirish</label>
-            <label class="block cursor-pointer"><input type="radio" name="q3" value="c"> Kodni xatosiz yozish, debug qilib optimal yechimni topish</label>
-            <label class="block cursor-pointer"><input type="radio" name="q3" value="d"> Data visualization yordamida muammoni topish va grafikalarda chizish</label>
-        </div>
-
-        <div class="mb-6 space-y-4">
-            <h3 class="text-xl font-bold text-gray-200">4. Qaysi vositalar (Tools) senga yaqinroq tuyuladi?</h3>
-            <label class="block cursor-pointer"><input type="radio" name="q4" value="a" required> PowerBI, Tableau, Excel, Python Pandas</label>
-            <label class="block cursor-pointer"><input type="radio" name="q4" value="b"> IDE, GitHub, Docker, Kubernetes, Django, React</label>
-            <label class="block cursor-pointer"><input type="radio" name="q4" value="c"> JIRA, Trello, Miro, Biznes hujjatlar</label>
-            <label class="block cursor-pointer"><input type="radio" name="q4" value="d"> TensorFlow, PyTorch, xilma-xil neyrotarmoqlar</label>
-        </div>
-
-        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 py-3 rounded-lg text-white font-bold transition shadow-lg">Natijani Analiz Qilish va Chatga O'tish</button>
     </form>
 </div>
 {% endblock %}
