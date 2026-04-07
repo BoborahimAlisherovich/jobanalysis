@@ -180,3 +180,4 @@ TEST_QUESTIONS = [
         'options': [{'value': 'A', 'text': 'Men maksimal tezlik va foyda tomon qadam bosaman (Producer)'}, {'value': 'B', 'text': "Men tizim qoidalari, struktura va barqarorligini afzal ko'raman (Administrator)"}, {'value': 'C', 'text': "Men innovatsiyalar va g'ayrioddiy yechim topishga intilaman (Entrepreneur)"}, {'value': 'D', 'text': "Jamoa bilan qanday kelishib integratsiya bo'lish muhim (Integrator)"}]
     },
 ]
+
