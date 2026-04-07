@@ -1,4 +1,4 @@
-# Analitik Loyiha (MMT Project)
+# AURA career
 
 Ushbu loyiha tahlillar, sun'iy intellekt maslahatchisi (AI Advisor) va bo'sh ish o'rinlarini (Jobs) boshqarish hamda tahlil qilish imkonini beruvchi yagona platformadir. Dastur Django va Django REST Framework (DRF) asosida toza arxitektura tamoyillariga muvofiq ishlab chiqilgan.
 
@@ -23,7 +23,7 @@ Ushbu loyiha tahlillar, sun'iy intellekt maslahatchisi (AI Advisor) va bo'sh ish
 ### 1-qadam. Loyihani yuklab oling
 ```bash
 git clone <REPOSITORIY_HAVOLASI>
-cd analitik-loiha
+cd aura-career
 ```
 
 ### 2-qadam. Virtual muhit (Virtual environment) yaratish va faollashtirish
@@ -71,17 +71,17 @@ API endpointlarga murojaat qilish uchun odatda http://127.0.0.1:8000/api v.h. ma
 
 ## Qisqacha papkalar tuzilishi
 ```
-analitik-loiha/
-│
-├── ai_advisor/         # AI maslahatchisi va savolarni boshqarish
-├── analytics/          # Analitik va statistik mantiq
-├── jobs/               # Ish o'rinlari, category va skill turlari
-├── mmt_project/        # Asosiy sozlamalar (settings, urls)
-├── users/              # Foydalanuvchi abstraksiyasi, autentifikatsiya
-├── db.sqlite3          # SQLite bazasi (Local muhit uchun)
-├── manage.py           # Django loyihani boshqarish utilitasidir
-├── requirements.txt    # O'rnatilgan kutubxonalar ro'yxati
-└── README.md           # Dasturiy ta'minot hujjatlari
+aura-career/
+в”‚
+в”њв”Ђв”Ђ ai_advisor/         # AI maslahatchisi va savolarni boshqarish
+в”њв”Ђв”Ђ analytics/          # Analitik va statistik mantiq
+в”њв”Ђв”Ђ jobs/               # Ish o'rinlari, category va skill turlari
+в”њв”Ђв”Ђ mmt_project/        # Asosiy sozlamalar (settings, urls)
+в”њв”Ђв”Ђ users/              # Foydalanuvchi abstraksiyasi, autentifikatsiya
+в”њв”Ђв”Ђ db.sqlite3          # SQLite bazasi (Local muhit uchun)
+в”њв”Ђв”Ђ manage.py           # Django loyihani boshqarish utilitasidir
+в”њв”Ђв”Ђ requirements.txt    # O'rnatilgan kutubxonalar ro'yxati
+в””в”Ђв”Ђ README.md           # Dasturiy ta'minot hujjatlari
 ```
 
 ## Litsenziya
