@@ -1,8 +1,11 @@
 ﻿{% extends 'base.html' %}
 {% block content %}
-<div class="mb-4">
+<div class="mb-4 flex flex-wrap justify-between items-center">
     <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
         &larr; Bosh sahifaga Qaytish
+    </a>
+    <a href="{% url 'ai_test' %}?retake=1" class="text-xs bg-red-600/20 hover:bg-red-600/40 text-red-400 border border-red-500/50 px-4 py-2 rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(220,38,38,0.2)]">
+        &#8635; Testni qayta topshirish
     </a>
 </div>
 

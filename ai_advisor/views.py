@@ -7,46 +7,71 @@ from .questions import TEST_QUESTIONS
 
 @login_required(login_url='/login/')
 def ai_test_view(request):
+    from .models import TestResult
+    
+    # Agar foydalanuvchi "Qayta topshirish" tugmasini bossa, eski test natijasini o'chiramiz
+    if request.GET.get('retake') == '1':
+        TestResult.objects.filter(user=request.user).delete()
+        if 'ai_recommendation' in request.session:
+            del request.session['ai_recommendation']
+        return redirect('ai_test')
+
+    # Agar test oldin yechilgan bo'lsa, to'g'ridan-to'g'ri chatga yo'naltirish
+    existing_result = TestResult.objects.filter(user=request.user).order_by('-created_at').first()
+    if existing_result and request.method == "GET":
+        request.session['ai_recommendation'] = json.dumps(existing_result.ai_recommendation)
+        return redirect('ai_chat')
+
     if request.method == "POST":
+        # A - Producer (Ishlab chiqaruvchi - Natijaga yo'naltirilgan)
+        # B - Administrator (Ma'mur - Tizim va tartib)
+        # C - Entrepreneur (Tadbirkor - G'oyalar)
+        # D - Integrator (Birlashtiruvchi - Jamoa)
         scores = { 'A': 0, 'B': 0, 'C': 0, 'D': 0 }
-        
-        # Talab qilingan 30 ta savolni tahlil qilish
+
+        answers = {}
         for i in range(1, 31):
             answer = request.POST.get(f'q{i}')
             if answer in scores:
                 scores[answer] += 1
+                answers[f'q{i}'] = answer
 
         best_match = max(scores, key=scores.get)
-        
-        # A - Software Engineer, B - Data Scientist, C - AI Engineer, D - Product Manager
+
         match_table = {
             'A': {
-                'title': "Software Engineer / Backend Dasturchi",
-                'advice': "Sizga murakkab serverlar, dasturiy axitekturalar va tizimlar qurish mos keladi. Siz logikaga va jarayonlarni avtomatlashtirishga moyilsiz."
+                'title': "Producer (Natijaga yo'naltirilgan - Dasturchi, DevOps, Injinir)",
+                'advice': "Siz (P) roliga ko'proq mos tushasiz. Sizga aniq vazifalar, natijaga qaratilgan ishlar va texnik xatolarni hal qilish juda yoqadi. Backend, Frontend, yoki DevOps kabi rollar aynan siz uchun yaratilgan."
             },
             'B': {
-                'title': "Data Analyst / Data Scientist",
-                'advice': "Sizning diqqatingiz tafsilotlarda va matematik isbotlarda. Katta ma'lumotlar bilan ishlash va faktlar asosida biznes analitikasi – sizning kuchingiz."
+                'title': "Administrator (Tizimli va tartibli - QA, Data Analyst, SysAdmin)",
+                'advice': "Siz (A) roliga ko'proq mos tushasiz. Tafsilotlarga e'tibor berasiz, hamma narsa tizimli va qoidalarga muvofiq ishlashini xohlaysiz. Dasturiy ta'minotni test qilish (QA), tizim ma'murligi yoki Data Analitikasi sizga juda mos."
             },
             'C': {
-                'title': "AI & ML Engineer / AI Researcher",
-                'advice': "Siz innovatsiyalarga va abstrakt nazariyalarni amaliyotga tadbiq qilishga chanqoqsiz. Intellektual tizimlar (Neyrotarmoqlar) bilan ishlashni tavsiya qilaman."
+                'title': "Entrepreneur (Innovator - AI Engineer, Product Manager, UX/UI)",
+                'advice': "Siz (E) roliga ko'proq mos tushasiz. Siz yangi g'oyalarni yaxshi ko'rasiz, xavflarni o'zingizga ola bilasiz. AI modellari yaratish, yangi IT mahsulotlar o'ylab topish yoki tizimlar dizaynini (UX/UI) chizish sizni ilhomlantiradi."
             },
             'D': {
-                'title': "Product Manager / IT Strateg / Analitik",
-                'advice': "Siz yaxshi texnik asosga ega rahbar va tizimli fikrlovchi biznesmensiz. Asosiy maqsad texnologiya emas, muammoga eng yaxshi yechim berish."
+                'title': "Integrator (Jamoa odami - Scrum Master, Project Manager, HR in IT)",
+                'advice': "Siz (I) roliga ko'proq mos tushasiz. Siz uchun odamlararo munosabatlar, konfliktlarni hal qilish va jamoani bitta maqsad sari birlashtirish juda muhim. IT loyihalarni boshqarish, HR yoki Scrum Master lavozimlari ayni muddao."
             }
         }
-        
+
         result = match_table.get(best_match, match_table['A'])
         
-        mock_ai_resp = json.dumps({
+        recommendation_data = {
             "recommended_job": result['title'],
-            "reason": f"Hurmatli {request.user.first_name or request.user.username}, sizning test natijalaringiz quyidagi kasb sizga 99% mosligini ko'rsatdi: {result['title']}. AI Tavsiyasi: {result['advice']}"
-        })
-        request.session['ai_recommendation'] = mock_ai_resp
-        return redirect('ai_chat')
+            "reason": f"Hurmatli {request.user.first_name or request.user.username}, PAEI modeli bo'yicha tahlil natijasida sizga eng mos kasb: {result['title']}. AI Tavsiyasi: {result['advice']}"
+        }
 
+        # Natijani bazaga saqlash
+        TestResult.objects.create(
+            user=request.user,
+            answers_data=answers,
+            ai_recommendation=recommendation_data
+        )
+
+        request.session['ai_recommendation'] = json.dumps(recommendation_data)
     context = {
         'questions': TEST_QUESTIONS
     }

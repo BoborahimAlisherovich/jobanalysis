@@ -1,82 +1,176 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MMT - Marketing Ma'lumotlar Tahlili{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}AI Advisor - IT Kelajagingiz{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js & Tailwind -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#04050A',
+                        surface: 'rgba(255, 255, 255, 0.03)',
+                        surfaceHover: 'rgba(255, 255, 255, 0.08)',
+                        accent: {
+                            DEFAULT: '#6366F1', // Indigo
+                            neon: '#06B6D4',   // Cyan
+                            purple: '#A855F7'
+                        },
+                        textMain: '#FFFFFF',
+                        textSec: '#9CA3AF'
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #04050A; 
+            color: #FFFFFF; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(4, 5, 10, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
 </head>
-<body class="bg-[#131526] text-gray-200 font-sans">
-    
-    <nav class="bg-[#1a1e35] text-white shadow-lg border-b border-gray-800">
-        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-3">
-                    <span class="text-blue-400 font-extrabold tracking-widest text-xl">Jobs</span><span class="text-white font-semibold text-xl tracking-widest">Analytics</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="/jobs/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-2 transition">💼 Barcha Vakansiyalar</a>
-                    <a href="/sources/" class="text-gray-300 hover:text-cyan-400 font-semibold text-sm mr-4 transition">📊 Manbalar ro'yxati</a>
-                    <a href="/ai-test/" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 px-4 py-1.5 rounded-lg text-sm text-white font-bold transition mr-4 shadow-lg flex items-center gap-2">🤖 AI Job Test & Chat</a>
+<body class="antialiased min-h-screen flex flex-col relative text-textMain selection:bg-accent selection:text-white">
+
+    <!-- Background Glow Effects -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-accent-neon/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Glassmorphic Navbar -->
+    <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="/" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-neon flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.4)] group-hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] text-white transition-all">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <span class="font-bold text-xl tracking-wide text-white">AI<span class="text-textSec font-medium">Advisor</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-[14px] font-medium tracking-wide">
+                    <a href="/jobs/" class="text-textSec hover:text-white transition-colors">Vakansiyalar</a>
+                    <a href="/sources/" class="text-textSec hover:text-white transition-colors">Manbalar</a>
+                    
+                    <div class="w-px h-5 bg-white/10"></div>
                     
                     {% if user.is_authenticated %}
-                        <div class="flex items-center space-x-2 text-blue-400 font-semibold mr-2 border border-blue-400 px-3 py-1 rounded-full bg-[#131526]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                            </svg>
-                            <span>{{ user.username }}</span>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-accent-purple flex items-center justify-center text-xs font-bold text-white shadow-lg">{{ user.username.0|upper }}</div>
+                            <span class="text-white font-semibold">{{ user.username }}</span>
                         </div>
-                        <a href="/logout/" class="text-red-400 hover:text-red-300 text-sm font-bold">Chiqish</a>
+                        <a href="/logout/" class="text-textSec hover:text-red-400 transition-colors">Chiqish</a>
+                        <a href="/ai-test" class="px-6 py-2.5 rounded-xl bg-white text-background font-bold hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">AI Test Boshlash</a>
                     {% else %}
-                        <a href="/login/" class="text-green-400 hover:text-green-300 text-sm font-bold mr-2">Kirish</a>
-                        <a href="/register/" class="text-blue-400 hover:text-blue-300 text-sm font-bold">Ro'yxatdan o'tish</a>
+                        <a href="/login/" class="text-textSec hover:text-white transition-colors">Kirish</a>
+                        <a href="/register/" class="text-white hover:text-accent-neon transition-colors">Ro'yxatdan o'tish</a>
+                        <a href="/ai-test" class="px-6 py-2.5 rounded-xl bg-white text-background font-bold hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">AI Test Boshlash</a>
                     {% endif %}
-                    <a href="/" class="bg-[#242b4d] hover:bg-[#343e6b] px-4 py-1.5 rounded-lg text-sm font-semibold transition ml-4 border border-gray-700">Refresh Data</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Django Messages -->
-    {% if messages %}
-    <div class="fixed top-20 right-4 z-50 flex flex-col gap-2">
-        {% for message in messages %}
-        <div class="p-4 rounded-lg shadow-lg text-white font-semibold transition-all duration-500 transform translate-x-0 opacity-100 message-toast
-            {% if message.tags == 'error' %}bg-red-500/90 border border-red-400{% elif message.tags == 'success' %}bg-green-500/90 border border-green-400{% else %}bg-blue-500/90 border border-blue-400{% endif %}">
-            <div class="flex items-center space-x-2">
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto w-full">
+        <!-- Django Messages -->
+        {% if messages %}
+        <div class="fixed top-24 right-6 z-50 flex flex-col gap-3 font-sans">
+            {% for message in messages %}
+            <div class="p-4 rounded-xl shadow-2xl text-white font-medium text-sm glass-panel animate-fade-in
+                {% if message.tags == 'error' %}border-l-4 border-l-red-500{% elif message.tags == 'success' %}border-l-4 border-l-green-500{% else %}border-l-4 border-l-accent{% endif %} flex items-center space-x-3 message-toast cursor-pointer">
                 {% if message.tags == 'error' %}
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 {% else %}
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg class="h-5 w-5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 {% endif %}
                 <span>{{ message }}</span>
-                <button onclick="this.parentElement.parentElement.style.display='none'" class="ml-4 hover:text-gray-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-    <script>
-        setTimeout(() => {
-            document.querySelectorAll('.message-toast').forEach(el => {
-                el.style.opacity = '0';
-                setTimeout(() => el.remove(), 500);
-            });
-        }, 4000);
-    </script>
-    {% endif %}
+        <script>
+            setTimeout(() => {
+                document.querySelectorAll('.message-toast').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(-10px)';
+                    el.style.transition = 'all 0.5s ease-out';
+                    setTimeout(() => el.remove(), 500);
+                });
+            }, 5000);
+        </script>
+        {% endif %}
 
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
 
-    <footer class="bg-[#1a1e35] border-t border-gray-800 py-6 mt-12 text-center text-sm text-gray-500">
-        <p>&copy; 2026 MMT - Davlat Strategik Analitika Platformasi.</p>
+    <footer class="mt-20 border-t border-white/5 py-8 text-center text-sm text-textSec font-sans z-10 glass-panel border-r-0 border-l-0 border-b-0 rounded-none bg-transparent">
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+            <p>&copy; 2026 AI Advisor Platform. Barcha huquqlar himoyalangan.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Maxfiylik siyosati</a>
+                <a href="#" class="hover:text-white transition">Foydalanish shartlari</a>
+            </div>
+        </div>
     </footer>
 
     {% block scripts %}
