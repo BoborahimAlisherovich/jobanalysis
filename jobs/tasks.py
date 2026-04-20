@@ -54,13 +54,18 @@ def scrape_hh_uz_jobs():
     url_base = 'https://api.hh.ru/vacancies'
     country, _ = Country.objects.get_or_create(name='Uzbekistan')
     total_added = 0
+    
+    # HeadHunter API botlarni bloklamasligi uchun User-Agent yuboramiz
+    headers = {
+        'User-Agent': 'AnalitikLoyiha/1.0 (info@example.com)'
+    }
 
     for q in queries:
         try:
-            response = requests.get(url_base + '?area=97&text=' + q + '&per_page=20').json()
+            response = requests.get(url_base + '?area=97&text=' + q + '&per_page=20', headers=headers).json()
             items = response.get('items', [])
             if not items:
-                response = requests.get(url_base + '?text=' + q + '&per_page=10').json()
+                response = requests.get(url_base + '?text=' + q + '&per_page=10', headers=headers).json()
                 items = response.get('items', [])
 
             for item in items:
