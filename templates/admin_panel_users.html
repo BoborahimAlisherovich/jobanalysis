@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foydalanuvchilar - AURA Career Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #f1f5f9; display: flex; min-height: 100vh; }
+        
+        .sidebar { width: 250px; background: #1e293b; color: #fff; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; }
+        .sidebar-header { padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .sidebar-header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+        .sidebar-header p { font-size: 11px; color: #64748b; margin-top: 2px; }
+        .sidebar-nav { flex: 1; padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; }
+        .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px; color: #94a3b8; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.15s; }
+        .sidebar-link:hover { background: rgba(255,255,255,0.06); color: #e2e8f0; }
+        .sidebar-link.active { background: #3b82f6; color: #fff; }
+        .sidebar-link .icon { width: 20px; text-align: center; font-size: 16px; }
+        .sidebar-footer { padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+        
+        .main { flex: 1; margin-left: 250px; padding: 32px; }
+        .page-header { margin-bottom: 28px; }
+        .page-header h2 { font-size: 22px; font-weight: 700; color: #0f172a; }
+        .page-header p { font-size: 13px; color: #64748b; margin-top: 4px; }
+        
+        .card { background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 20px; }
+        .stat-card { text-align: center; padding: 20px 16px; }
+        .stat-value { font-size: 28px; font-weight: 700; color: #1e293b; }
+        .stat-label { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-top: 4px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 12px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 600; border-bottom: 2px solid #f1f5f9; white-space: nowrap; }
+        td { padding: 12px 14px; border-bottom: 1px solid #f1f5f9; font-size: 13px; color: #334155; cursor: pointer; }
+        .user-row:hover td { background: #f8fafc; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 500; }
+        .badge-blue { background: #eff6ff; color: #3b82f6; }
+        .badge-purple { background: #f5f3ff; color: #7c3aed; }
+        .badge-gray { background: #f1f5f9; color: #64748b; }
+        
+        input[type="text"] { border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 13px; width: 100%; max-width: 360px; outline: none; }
+        input[type="text"]:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+        
+        .search-card { padding: 16px 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .filter-hint { font-size: 12px; color: #94a3b8; }
+        
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>AURA Career</h1>
+            <p>Admin panel</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/admin/" class="sidebar-link">
+                <span class="icon">&#9632;</span> Analitika
+            </a>
+            <a href="/admin/users/" class="sidebar-link active">
+                <span class="icon">&#9679;</span> Foydalanuvchilar
+            </a>
+            <a href="/django-admin/" class="sidebar-link">
+                <span class="icon">&#9881;</span> Django Admin
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="/" class="sidebar-link" style="color: #64748b; font-size: 13px;">
+                <span class="icon">&#8592;</span> Saytga qaytish
+            </a>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="page-header">
+            <h2>Foydalanuvchilar</h2>
+            <p>Barcha ro'yxatdan o'tgan foydalanuvchilar va test natijalari</p>
+        </div>
+
+        <div class="grid-4">
+            <div class="card stat-card">
+                <div class="stat-value">{{ total_users }}</div>
+                <div class="stat-label">Jami foydalanuvchilar</div>
+            </div>
+        </div>
+
+        <div class="card search-card">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="searchInput" placeholder="Ism, familiya, telefon, email orqali qidirish..." oninput="filterTable()">
+            <span class="filter-hint" id="filterCount">Barcha foydalanuvchilar</span>
+        </div>
+
+        <div class="card" style="padding: 0; overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Ism</th>
+                        <th>Familiya</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th>Davlat</th>
+                        <th>Tajriba</th>
+                        <th>Test natijasi</th>
+                        <th>Ro'yxatdan o'tgan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in users %}
+                    <tr class="user-row" data-user-id="{{ u.id }}">
+                        <td style="color: #94a3b8; font-size: 12px;">{{ u.id }}</td>
+                        <td style="font-weight: 500;">{{ u.username }}</td>
+                        <td>{{ u.first_name }}</td>
+                        <td>{{ u.last_name }}</td>
+                        <td>{% if u.phone %}<span class="badge badge-blue">{{ u.phone }}</span>{% else %}<span class="badge badge-gray">—</span>{% endif %}</td>
+                        <td style="color: #64748b;">{{ u.email|default:"—" }}</td>
+                        <td>{{ u.country|default:"—" }}</td>
+                        <td>{{ u.experience_years }} yil</td>
+                        <td>
+                            {% if u.recommended_job %}
+                                <span class="badge badge-purple" title="{{ u.recommended_job }}">{{ u.recommended_job|truncatechars:30 }}</span>
+                            {% else %}
+                                <span class="badge badge-gray">Test topshirmagan</span>
+                            {% endif %}
+                        </td>
+                        <td style="color: #64748b; font-size: 12px; white-space: nowrap;">{{ u.date_joined|date:"d.m.Y" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="10" style="text-align: center; padding: 60px 20px; color: #94a3b8;">
+                            <p style="font-size: 15px; font-weight: 500;">Foydalanuvchilar mavjud emas</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function filterTable() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const rows = document.querySelectorAll('.user-row');
+            let visible = 0;
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const match = text.includes(q);
+                row.style.display = match ? '' : 'none';
+                if (match) visible++;
+            });
+            document.getElementById('filterCount').textContent = visible + ' / {{ total_users }}';
+        }
+        document.querySelectorAll('.user-row').forEach(row => {
+            row.addEventListener('click', function() {
+                const id = this.dataset.userId;
+                if (id) window.location.href = '/admin/users/' + id + '/';
+            });
+        });
+    </script>
+</body>
+</html>

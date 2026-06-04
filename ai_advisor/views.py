@@ -1,4 +1,4 @@
-﻿from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from jobs.models import Job, Category
 from django.db.models import Count, Avg
@@ -7,11 +7,12 @@ from .questions import TEST_QUESTIONS
 
 @login_required(login_url='/login/')
 def ai_test_view(request):
-    from .models import TestResult
+    from .models import ChatSession, TestResult
     
     # Agar foydalanuvchi "Qayta topshirish" tugmasini bossa, eski test natijasini o'chiramiz
     if request.GET.get('retake') == '1':
         TestResult.objects.filter(user=request.user).delete()
+        ChatSession.objects.filter(user=request.user).delete()
         if 'ai_recommendation' in request.session:
             del request.session['ai_recommendation']
         return redirect('ai_test')
@@ -70,8 +71,13 @@ def ai_test_view(request):
             answers_data=answers,
             ai_recommendation=recommendation_data
         )
+        ChatSession.objects.filter(user=request.user).delete()
 
         request.session['ai_recommendation'] = json.dumps(recommendation_data)
+        
+        # Test natijasi saqlangach, avtomatik chat sahifasiga o'tkazish
+        return redirect('ai_chat')
+        
     context = {
         'questions': TEST_QUESTIONS
     }
@@ -79,13 +85,24 @@ def ai_test_view(request):
 
 @login_required(login_url='/login/')
 def ai_chat_view(request):
-    from .services import get_ai_chat_response
+    from .models import TestResult
+    
     rec_json = request.session.get('ai_recommendation', '{}')
     test_recommendation = {}
     
-    context = {}
-    if rec_json != '{}':
+    # Agar foydalanuvchi tizimdan chiqib ketgan bo'lsa (session tozalangan bo'lsa),
+    # ma'lumotlarni bazadan tortib olamiz:
+    if rec_json == '{}':
+        existing_result = TestResult.objects.filter(user=request.user).order_by('-created_at').first()
+        if existing_result:
+            test_recommendation = existing_result.ai_recommendation
+            # Kelgusida foydalanishi uchun sessionga ham yozib qo'yamiz
+            request.session['ai_recommendation'] = json.dumps(test_recommendation)
+    else:
         test_recommendation = json.loads(rec_json)
+        
+    context = {}
+    if test_recommendation:
         context['rec_job'] = test_recommendation.get('recommended_job')
         context['rec_reason'] = test_recommendation.get('reason')
     
@@ -96,14 +113,47 @@ def ai_chat_view(request):
 
     context['db_context'] = f"Jami vakansiyalar: {total_jobs}. Eng ko'p vakansiyalar: {top_cats}."
 
-    # Handle basic POST for Chat
-    if request.method == "POST":
-        user_message = request.POST.get("message", "")
-        # Real AI integration call (via services.py)
-        
-        ai_response = get_ai_chat_response(request.user, user_message, test_recommendation)
-        
-        context['user_message'] = user_message
-        context['ai_response'] = ai_response
+    # Chat xotirasini olish (eski xabarlarni ekranda ko'rsatish)
+    from .services import _clean_ai_response, get_chat_session
+    chat_session = get_chat_session(request.user)
+    cleaned_history = []
+    history_changed = False
+    for msg in chat_session.message_history:
+        content = msg.get('content', '')
+        if msg.get('role') == 'assistant':
+            cleaned_content = _clean_ai_response(content)
+            if cleaned_content != content:
+                history_changed = True
+            content = cleaned_content
+        if content.strip():
+            cleaned_history.append({**msg, 'content': content})
+        else:
+            history_changed = True
+
+    if history_changed:
+        chat_session.message_history = cleaned_history
+        chat_session.save(update_fields=['message_history', 'updated_at'])
+
+    context['chat_history'] = chat_session.message_history
 
     return render(request, 'ai_chat.html', context)
+
+from django.http import StreamingHttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+@login_required(login_url='/login/')
+def ai_chat_stream(request):
+    from .services import get_ai_chat_response_stream, get_latest_test_recommendation
+
+    if request.method == "POST":
+        user_message = request.POST.get("message", "")
+        
+        # Olingan test natijalarini yig'ish
+        test_recommendation = get_latest_test_recommendation(request.user)
+        
+        # Streaming response generatsiya qilish
+        response_generator = get_ai_chat_response_stream(request.user, user_message, test_recommendation)
+        
+        return StreamingHttpResponse(response_generator, content_type='text/plain')
+        
+    return JsonResponse({"error": "Faqat POST so'rov qabul qilinadi"}, status=400)

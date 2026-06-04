@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.first_name }} {{ profile.last_name }} - AURA Career Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #f1f5f9; display: flex; min-height: 100vh; }
+        
+        .sidebar { width: 250px; background: #1e293b; color: #fff; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; }
+        .sidebar-header { padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .sidebar-header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+        .sidebar-header p { font-size: 11px; color: #64748b; margin-top: 2px; }
+        .sidebar-nav { flex: 1; padding: 16px 12px; }
+        .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px; color: #94a3b8; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.15s; }
+        .sidebar-link:hover { background: rgba(255,255,255,0.06); color: #e2e8f0; }
+        .sidebar-link.active { background: #3b82f6; color: #fff; }
+        .sidebar-link .icon { width: 20px; text-align: center; font-size: 16px; }
+        .sidebar-footer { padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+        
+        .main { flex: 1; margin-left: 250px; padding: 32px; }
+        .page-header { margin-bottom: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .page-header h2 { font-size: 22px; font-weight: 700; color: #0f172a; }
+        .page-header p { font-size: 13px; color: #64748b; margin-top: 4px; }
+        .back-link { color: #3b82f6; font-size: 13px; font-weight: 500; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .card { background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 20px; }
+        .card-title { font-size: 15px; font-weight: 600; color: #0f172a; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9; }
+        
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+        
+        .info-row { display: flex; flex-direction: column; gap: 2px; }
+        .info-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .info-value { font-size: 14px; color: #0f172a; font-weight: 500; }
+        
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 500; }
+        .badge-blue { background: #eff6ff; color: #3b82f6; }
+        .badge-purple { background: #f5f3ff; color: #7c3aed; }
+        .badge-green { background: #f0fdf4; color: #22c55e; }
+        .badge-cyan { background: #ecfeff; color: #06b6d4; }
+        .badge-pink { background: #fdf2f8; color: #ec4899; }
+        .badge-gray { background: #f1f5f9; color: #64748b; }
+        
+        .score-box { text-align: center; padding: 16px 12px; border-radius: 8px; }
+        .score-value { font-size: 24px; font-weight: 700; }
+        .score-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px; }
+        
+        .test-card { background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 20px; margin-bottom: 16px; border: 1px solid #f1f5f9; }
+        .test-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        .reason-text { font-size: 13px; color: #475569; line-height: 1.6; padding: 12px; background: #f8fafc; border-radius: 8px; margin-top: 12px; }
+        
+        details summary { cursor: pointer; color: #3b82f6; font-size: 13px; font-weight: 500; padding: 4px 0; }
+        details summary:hover { color: #2563eb; }
+        .answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 6px; margin-top: 12px; }
+        .answer-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f8fafc; border-radius: 6px; font-size: 12px; }
+        .answer-item .q { color: #64748b; }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>AURA Career</h1>
+            <p>Admin panel</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/admin/" class="sidebar-link">
+                <span class="icon">&#9632;</span> Analitika
+            </a>
+            <a href="/admin/users/" class="sidebar-link active">
+                <span class="icon">&#9679;</span> Foydalanuvchilar
+            </a>
+            <a href="/django-admin/" class="sidebar-link">
+                <span class="icon">&#9881;</span> Django Admin
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="/" class="sidebar-link" style="color: #64748b; font-size: 13px;">
+                <span class="icon">&#8592;</span> Saytga qaytish
+            </a>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="page-header">
+            <div>
+                <a href="/admin/users/" class="back-link">&larr; Foydalanuvchilar</a>
+                <h2 style="margin-top: 6px;">{{ profile.first_name }} {{ profile.last_name }}</h2>
+                <p>ID: {{ profile.id }} &middot; @{{ profile.username }}</p>
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                {% if profile.is_staff %}<span class="badge badge-green">Admin</span>{% endif %}
+                <span class="badge badge-blue">ID: {{ profile.id }}</span>
+            </div>
+        </div>
+
+        <!-- Profile info -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Shaxsiy ma'lumotlar</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="info-row"><span class="info-label">Ism</span><span class="info-value">{{ profile.first_name|default:"—" }}</span></div>
+                    <div class="info-row"><span class="info-label">Familiya</span><span class="info-value">{{ profile.last_name|default:"—" }}</span></div>
+                    <div class="info-row"><span class="info-label">Username</span><span class="info-value">{{ profile.username }}</span></div>
+                    <div class="info-row"><span class="info-label">Email</span><span class="info-value">{{ profile.email|default:"—" }}</span></div>
+                    <div class="info-row"><span class="info-label">Telefon</span><span class="info-value">{{ profile.phone|default:"—" }}</span></div>
+                    <div class="info-row"><span class="info-label">Davlat</span><span class="info-value">{{ profile.country|default:"—" }}</span></div>
+                    <div class="info-row"><span class="info-label">Tajriba</span><span class="info-value">{{ profile.experience_years }} yil</span></div>
+                    <div class="info-row"><span class="info-label">Ro'yxatdan o'tgan</span><span class="info-value">{{ profile.date_joined|date:"d.m.Y H:i" }}</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Ko'nikmalar</div>
+                {% if skills %}
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    {% for s in profile.skills.all %}
+                    <span class="badge badge-cyan">{{ s.name }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p style="color: #94a3b8; font-size: 13px;">Ko'nikmalar ko'rsatilmagan</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Test results -->
+        <div class="card-title" style="margin-bottom: 16px; font-size: 16px;">Test natijalari</div>
+        {% if tests %}
+        {% for t in tests %}
+        <div class="test-card">
+            <div class="test-header">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="badge badge-blue">#{{ t.id }}</span>
+                    <span style="color: #64748b; font-size: 12px;">{{ t.date|date:"d.m.Y H:i" }}</span>
+                </div>
+                <span class="badge badge-purple">{{ t.recommended_job|default:"Natija yo'q" }}</span>
+            </div>
+
+            <!-- PAEI scores -->
+            <div class="grid-4" style="margin-bottom: 12px;">
+                <div class="score-box" style="background: #eef2ff; border: 1px solid #c7d2fe;">
+                    <div class="score-value" style="color: #4f46e5;">{{ t.scores.A }}</div>
+                    <div class="score-label" style="color: #4f46e5;">P - Producer</div>
+                </div>
+                <div class="score-box" style="background: #ecfeff; border: 1px solid #a5f3fc;">
+                    <div class="score-value" style="color: #0891b2;">{{ t.scores.B }}</div>
+                    <div class="score-label" style="color: #0891b2;">A - Administrator</div>
+                </div>
+                <div class="score-box" style="background: #f0fdf4; border: 1px solid #bbf7d0;">
+                    <div class="score-value" style="color: #16a34a;">{{ t.scores.C }}</div>
+                    <div class="score-label" style="color: #16a34a;">E - Entrepreneur</div>
+                </div>
+                <div class="score-box" style="background: #f5f3ff; border: 1px solid #ddd6fe;">
+                    <div class="score-value" style="color: #7c3aed;">{{ t.scores.D }}</div>
+                    <div class="score-label" style="color: #7c3aed;">I - Integrator</div>
+                </div>
+            </div>
+
+            {% if t.reason %}
+            <div class="reason-text">{{ t.reason }}</div>
+            {% endif %}
+
+            <details style="margin-top: 12px;">
+                <summary>Javoblarni ko'rish ({{ t.answers|length }} ta)</summary>
+                <div class="answer-grid">
+                    {% for q, a in t.answers.items %}
+                    <div class="answer-item">
+                        <span class="q">{{ q }}</span>
+                        <span class="badge {% if a == 'A' %}badge-purple{% elif a == 'B' %}badge-cyan{% elif a == 'C' %}badge-green{% else %}badge-pink{% endif %}">{{ a }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </details>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="card" style="text-align: center; padding: 60px;">
+            <p style="color: #94a3b8; font-size: 14px;">Bu foydalanuvchi hali test topshirmagan</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

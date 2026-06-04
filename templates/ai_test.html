@@ -1,17 +1,17 @@
 ﻿{% extends "base.html" %}
+{% load static %}
 
 {% block title %}AI Neyro Test - O'zingizni aniqlang{% endblock %}
 
 {% block content %}
 <div class="min-h-[85vh] flex items-center justify-center p-4 pt-10" x-data="testApp()">
-    <!-- Test Container -->
-    <div class="w-full max-w-3xl glass-panel shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col relative overflow-hidden animate-slide-up border border-white/5 bg-background/40 rounded-[2.5rem]">
+    <div class="w-full max-w-3xl glass-panel shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col relative overflow-hidden animate-slide-up border border-white/5 rounded-[2.5rem]">
         
         <!-- Top decorative gradient -->
         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-accent via-accent-neon to-accent-purple shadow-[0_0_20px_rgba(99,102,241,0.8)] z-20"></div>
 
         <!-- Progress Header -->
-        <div class="px-8 py-8 border-b border-white/5 relative z-10 flex justify-between items-center bg-white/[0.01]">
+        <div class="px-8 py-8 border-b border-white/5 relative z-10 flex justify-between items-center">
             <div>
                 <span class="text-[12px] font-bold tracking-widest text-accent uppercase flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
@@ -23,19 +23,22 @@
                 <div class="text-[32px] font-black text-white leading-none">
                     <span x-text="currentIndex + 1"></span><span class="text-textSec/50 text-[20px]"> / <span x-text="questions.length"></span></span>
                 </div>
+                <div class="text-textSec text-[11px] font-medium uppercase tracking-wider mt-1">
+                    <span x-text="Math.round(((currentIndex + 1) / questions.length) * 100)"></span>% bajarildi
+                </div>
             </div>
         </div>
 
         <!-- Progress Bar -->
         <div class="w-full h-1.5 bg-white/5 overflow-hidden">
             <div class="h-full bg-gradient-to-r from-accent to-accent-neon rounded-r-full transition-all duration-500 ease-out relative" 
-                 :style="`width: ${((currentIndex) / questions.length) * 100}%`">
+                 :style="`width: ${((currentIndex + 1) / questions.length) * 100}%`">
                  <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
             </div>
         </div>
 
         <!-- Question Body -->
-        <div class="p-8 sm:p-12 relative flex-grow z-10 min-h-[450px]">
+        <div class="p-8 sm:p-12 relative flex-grow z-10 min-h-[400px]">
             <form method="POST" id="testForm" action="{% url 'ai_test' %}">
                 {% csrf_token %}
 
@@ -64,19 +67,19 @@
                          x-transition:leave="transition ease-in duration-200 absolute w-full top-0"
                          x-transition:leave-start="opacity-100 translate-x-0"
                          x-transition:leave-end="opacity-0 -translate-x-8"
-                         class="space-y-8 w-full"
+                         class="space-y-6 w-full"
                          style="display: none;">
                         
-                        <div class="inline-flex px-3 py-1 rounded-md bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold uppercase tracking-wider shadow-[0_0_10px_rgba(99,102,241,0.2)]">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold uppercase tracking-wider">
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                             <span x-text="q.category"></span>
-                        </div>
+                        </span>
 
-                        <h2 class="text-[22px] md:text-[28px] font-bold text-white leading-tight tracking-tight shadow-sm" x-text="q.question"></h2>
+                        <h2 class="text-[22px] md:text-[28px] font-bold text-white leading-tight tracking-tight" x-text="q.question"></h2>
                         
-                        <div class="space-y-4">
+                        <div class="space-y-3">
                             <template x-for="opt in q.options" :key="opt.value">
-                                <!-- Custom Radio Option Design -->
-                                <label class="group relative flex items-center p-5 rounded-2xl border-2 border-white/5 cursor-pointer 
+                                <label class="group relative flex items-center p-4 sm:p-5 rounded-2xl border-2 border-white/5 cursor-pointer 
                                               hover:bg-white/5 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5 overflow-hidden"
                                        :class="{ 'border-accent bg-accent/5 ring-1 ring-accent/50 shadow-[0_0_20px_rgba(99,102,241,0.2)]': answers[q.id] === opt.value }">
                                     
@@ -88,7 +91,7 @@
                                            class="absolute opacity-0 hidden" required>
                                     
                                     <div class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-textSec/30 mr-5 transition-all bg-white/5 shadow-inner z-10 relative flex-shrink-0"
-                                         :class="{ 'border-accent bg-accent/20 scale-110': answers[q.id] === opt.value }">
+                                         :class="{ 'border-accent bg-accent/20 scale-110 shadow-[0_0_15px_rgba(99,102,241,0.3)]': answers[q.id] === opt.value }">
                                          <div class="w-3 h-3 rounded-full transition-all bg-transparent"
                                               :class="{ 'bg-accent shadow-[0_0_10px_#6366F1]': answers[q.id] === opt.value }"></div>
                                     </div>
@@ -99,35 +102,30 @@
                             </template>
                         </div>
 
-                        <!-- Footer / Navigation -->
-                        <div class="mt-12 flex justify-between items-center pt-6 border-t border-white/5">
+                        <!-- Navigation -->
+                        <div class="mt-10 flex justify-between items-center pt-6 border-t border-white/5">
                             <button type="button" 
                                     @click="prevQuestion" 
-                                    class="px-6 py-3 rounded-xl font-medium text-[15px] transition-all border border-white/10 hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed text-white hover:-translate-x-0.5 flex items-center gap-2"
-                                    :disabled="currentIndex === 0"
+                                    class="btn-ghost text-sm px-6 py-3"
                                     :class="{'opacity-0 pointer-events-none': currentIndex === 0}">
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                                 Oldingi
                             </button>
 
-                            <!-- Next Button -->
                             <button type="button" 
                                     x-show="currentIndex < questions.length - 1"
                                     @click="nextQuestion"
                                     :disabled="!isAnswerSelected"
-                                    :class="isAnswerSelected ? 'bg-white text-background hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 cursor-pointer opacity-100' : 'bg-white/10 text-white/30 cursor-not-allowed opacity-50'"
-                                    class="px-8 py-3 rounded-xl font-bold text-[15px] transition-all flex items-center gap-2 mt-0 !mt-0 origin-right transition-all duration-300">
+                                    :class="isAnswerSelected ? 'btn-primary px-8 py-3' : 'btn-ghost px-8 py-3 opacity-50 cursor-not-allowed'">
                                 Keyingisi
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                             </button>
 
-                            <!-- Submit Button -->
                             <button type="button" 
                                     x-show="currentIndex === questions.length - 1"
                                     @click="submitForm()"
                                     :disabled="!isAnswerSelected"
-                                    :class="isAnswerSelected ? 'bg-gradient-to-r from-accent to-accent-neon hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-0.5 cursor-pointer opacity-100' : 'bg-white/10 text-white/30 cursor-not-allowed opacity-50 border border-white/5'"
-                                    class="px-8 py-3 rounded-xl font-bold text-[15px] transition-all text-white flex items-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.5)] mt-0 !mt-0 whitespace-nowrap transition-all duration-300">
+                                    :class="isAnswerSelected ? 'btn-gradient px-8 py-3 shadow-[0_0_20px_rgba(6,182,212,0.5)]' : 'btn-ghost px-8 py-3 opacity-50 cursor-not-allowed'">
                                 Tahlilni Yuklash
                                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                             </button>
@@ -135,15 +133,22 @@
                     </div>
                 </template>
 
-                <!-- Loading State for Submit -->
-                <div x-show="isSubmitting" style="display: none;" class="absolute inset-0 z-50 flex flex-col items-center justify-center bg-background/90 backdrop-blur-xl rounded-[2.5rem] border border-white/5">
-                    <div class="relative w-16 h-16 mb-6 flex items-center justify-center">
+                <!-- Loading State -->
+                <div x-show="isSubmitting" style="display: none;" class="absolute inset-0 z-50 flex flex-col items-center justify-center bg-background/90 backdrop-blur-xl rounded-[2.5rem]">
+                    <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
                         <div class="w-full h-full rounded-full border-4 border-white/10 border-t-accent animate-spin shadow-[0_0_30px_rgba(99,102,241,0.5)]"></div>
-                        <div class="absolute inset-0 w-full h-full rounded-full border-4 border-transparent border-t-accent-neon animate-spin-slow"></div>
-                        <div class="absolute w-8 h-8 rounded-full bg-accent/20 animate-pulse shadow-[0_0_20px_#6366F1]"></div>
+                        <div class="absolute w-10 h-10 rounded-full bg-accent/20 animate-pulse shadow-[0_0_20px_#6366F1]"></div>
                     </div>
-                    <h3 class="text-[24px] font-bold text-white mb-2 tracking-tight text-glow">Tahlil qilinmoqda</h3>
-                    <p class="text-[15px] text-textSec mt-1 max-w-xs text-center leading-relaxed">Natijalar sun'iy intellekt orqali qayta ishlanmoqda...</p>
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">AI Tahlil qilinmoqda</h3>
+                    <div class="flex items-center gap-2 text-textSec text-[15px]">
+                        <span>Natijalar sun'iy intellekt orqali qayta ishlanmoqda</span>
+                        <span class="animate-pulse">...</span>
+                    </div>
+                    <div class="mt-6 flex gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-bounce" style="animation-delay: 0s;"></span>
+                        <span class="w-2 h-2 rounded-full bg-accent-neon animate-bounce" style="animation-delay: 0.15s;"></span>
+                        <span class="w-2 h-2 rounded-full bg-accent-purple animate-bounce" style="animation-delay: 0.3s;"></span>
+                    </div>
                 </div>
             </form>
         </div>
@@ -164,7 +169,7 @@
 
             selectAnswer(index, value) {
                 this.answers[this.questions[index].id] = value;
-                if (navigator.vibrate) { navigator.vibrate(50); }
+                if (navigator.vibrate) navigator.vibrate(30);
             },
 
             nextQuestion() {

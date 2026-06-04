@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - AURA Career</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: #f1f5f9; display: flex; min-height: 100vh; }
+        
+        /* Sidebar */
+        .sidebar { width: 250px; background: #1e293b; color: #fff; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; }
+        .sidebar-header { padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .sidebar-header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+        .sidebar-header p { font-size: 11px; color: #64748b; margin-top: 2px; }
+        .sidebar-nav { flex: 1; padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; }
+        .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px; color: #94a3b8; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.15s; }
+        .sidebar-link:hover { background: rgba(255,255,255,0.06); color: #e2e8f0; }
+        .sidebar-link.active { background: #3b82f6; color: #fff; }
+        .sidebar-link .icon { width: 20px; text-align: center; font-size: 16px; }
+        .sidebar-footer { padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+        
+        /* Main content */
+        .main { flex: 1; margin-left: 250px; padding: 32px; }
+        .page-header { margin-bottom: 28px; }
+        .page-header h2 { font-size: 22px; font-weight: 700; color: #0f172a; }
+        .page-header p { font-size: 13px; color: #64748b; margin-top: 4px; }
+        
+        /* Cards */
+        .card { background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 20px; }
+        .stat-card { text-align: center; padding: 24px 16px; }
+        .stat-value { font-size: 32px; font-weight: 700; color: #1e293b; }
+        .stat-label { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-top: 4px; }
+        .stat-change { font-size: 12px; margin-top: 8px; font-weight: 500; }
+        .stat-change.up { color: #22c55e; }
+        
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; margin-bottom: 24px; }
+        
+        .card-title { font-size: 15px; font-weight: 600; color: #0f172a; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9; }
+        
+        .progress-bar { height: 8px; background: #f1f5f9; border-radius: 999px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 999px; background: #3b82f6; transition: width 0.4s; }
+        .bar-row { margin-bottom: 12px; }
+        .bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+        .bar-label .name { color: #334155; }
+        .bar-label .count { color: #3b82f6; font-weight: 600; }
+        
+        .metric-box { text-align: center; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+        .metric-value { font-size: 24px; font-weight: 700; color: #0f172a; }
+        .metric-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-top: 4px; }
+        
+        .flex-row { display: flex; gap: 16px; flex-wrap: wrap; }
+        .flex-row > * { flex: 1; min-width: 120px; }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>AURA Career</h1>
+            <p>Admin panel</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/admin/" class="sidebar-link active">
+                <span class="icon">&#9632;</span> Analitika
+            </a>
+            <a href="/admin/users/" class="sidebar-link">
+                <span class="icon">&#9679;</span> Foydalanuvchilar
+            </a>
+            <a href="/django-admin/" class="sidebar-link">
+                <span class="icon">&#9881;</span> Django Admin
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="/" class="sidebar-link" style="color: #64748b; font-size: 13px;">
+                <span class="icon">&#8592;</span> Saytga qaytish
+            </a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="page-header">
+            <h2>Analitika</h2>
+            <p>Platforma statistikasi va umumiy ko'rinish</p>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="grid-4">
+            <div class="card stat-card">
+                <div class="stat-value">{{ total_users }}</div>
+                <div class="stat-label">Jami foydalanuvchilar</div>
+                <div class="stat-change up">+{{ new_users_week }} bu hafta</div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-value">{{ total_tests }}</div>
+                <div class="stat-label">Test topshirganlar</div>
+                <div class="stat-change up">+{{ new_tests_week }} bu hafta</div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-value">{{ total_jobs }}</div>
+                <div class="stat-label">Jami vakansiyalar</div>
+                <div class="stat-change up">+{{ new_jobs_week }} bu hafta</div>
+            </div>
+            <div class="card stat-card">
+                <div class="stat-value">{{ active_jobs }}</div>
+                <div class="stat-label">Faol vakansiyalar</div>
+            </div>
+        </div>
+
+        <!-- Sources + Categories -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Vakansiya manbalari</div>
+                {% for s in sources %}
+                <div class="bar-row">
+                    <div class="bar-label">
+                        <span class="name">{{ s.source }}</span>
+                        <span class="count">{{ s.count }}</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {% if total_jobs > 0 %}{% widthratio s.count total_jobs 100 %}{% else %}0{% endif %}%;"></div>
+                    </div>
+                </div>
+                {% empty %}
+                <p style="color: #94a3b8; font-size: 13px;">Ma'lumot yo'q</p>
+                {% endfor %}
+            </div>
+            <div class="card">
+                <div class="card-title">Kategoriyalar</div>
+                {% for cat in categories %}
+                <div class="bar-row">
+                    <div class="bar-label">
+                        <span class="name">{{ cat.name }}</span>
+                        <span class="count">{{ cat.job_count }}</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {% if total_jobs > 0 %}{% widthratio cat.job_count total_jobs 100 %}{% else %}0{% endif %}%;"></div>
+                    </div>
+                </div>
+                {% empty %}
+                <p style="color: #94a3b8; font-size: 13px;">Ma'lumot yo'q</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Test distribution + weekly -->
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Test natijalari (PAEI)</div>
+                <div style="display: flex; gap: 12px; flex-direction: column;">
+                    <div class="bar-row">
+                        <div class="bar-label"><span class="name">P - Producer</span><span class="count">{{ test_distribution.A }}</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: {% widthratio test_distribution.A total_tests 100 %}%; background: #6366f1;"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label"><span class="name">A - Administrator</span><span class="count">{{ test_distribution.B }}</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: {% widthratio test_distribution.B total_tests 100 %}%; background: #06b6d4;"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label"><span class="name">E - Entrepreneur</span><span class="count">{{ test_distribution.C }}</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: {% widthratio test_distribution.C total_tests 100 %}%; background: #22c55e;"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label"><span class="name">I - Integrator</span><span class="count">{{ test_distribution.D }}</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: {% widthratio test_distribution.D total_tests 100 %}%; background: #a855f7;"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Haftalik faollik</div>
+                <div class="flex-row">
+                    <div class="metric-box">
+                        <div class="metric-value">{{ new_users_week }}</div>
+                        <div class="metric-label">Yangi foydalanuvchilar</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">{{ new_tests_week }}</div>
+                        <div class="metric-label">Yangi testlar</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">{{ new_jobs_week }}</div>
+                        <div class="metric-label">Yangi vakansiyalar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

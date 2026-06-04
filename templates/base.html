@@ -9,13 +9,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Alpine.js & Tailwind -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -29,11 +26,7 @@
                         background: '#04050A',
                         surface: 'rgba(255, 255, 255, 0.03)',
                         surfaceHover: 'rgba(255, 255, 255, 0.08)',
-                        accent: {
-                            DEFAULT: '#6366F1', // Indigo
-                            neon: '#06B6D4',   // Cyan
-                            purple: '#A855F7'
-                        },
+                        accent: { DEFAULT: '#6366F1', neon: '#06B6D4', purple: '#A855F7', green: '#22D3A0', pink: '#EC4899' },
                         textMain: '#FFFFFF',
                         textSec: '#9CA3AF'
                     },
@@ -41,6 +34,8 @@
                         'blob': 'blob 7s infinite',
                         'fade-in': 'fadeIn 0.6s ease-out forwards',
                         'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
                     },
                     keyframes: {
                         blob: {
@@ -49,127 +44,168 @@
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
                         },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+                        'pulse-glow': { '0%, 100%': { boxShadow: '0 0 20px rgba(99,102,241,0.2)' }, '50%': { boxShadow: '0 0 40px rgba(99,102,241,0.5)' } },
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { 
-            background-color: #04050A; 
-            color: #FFFFFF; 
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        .glass-nav {
-            background: rgba(4, 5, 10, 0.6);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
-    </style>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Alpine.js & Chart.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="antialiased min-h-screen flex flex-col relative text-textMain selection:bg-accent selection:text-white">
+<body class="antialiased min-h-screen flex flex-col relative selection:bg-accent/30 selection:text-white">
 
-    <!-- Background Glow Effects -->
-    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
-        <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-accent-neon/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob" style="animation-delay: 4s;"></div>
+    <!-- Animated Background Glow -->
+    <div class="bg-glow">
+        <div class="bg-glow-blob w-[600px] h-[600px] top-[-15%] left-[-10%] bg-accent animate-blob"></div>
+        <div class="bg-glow-blob w-[500px] h-[500px] top-[20%] right-[-15%] bg-accent-neon animate-blob" style="animation-delay: 2s;"></div>
+        <div class="bg-glow-blob w-[600px] h-[600px] bottom-[-25%] left-[15%] bg-accent-purple animate-blob" style="animation-delay: 4s;"></div>
+        <div class="bg-glow-blob w-[400px] h-[400px] top-[40%] left-[40%] bg-accent-green/10 animate-blob" style="animation-delay: 6s;"></div>
     </div>
 
     <!-- Glassmorphic Navbar -->
-    <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300">
-        <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">
+    <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-500" style="background: rgba(4,5,10,0.6); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                  <a href="/" class="flex items-center group">
-                      <img src="{% static 'img/logo.png' %}" alt="Aura Career Logo" class="h-14 w-auto transform scale-125 origin-left ml-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
-                  </a>
+                <a href="/" class="flex items-center group shrink-0">
+                    <img src="{% static 'img/logo.png' %}" alt="Aura Career" class="h-14 w-auto transform scale-125 origin-left ml-2 drop-shadow-[0_0_20px_rgba(255,255,255,0.6)] group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.9)] transition-all duration-500" />
+                </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 text-[14px] font-medium tracking-wide">
-                    <a href="/jobs/" class="text-textSec hover:text-white transition-colors">Vakansiyalar</a>
-                    <a href="/sources/" class="text-textSec hover:text-white transition-colors">Manbalar</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-textSec hover:text-white transition-all duration-300 text-[14px] font-medium tracking-wide relative group">
+                        Bosh sahifa
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="/jobs/" class="text-textSec hover:text-white transition-all duration-300 text-[14px] font-medium tracking-wide relative group">
+                        Vakansiyalar
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="/sources/" class="text-textSec hover:text-white transition-all duration-300 text-[14px] font-medium tracking-wide relative group">
+                        Manbalar
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                    </a>
                     
-                    <div class="w-px h-5 bg-white/10"></div>
+                    <div class="w-px h-6 bg-white/10"></div>
                     
                     {% if user.is_authenticated %}
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-accent to-accent-purple flex items-center justify-center text-xs font-bold text-white shadow-lg">{{ user.username.0|upper }}</div>
-                            <span class="text-white font-semibold">{{ user.username }}</span>
+                        <div class="flex items-center gap-4">
+                            <a href="/ai-test" class="px-5 py-2.5 rounded-xl bg-white text-background font-bold text-[13px] hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] transition-all duration-300">
+                                AI Test
+                            </a>
+                            <div class="flex items-center gap-2 cursor-pointer group relative">
+                                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-accent to-accent-purple flex items-center justify-center text-xs font-bold text-white shadow-lg shadow-accent/30 group-hover:shadow-accent/50 transition-all duration-300">
+                                    {{ user.username.0|upper }}
+                                </div>
+                                <span class="text-white font-semibold text-[14px] hidden lg:block">{{ user.username }}</span>
+                            </div>
+                            <a href="/logout/" class="text-textSec hover:text-red-400 transition-all duration-300 text-[13px] font-medium" title="Chiqish">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                            </a>
                         </div>
-                        <a href="/logout/" class="text-textSec hover:text-red-400 transition-colors">Chiqish</a>
-                        <a href="/ai-test" class="px-6 py-2.5 rounded-xl bg-white text-background font-bold hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">AI Test Boshlash</a>
                     {% else %}
-                        <a href="/login/" class="text-textSec hover:text-white transition-colors">Kirish</a>
-                        <a href="/register/" class="text-white hover:text-accent-neon transition-colors">Ro'yxatdan o'tish</a>
-                        <a href="/ai-test" class="px-6 py-2.5 rounded-xl bg-white text-background font-bold hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">AI Test Boshlash</a>
+                        <div class="flex items-center gap-6">
+                            <a href="/login/" class="text-textSec hover:text-white transition-all duration-300 text-[14px] font-medium">
+                                Kirish
+                            </a>
+                            <a href="/register/" class="px-5 py-2.5 rounded-xl bg-white text-background font-bold text-[13px] hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] transition-all duration-300">
+                                Ro'yxatdan o'tish
+                            </a>
+                            <a href="/ai-test" class="px-5 py-2.5 rounded-xl border border-accent/30 text-accent-neon font-bold text-[13px] hover:bg-accent/10 hover:border-accent/60 transition-all duration-300">
+                                AI Test
+                            </a>
+                        </div>
                     {% endif %}
                 </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobileMenuBtn" class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 group z-50" aria-label="Menyu">
+                    <span class="block w-6 h-0.5 bg-white/60 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="block w-6 h-0.5 bg-white/60 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="block w-6 h-0.5 bg-white/60 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobileNav" class="mobile-nav">
+        <a href="/" class="text-2xl font-semibold hover:text-white transition">Bosh sahifa</a>
+        <a href="/jobs/" class="text-2xl font-semibold hover:text-white transition">Vakansiyalar</a>
+        <a href="/sources/" class="text-2xl font-semibold hover:text-white transition">Manbalar</a>
+        <a href="/ai-test" class="text-2xl font-semibold hover:text-white transition">AI Test</a>
+        {% if user.is_authenticated %}
+            <div class="flex items-center gap-3 text-2xl">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-purple flex items-center justify-center text-lg font-bold text-white shadow-lg">{{ user.username.0|upper }}</div>
+                <span class="font-semibold text-white">{{ user.username }}</span>
+            </div>
+            <a href="/logout/" class="text-xl text-red-400 hover:text-red-300 transition">Chiqish</a>
+        {% else %}
+            <a href="/login/" class="text-2xl font-semibold hover:text-white transition">Kirish</a>
+            <a href="/register/" class="px-8 py-4 rounded-2xl bg-white text-background font-bold text-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all">Ro'yxatdan o'tish</a>
+        {% endif %}
+    </div>
+
     <!-- Main Content -->
-    <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto w-full">
-        <!-- Django Messages -->
+    <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto w-full relative z-10">
+        
+        <!-- Django Messages Toast -->
         {% if messages %}
-        <div class="fixed top-24 right-6 z-50 flex flex-col gap-3 font-sans">
+        <div class="fixed top-24 right-4 sm:right-6 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none">
             {% for message in messages %}
-            <div class="p-4 rounded-xl shadow-2xl text-white font-medium text-sm glass-panel animate-fade-in
-                {% if message.tags == 'error' %}border-l-4 border-l-red-500{% elif message.tags == 'success' %}border-l-4 border-l-green-500{% else %}border-l-4 border-l-accent{% endif %} flex items-center space-x-3 message-toast cursor-pointer">
-                {% if message.tags == 'error' %}
-                <svg class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                {% else %}
-                <svg class="h-5 w-5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                {% endif %}
-                <span>{{ message }}</span>
+            <div class="pointer-events-auto message-toast animate-slide-down cursor-pointer flex items-start gap-3 p-4 rounded-2xl shadow-2xl border backdrop-blur-xl transition-all duration-300
+                {% if message.tags == 'error' %}bg-red-500/10 border-red-500/30{% elif message.tags == 'success' %}bg-green-500/10 border-green-500/30{% else %}bg-accent/10 border-accent/30{% endif %}">
+                <div class="shrink-0 mt-0.5">
+                    {% if message.tags == 'error' %}
+                    <svg class="w-5 h-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {% elif message.tags == 'success' %}
+                    <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {% else %}
+                    <svg class="w-5 h-5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {% endif %}
+                </div>
+                <span class="text-white text-sm font-medium">{{ message }}</span>
+                <button class="shrink-0 text-white/40 hover:text-white/80 transition-colors" onclick="this.closest('.message-toast').remove()">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
             </div>
             {% endfor %}
         </div>
-        <script>
-            setTimeout(() => {
-                document.querySelectorAll('.message-toast').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(-10px)';
-                    el.style.transition = 'all 0.5s ease-out';
-                    setTimeout(() => el.remove(), 500);
-                });
-            }, 5000);
-        </script>
         {% endif %}
 
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="mt-20 border-t border-white/5 py-8 text-center text-sm text-textSec font-sans z-10 glass-panel border-r-0 border-l-0 border-b-0 rounded-none bg-transparent">
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-            <p>&copy; 2026 Aura Career Platform. Barcha huquqlar himoyalangan.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-white transition">Maxfiylik siyosati</a>
-                <a href="#" class="hover:text-white transition">Foydalanish shartlari</a>
+    <!-- Footer -->
+    <footer class="mt-24 relative z-10 border-t border-white/5">
+        <div class="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <img src="{% static 'img/logo.png' %}" alt="Aura Career" class="h-10 w-auto opacity-60" />
+                    <p class="text-textSec text-sm">&copy; 2026 Aura Career Platform. Barcha huquqlar himoyalangan.</p>
+                </div>
+                <div class="flex items-center gap-8 text-sm">
+                    <a href="#" class="text-textSec hover:text-white transition-all duration-300">Maxfiylik siyosati</a>
+                    <a href="#" class="text-textSec hover:text-white transition-all duration-300">Foydalanish shartlari</a>
+                    <a href="#" class="text-textSec hover:text-white transition-all duration-300">Aloqa</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Main JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
     {% block scripts %}
     {% endblock %}
 </body>

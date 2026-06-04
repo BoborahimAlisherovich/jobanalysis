@@ -1,69 +1,286 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Analitik Dashboard - Aura Career{% endblock %}
+
 {% block content %}
-<style>
-    .cat-bar { background-color: #0ea5e9; height: 16px; border-radius: 4px; transition: 0.3s; }
-    .cat-item:hover .cat-bar { background-color: #3b82f6; cursor: pointer; }
-</style>
-
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-    
-    <!-- Top Bar Summary -->
-    <div class="col-span-3 bg-[#1a1e35] py-4 px-8 rounded-xl shadow-lg border border-gray-800 flex justify-between items-center text-sm font-semibold text-gray-300">
-        <div><span class="text-gray-500 mr-2">No.</span> Top Profession</div>
-        <div>Vacancies</div>
-        <div>Avg Salary</div>
-        <div>Growth</div>
-    </div>
-    
-    {% for cat in categories|slice:":1" %}
-    <!-- Fake top selected bar row just to simulate image -->
-    <div class="col-span-3 bg-[#181d33] py-4 px-8 -mt-2 rounded-xl shadow-md border border-gray-800 flex justify-between items-center text-md font-bold text-white">
-        <div class="flex items-center"><span class="w-6 text-gray-500">1</span> {{ cat.name }}</div>
-        <div>{{ cat.job_count }}</div>
-        <div class="text-green-400">$3,450</div>
-        <div class="text-indigo-400">{{ cat.trend_score }}%</div>
-    </div>
-    {% endfor %}
-
-    <!-- Top Job Categories (Left Chart visually built with HTML/CSS) -->
-    <div class="col-span-2 bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743]">
-        <h2 class="text-lg font-bold mb-6 text-white tracking-widest shrink-0">Top Job Categories <span class="text-xs font-normal text-gray-400 ml-2">(Click a category for details)</span></h2>
-        
-        <div class="space-y-5">
-            {% for cat in categories %}
-            <!-- For bar width percentage calculation, we can just assume max is roughly 400 for 100% -->
-            <a href="{% url 'category_analytics' cat.id %}" class="cat-item group flex items-center justify-between no-underline">
-                <div class="text-sm font-medium text-gray-300 w-48 text-right pr-4 shrink-0 group-hover:text-cyan-400 transition">{{ cat.name }}</div>
-                <div class="flex-grow flex items-center shrink-0">
-                    <div class="cat-bar" style="width: {% if cat.job_count > 0 %}calc( ({{ cat.job_count }} / 400) * 100% ){% else %}0%{% endif %}; min-width: 5px;"></div>
-                    <span class="ml-3 text-xs font-mono text-gray-400">{{ cat.job_count }} vacancies</span>
-                </div>
-            </a>
-            {% endfor %}
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10 animate-fade-in">
+    <div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            IT Bozor Tahlili
         </div>
-        
-        <!-- Bottom axis labels -->
-        <div class="flex ml-48 mt-4 border-t border-gray-700 pt-2 text-xs text-gray-500 font-mono">
-            <div class="flex-1">0</div>
-            <div class="flex-1 text-center">100</div>
-            <div class="flex-1 text-center">200</div>
-            <div class="flex-1 text-center">300</div>
-            <div class="flex-1 text-right">400+</div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Mehnat Bozori <span class="gradient-text">Dashboard</span></h1>
+        <p class="text-textSec mt-2 text-[15px]">Real vaqt rejimida IT vakansiyalar statistikasi</p>
+    </div>
+    <div class="flex gap-3">
+        <a href="/jobs/" class="btn-ghost text-sm px-5 py-2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Vakansiyalar
+        </a>
+        <a href="/ai-test" class="btn-gradient text-sm px-5 py-2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            AI Test
+        </a>
+    </div>
+</div>
+
+<!-- Stats Overview -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10 stagger-children">
+    <div class="stat-card">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="badge badge-accent text-[10px]">Real vaqt</span>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1">{{ categories|length }}</p>
+        <p class="text-textSec text-[13px] font-medium">Kategoriyalar</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-accent-neon/10 border border-accent-neon/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="totalJobsCount">0</p>
+        <p class="text-textSec text-[13px] font-medium">Jami Vakansiyalar</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-accent-purple/10 border border-accent-purple/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="avgSalaryDisplay">$0</p>
+        <p class="text-textSec text-[13px] font-medium">O'rtacha Maosh</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-accent-green/10 border border-accent-green/20 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+        </div>
+        <p class="text-3xl font-bold text-white mb-1" id="countriesCount">{{ country_labels|length }}</p>
+        <p class="text-textSec text-[13px] font-medium">Davlatlar</p>
+    </div>
+</div>
+
+<!-- Charts Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+    <!-- Bar Chart - Categories -->
+    <div class="glass-panel rounded-2xl p-6 lg:col-span-2 animate-slide-up">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-lg font-bold text-white">Top Kategoriyalar</h2>
+                <p class="text-textSec text-[13px] mt-0.5">Vakansiyalar soni bo'yicha</p>
+            </div>
+            <span class="badge badge-neon text-[10px]">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-neon pulse-dot mr-1.5"></span>
+                Yangilangan
+            </span>
+        </div>
+        <div class="relative h-[300px]">
+            <canvas id="categoriesChart"></canvas>
         </div>
     </div>
 
-    <!-- Top Countries (Donut Chart) -->
-    <div class="col-span-1 bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743] flex flex-col items-center">
-        <h2 class="text-lg font-bold mb-6 w-full text-white tracking-widest">Top Countries</h2>
-        <div class="relative w-full aspect-square flex items-center justify-center p-4">
+    <!-- Doughnut Chart - Countries -->
+    <div class="glass-panel rounded-2xl p-6 animate-slide-up" style="animation-delay: 0.1s;">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-lg font-bold text-white">Top Davlatlar</h2>
+                <p class="text-textSec text-[13px] mt-0.5">Geografik taqsimot</p>
+            </div>
+        </div>
+        <div class="relative h-[300px] flex items-center justify-center">
             <canvas id="countriesChart"></canvas>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Top Categories List -->
+<div class="glass-panel rounded-2xl p-6 animate-slide-up" style="animation-delay: 0.2s;">
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <h2 class="text-lg font-bold text-white">IT Yo'nalishlari Reytingi</h2>
+            <p class="text-textSec text-[13px] mt-0.5">Barcha kategoriyalar bo'yicha tahlil</p>
+        </div>
+        <div class="flex items-center gap-2 text-textSec text-[13px]">
+            <span>Trend</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th class="w-12">#</th>
+                    <th>Yo'nalish</th>
+                    <th class="text-center">Kategoriya</th>
+                    <th class="text-right">Vakansiyalar</th>
+                    <th class="text-right">O'rt. Maosh</th>
+                    <th class="text-right">Trend</th>
+                    <th class="text-right"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cat in categories %}
+                <tr class="group hover:bg-white/[0.02] transition-all duration-200">
+                    <td class="text-textSec font-mono text-sm">{{ forloop.counter }}</td>
+                    <td>
+                        <a href="{% url 'category_analytics' cat.id %}" class="font-semibold text-white hover:text-accent transition-colors duration-200">
+                            {{ cat.name }}
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <span class="inline-flex px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider
+                            {% if cat.name|slice:':4' == 'Back' or cat.name|slice:':4' == 'Fron' or cat.name|slice:':4' == 'Soft' or cat.name|slice:':4' == 'Game' or cat.name|slice:':4' == 'Mobi' or cat.name|slice:':4' == 'QA E' or cat.name|slice:':4' == 'Block' %}bg-blue-500/10 text-blue-400 border border-blue-500/20
+                            {% elif cat.name|slice:':4' == 'Data' or cat.name|slice:':4' == 'AI E' or cat.name|slice:':4' == 'Prom' %}bg-purple-500/10 text-purple-400 border border-purple-500/20
+                            {% elif cat.name|slice:':4' == 'DevO' %}bg-cyan-500/10 text-cyan-400 border border-cyan-500/20
+                            {% elif cat.name|slice:':4' == 'Cybe' %}bg-red-500/10 text-red-400 border border-red-500/20
+                            {% elif cat.name|slice:':4' == 'UI/U' or cat.name|slice:':4' == 'Prod' %}bg-pink-500/10 text-pink-400 border border-pink-500/20
+                            {% elif cat.name|slice:':4' == 'Prod' or cat.name|slice:':4' == 'Busi' %}bg-amber-500/10 text-amber-400 border border-amber-500/20
+                            {% else %}bg-green-500/10 text-green-400 border border-green-500/20{% endif %}">
+                            {% if cat.name|slice:':4' == 'Back' or cat.name|slice:':4' == 'Fron' or cat.name|slice:':4' == 'Soft' or cat.name|slice:':4' == 'Game' or cat.name|slice:':4' == 'Mobi' or cat.name|slice:':4' == 'QA E' or cat.name|slice:':4' == 'Block' %}Dev
+                            {% elif cat.name|slice:':4' == 'Data' or cat.name|slice:':4' == 'AI E' or cat.name|slice:':4' == 'Prom' %}Data/AI
+                            {% elif cat.name|slice:':4' == 'DevO' %}DevOps
+                            {% elif cat.name|slice:':4' == 'Cybe' %}Security
+                            {% elif cat.name|slice:':4' == 'UI/U' or cat.name|slice:':4' == 'Prod' %}Design
+                            {% elif cat.name|slice:':4' == 'Prod%' or cat.name|slice:':4' == 'Busi' %}Mgmt
+                            {% else %}Other{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-right font-semibold text-white">{{ cat.job_count }}</td>
+                    <td class="text-right font-mono text-accent-green font-semibold">
+                        {% if cat.avg_salary > 0 %}${{ cat.avg_salary }}{% else %}<span class="text-textSec">—</span>{% endif %}
+                    </td>
+                    <td class="text-right">
+                        <span class="inline-flex items-center gap-1 text-sm font-semibold
+                            {% if cat.trend_score > 0 %}text-accent-green
+                            {% elif cat.trend_score < 0 %}text-accent-red
+                            {% else %}text-textSec{% endif %}">
+                            {% if cat.trend_score > 0 %}
+                                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                            {% elif cat.trend_score < 0 %}
+                                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                            {% else %}
+                                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 12h14"/></svg>
+                            {% endif %}
+                            {{ cat.trend_score }}%
+                        </span>
+                    </td>
+                    <td class="text-right">
+                        <a href="{% url 'category_analytics' cat.id %}" class="inline-flex items-center gap-1 text-accent-neon hover:text-accent transition-colors text-sm font-medium">
+                            Batafsil
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
 <script>
-    Chart.defaults.color = '#9ca3af';
+document.addEventListener('DOMContentLoaded', function() {
+    // Calculate total jobs and avg salary from Django data
+    let totalJobs = 0;
+    let totalSalary = 0;
+    let salaryCount = 0;
+
+    {% autoescape off %}
+    const catData = [
+        {% for cat in categories %}
+        {
+            name: "{{ cat.name|escapejs }}",
+            job_count: {{ cat.job_count }},
+            avg_salary: {{ cat.avg_salary }},
+            trend_score: {{ cat.trend_score }}
+        },
+        {% endfor %}
+    ];
+    {% endautoescape %}
+
+    catData.forEach(c => {
+        totalJobs += c.job_count;
+        if (c.avg_salary > 0) {
+            totalSalary += c.avg_salary;
+            salaryCount++;
+        }
+    });
+
+    document.getElementById('totalJobsCount').textContent = totalJobs.toLocaleString();
+    const avgSalary = salaryCount > 0 ? Math.round(totalSalary / salaryCount) : 0;
+    document.getElementById('avgSalaryDisplay').textContent = '$' + avgSalary.toLocaleString();
+
+    // Categories Bar Chart
+    const ctxCat = document.getElementById('categoriesChart').getContext('2d');
+    new Chart(ctxCat, {
+        type: 'bar',
+        data: {
+            labels: catData.map(c => c.name),
+            datasets: [{
+                label: 'Vakansiyalar',
+                data: catData.map(c => c.job_count),
+                backgroundColor: [
+                    'rgba(99,102,241,0.7)', 'rgba(6,182,212,0.7)', 'rgba(168,85,247,0.7)',
+                    'rgba(34,211,160,0.7)', 'rgba(236,72,153,0.7)', 'rgba(251,146,60,0.7)',
+                    'rgba(99,102,241,0.5)', 'rgba(6,182,212,0.5)', 'rgba(168,85,247,0.5)',
+                    'rgba(34,211,160,0.5)', 'rgba(236,72,153,0.5)', 'rgba(251,146,60,0.5)',
+                    'rgba(99,102,241,0.3)', 'rgba(6,182,212,0.3)', 'rgba(168,85,247,0.3)',
+                    'rgba(34,211,160,0.3)', 'rgba(236,72,153,0.3)', 'rgba(251,146,60,0.3)'
+                ],
+                borderColor: [
+                    '#6366F1', '#06B6D4', '#A855F7', '#22D3A0', '#EC4899', '#FB923C',
+                    '#6366F1', '#06B6D4', '#A855F7', '#22D3A0', '#EC4899', '#FB923C',
+                    '#6366F1', '#06B6D4', '#A855F7', '#22D3A0', '#EC4899', '#FB923C'
+                ],
+                borderWidth: 1,
+                borderRadius: 4,
+                barPercentage: 0.7,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: 'rgba(4,5,10,0.9)',
+                    titleColor: '#fff',
+                    bodyColor: '#9CA3AF',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    padding: 12,
+                    cornerRadius: 12,
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: 'rgba(255,255,255,0.03)', drawBorder: false },
+                    ticks: { color: '#6B7280', font: { size: 11 } }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { 
+                        color: '#9CA3AF', 
+                        font: { size: 10 },
+                        maxRotation: 45,
+                    }
+                }
+            }
+        }
+    });
+
+    // Countries Donut Chart
     const ctxCountries = document.getElementById('countriesChart').getContext('2d');
     new Chart(ctxCountries, {
         type: 'doughnut',
@@ -71,23 +288,46 @@
             labels: {{ country_labels|safe }},
             datasets: [{
                 data: {{ country_data|safe }},
-                backgroundColor: [
-                    '#06b6d4', '#8b5cf6', '#a855f7', '#ec4899', '#f43f5e', '#eab308', '#22c55e', '#3b82f6'
-                ],
-                borderWidth: 0,
-                hoverOffset: 10
+                backgroundColor: ['#6366F1', '#06B6D4', '#A855F7', '#22D3A0', '#EC4899', '#FB923C', '#F43F5E', '#EAB308'],
+                borderWidth: 2,
+                borderColor: '#04050A',
+                hoverOffset: 12,
             }]
         },
         options: {
             responsive: true,
-            cutout: '60%',
+            maintainAspectRatio: false,
+            cutout: '65%',
             plugins: {
                 legend: {
-                    position: 'top',
-                    labels: { color: '#9ca3af', font: { size: 10 }, usePointStyle: true, boxWidth: 8 }
+                    position: 'bottom',
+                    labels: { 
+                        color: '#9CA3AF', 
+                        font: { size: 11 },
+                        padding: 16,
+                        usePointStyle: true,
+                        pointStyleWidth: 8,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(4,5,10,0.9)',
+                    titleColor: '#fff',
+                    bodyColor: '#9CA3AF',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    padding: 12,
+                    cornerRadius: 12,
+                    callbacks: {
+                        label: function(context) {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const pct = ((context.raw / total) * 100).toFixed(1);
+                            return context.label + ': ' + context.raw + ' (' + pct + '%)';
+                        }
+                    }
                 }
             }
         }
     });
+});
 </script>
 {% endblock %}

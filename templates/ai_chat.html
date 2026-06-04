@@ -1,71 +1,286 @@
-﻿{% extends 'base.html' %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI Maslahatchi - Aura Career{% endblock %}
+
 {% block content %}
-<div class="mb-4 flex flex-wrap justify-between items-center">
-    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
-        &larr; Bosh sahifaga Qaytish
-    </a>
-    <a href="{% url 'ai_test' %}?retake=1" class="text-xs bg-red-600/20 hover:bg-red-600/40 text-red-400 border border-red-500/50 px-4 py-2 rounded-lg font-bold transition-all shadow-[0_0_15px_rgba(220,38,38,0.2)]">
-        &#8635; Testni qayta topshirish
-    </a>
-</div>
+{# marked.js — AI javobidagi Markdown ni HTML ga o'girish uchun #}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-<div class="bg-[#1a1e35] max-w-4xl mx-auto p-8 rounded-xl shadow-lg border border-[#232743]">
-    <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide text-center">🎯 AI Sizning Natijangiz</h1>
-    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6 text-center text-sm">Sun'iy intellekt sizning test javoblaringizni o'qib chiqdi.</p>
+<div class="max-w-5xl mx-auto animate-fade-in">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-purple/10 border border-accent-purple/20 text-accent-purple text-[11px] font-bold uppercase tracking-wider mb-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple animate-pulse"></span>
+                AI Career Agent
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Sizning <span class="gradient-text-purple">Karyera Tahliliz</span></h1>
+            <p class="text-textSec mt-1 text-[15px]">Real bozor ma'lumotlari asosida shaxsiylashtirilgan yo'nalish</p>
+        </div>
+        <a href="{% url 'ai_test' %}?retake=1" class="btn-ghost text-sm px-5 py-2.5 text-red-400 border-red-500/30 hover:bg-red-500/10 hover:border-red-500/50">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Testni qayta topshirish
+        </a>
+    </div>
 
-    <div class="bg-gradient-to-r from-blue-900 to-purple-900 border border-indigo-500 rounded-xl p-8 mb-8 text-center shadow-[0_0_20px_rgba(99,102,241,0.2)]">  
-        <h2 class="text-sm font-semibold tracking-widest text-indigo-300 uppercase mb-2">Tavsiya etilgan kasb:</h2>
-        <p class="text-4xl font-extrabold text-white mb-4">{{ rec_job }}</p>    
-        <p class="text-gray-300">
-            {{ rec_reason }}
-        </p>
+    <!-- Recommendation Card -->
+    <div class="glass-panel rounded-2xl p-8 mb-8 relative overflow-hidden animate-slide-up">
+        <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-accent-purple via-accent-pink to-accent"></div>
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-accent-purple/10 rounded-full blur-[60px] pointer-events-none"></div>
+        
+        <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.3)]">
+                    <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <div>
+                    <p class="text-textSec text-[12px] font-semibold uppercase tracking-wider">Tavsiya etilgan kasb</p>
+                    <h2 class="text-2xl font-bold text-white">{{ rec_job }}</h2>
+                </div>
+            </div>
+            <!-- Bozor statistikasi -->
+            <div class="bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
+                <p class="text-xs font-semibold text-accent-purple uppercase tracking-wider mb-2">📡 Real Vaqt Bozor Holati</p>
+                <p class="text-textSec text-[13px] leading-relaxed">{{ db_context }}</p>
+            </div>
+            <p class="text-textSec text-[15px] leading-relaxed">{{ rec_reason }}</p>
+        </div>
     </div>
 
     <!-- Chat Interface -->
-    <div class="bg-[#131526] border border-gray-800 rounded-lg p-6">
-        <h3 class="text-xl font-bold text-white mb-4 flex items-center"><span class="mr-2">💬</span> AI Maslahatchisi bilan Suhbat</h3>
+    <div class="glass-panel rounded-2xl overflow-hidden animate-slide-up" style="animation-delay: 0.1s;">
+        <!-- Chat Header -->
+        <div class="px-6 py-5 border-b border-white/5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-[15px]">AI Career Guidance Agent</h3>
+                    <p class="text-textSec text-[12px]">Real bozor ma'lumotlari • Hallucination-Free</p>
+                </div>
+            </div>
+            <!-- Agent holati indikatori -->
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-green-400 text-[11px] font-semibold">Agent Faol</span>
+            </div>
+        </div>
 
-        <div id="chatHistory" class="space-y-4 mb-4 h-64 overflow-y-auto pr-2 custom-scrollbar">
-            <!-- Initial AI msg -->
-            <div class="flex justify-start">
-                <div class="bg-[#242b4d] text-gray-200 p-4 rounded-xl rounded-tl-none max-w-lg border border-gray-700 shadow-md">
-                    Assalomu alaykum, {{ user.first_name|default:user.username }}! Men sizga <strong>{{ rec_job }}</strong> yo'nalishini tayinladim. Menda joriy vakansiyalar haqida to'liq ma'lumot bor. Baza haqida bilishni xohlasangiz yoki boshqa muammo bo'lsa bemalol yozing!
+        <!-- Chat Messages -->
+        <div id="chatHistory" class="p-6 space-y-5 h-[500px] overflow-y-auto custom-scrollbar" style="scroll-behavior: smooth;">
+
+            {% if not chat_history %}
+            <!-- Birinchi marta kirganda: AI agent avtomatik tahlil qiladi -->
+            <div class="flex justify-center py-4">
+                <div class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-textSec text-[12px]">
+                    🤖 Agent sizning profilingizni va bozor ma'lumotlarini tahlil qilmoqda...
                 </div>
             </div>
-            
-            {% if user_message %}
-            <!-- User msg -->
-            <div class="flex justify-end">
-                <div class="bg-cyan-600 text-white p-4 rounded-xl rounded-tr-none max-w-lg shadow-md border border-cyan-500 font-medium">
-                    {{ user_message }}
+            {% else %}
+            <!-- Chat tarixini bazadan ko'rsatish -->
+            {% for msg in chat_history %}
+                {% if msg.role == 'user' %}
+                <div class="flex justify-end animate-fade-in">
+                    <div class="chat-bubble-user max-w-[80%] sm:max-w-[70%]">
+                        <p class="text-[14px] leading-relaxed">{{ msg.content }}</p>
+                    </div>
                 </div>
-            </div>
-            <!-- AI msg -->
-            <div class="flex justify-start">
-                <div class="bg-[#242b4d] text-gray-200 p-4 rounded-xl rounded-tl-none max-w-lg border border-gray-700 shadow-md">
-                    {{ ai_response|safe }}
+                {% elif msg.role == 'assistant' %}
+                <div class="flex justify-start animate-fade-in">
+                    <div class="chat-bubble-ai max-w-[80%] sm:max-w-[75%]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-5 h-5 rounded-full bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center text-[8px] font-bold text-white">AI</span>
+                            <span class="text-textSec text-[11px] font-medium">Career Agent</span>
+                        </div>
+                        <div class="ai-markdown text-[14px] leading-relaxed">{{ msg.content }}</div>
+                    </div>
                 </div>
-            </div>
+                {% endif %}
+            {% endfor %}
             {% endif %}
         </div>
 
-        <form method="POST" class="mt-4 flex gap-4">
-            {% csrf_token %}
-            <input type="text" name="message" class="flex-grow bg-[#1a1e35] text-white border border-gray-700 rounded-lg p-4 focus:outline-none focus:border-cyan-400 transition" placeholder="O'z savolingizni shu yerga yozing..." required autocomplete="off" autofocus>
-            <button type="submit" class="bg-indigo-600 hover:bg-cyan-500 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition duration-200">Yuborish</button>
-        </form>
+        <!-- Chat Input -->
+        <div class="px-6 py-4 border-t border-white/5">
+            <!-- Tezkor savollar -->
+            <div class="flex gap-2 mb-3 flex-wrap">
+                <button type="button" class="quick-q text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-textSec hover:bg-accent-purple/10 hover:border-accent-purple/30 hover:text-accent-purple transition-all">📊 Bozor tahlili</button>
+                <button type="button" class="quick-q text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-textSec hover:bg-accent-purple/10 hover:border-accent-purple/30 hover:text-accent-purple transition-all">🗺️ Roadmap ko'rish</button>
+                <button type="button" class="quick-q text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-textSec hover:bg-accent-purple/10 hover:border-accent-purple/30 hover:text-accent-purple transition-all">💼 Mos vakansiyalar</button>
+                <button type="button" class="quick-q text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-textSec hover:bg-accent-purple/10 hover:border-accent-purple/30 hover:text-accent-purple transition-all">📈 O'sish imkoniyatlari</button>
+            </div>
+            <form id="chatForm" class="flex gap-3">
+                {% csrf_token %}
+                <div class="relative flex-grow">
+                    <input type="text" id="chatInput" name="message" 
+                           class="form-input pr-12" 
+                           placeholder="Karyerangiz haqida savol bering..." 
+                           required autocomplete="off" autofocus>
+                </div>
+                <button type="submit" id="chatSubmit" 
+                        class="btn-gradient px-6 py-3 shrink-0">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19V5m0 0l-7 7m7-7l7 7"/></svg>
+                    Yuborish
+                </button>
+            </form>
+        </div>
     </div>
 </div>
+
 <style>
-    /* Scrollbar Style */
-    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: #131526; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #4b5563; }   
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 9999px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+    /* AI Markdown uslubi */
+    .ai-markdown h1, .ai-markdown h2 { font-size: 1.05rem; font-weight: 700; color: #e2e8f0; margin: 0.8rem 0 0.4rem; }
+    .ai-markdown h3 { font-size: 0.95rem; font-weight: 600; color: #c4b5fd; margin: 0.6rem 0 0.3rem; }
+    .ai-markdown p { margin: 0.35rem 0; color: #94a3b8; }
+    .ai-markdown strong { color: #e2e8f0; }
+    .ai-markdown ul, .ai-markdown ol { padding-left: 1.2rem; margin: 0.3rem 0; }
+    .ai-markdown li { margin: 0.2rem 0; color: #94a3b8; }
+    .ai-markdown hr { border-color: rgba(255,255,255,0.08); margin: 0.6rem 0; }
+    .ai-markdown code { background: rgba(168,85,247,0.1); color: #c4b5fd; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.85em; }
+
+    /* Yozish animatsiyasi */
+    .typing-cursor::after {
+        content: '▋';
+        animation: blink 0.7s step-end infinite;
+        color: #a855f7;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
 </style>
+
 <script>
-    // scroll bottom
     const chatHistory = document.getElementById('chatHistory');
-    chatHistory.scrollTop = chatHistory.scrollHeight;
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatSubmit = document.getElementById('chatSubmit');
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const isFirstSession = {{ chat_history|length }} === 0;
+
+    // marked.js sozlamalari
+    marked.setOptions({ breaks: true, gfm: true });
+
+    function scrollToBottom() {
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+
+    // DB dan yuklangan eski xabarlarni markdown qilib render qilamiz
+    document.querySelectorAll('.ai-markdown').forEach(el => {
+        el.innerHTML = marked.parse(el.textContent || '');
+    });
+
+    scrollToBottom();
+
+    // Tezkor savollar tugmalari
+    document.querySelectorAll('.quick-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            chatInput.value = btn.textContent.trim();
+            chatInput.focus();
+        });
+    });
+
+    // Chat yuborish funksiyasi
+    async function sendMessage(message) {
+        if (!message.trim()) return;
+
+        // Foydalanuvchi xabarini ekranga qo'shamiz
+        if (message !== '__AUTO_INIT__') {
+            const userDiv = document.createElement('div');
+            userDiv.className = 'flex justify-end animate-fade-in';
+            userDiv.innerHTML = `<div class="chat-bubble-user max-w-[80%] sm:max-w-[70%]"><p class="text-[14px] leading-relaxed">${message}</p></div>`;
+            chatHistory.appendChild(userDiv);
+        } else {
+            // Birinchi avtomatik tahlil — "Tahlil qilinmoqda..." yozuvini olib tashlaymiz
+            const initMsg = chatHistory.querySelector('.flex.justify-center');
+            if (initMsg) initMsg.remove();
+        }
+
+        chatInput.value = '';
+        chatInput.disabled = true;
+        chatSubmit.disabled = true;
+        chatSubmit.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>';
+        scrollToBottom();
+
+        // AI javob konteyneri
+        const aiDiv = document.createElement('div');
+        aiDiv.className = 'flex justify-start animate-fade-in';
+        const aiInner = document.createElement('div');
+        aiInner.className = 'chat-bubble-ai max-w-[80%] sm:max-w-[75%]';
+        aiInner.innerHTML = `
+            <div class="flex items-center gap-2 mb-2">
+                <span class="w-5 h-5 rounded-full bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center text-[8px] font-bold text-white">AI</span>
+                <span class="text-textSec text-[11px] font-medium">Career Agent</span>
+            </div>
+            <div class="ai-markdown text-[14px] leading-relaxed typing-cursor"></div>`;
+        aiDiv.appendChild(aiInner);
+        chatHistory.appendChild(aiDiv);
+
+        const aiMarkdown = aiInner.querySelector('.ai-markdown');
+        scrollToBottom();
+
+        // Server-Sent streaming
+        try {
+            const formData = new FormData();
+            formData.append('message', message === '__AUTO_INIT__' ? '' : message);
+            formData.append('csrfmiddlewaretoken', csrfToken);
+
+            const response = await fetch("{% url 'ai_chat_stream' %}", {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                aiMarkdown.innerHTML = '<p class="text-red-400">Xatolik yuz berdi. Qayta urinib ko\'ring.</p>';
+                aiMarkdown.classList.remove('typing-cursor');
+                return;
+            }
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder('utf-8');
+            let rawText = '';
+            let done = false;
+
+            while (!done) {
+                const { value, done: readerDone } = await reader.read();
+                done = readerDone;
+                if (value) {
+                    rawText += decoder.decode(value, { stream: true });
+                    // Har bir chunk kelganda markdown ga render qilamiz
+                    aiMarkdown.innerHTML = marked.parse(rawText);
+                    scrollToBottom();
+                }
+            }
+
+            aiMarkdown.classList.remove('typing-cursor');
+
+        } catch (err) {
+            aiMarkdown.innerHTML = `<p class="text-red-400">Xatolik: ${err.message}</p>`;
+            aiMarkdown.classList.remove('typing-cursor');
+        } finally {
+            chatInput.disabled = false;
+            chatSubmit.disabled = false;
+            chatSubmit.innerHTML = '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19V5m0 0l-7 7m7-7l7 7"/></svg> Yuborish';
+            chatInput.focus();
+            scrollToBottom();
+        }
+    }
+
+    // Form submit
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        await sendMessage(message);
+    });
+
+    // Agar birinchi sessiya bo'lsa — avtomatik karyera tahlilini boshlash
+    if (isFirstSession) {
+        // Sahifa yuklanganidan 500ms keyin avtomatik yuboramiz
+        setTimeout(() => sendMessage('__AUTO_INIT__'), 500);
+    }
 </script>
 {% endblock %}

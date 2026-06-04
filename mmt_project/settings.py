@@ -12,8 +12,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like his: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Ollama integration removed. If you want to re-enable a local model,
+# define `OLLAMA_URL` and `OLLAMA_MODEL` in an environment-specific settings file.
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +28,7 @@ SECRET_KEY = 'django-insecure-fs6ro)b+7tso^@3_w-^lcb8krnsh)x1ip@fj#jc9h*jwn3p#_s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +45,7 @@ INSTALLED_APPS = [
     # Custom apps
     'users',
     'jobs',
-    'analytics',
+
     'ai_advisor',
     'rest_framework',
     'django_filters',
@@ -135,3 +138,90 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = ['users.backends.EmailOrUsernameModelBackend', 'django.contrib.auth.backends.ModelBackend']
+
+# =====================================================================
+# JAZZMIN ADMIN PANEL SOZLAMALARI
+# =====================================================================
+JAZZMIN_SETTINGS = {
+    "site_title": "AURA Career Admin",
+    "site_header": "AURA Career",
+    "site_brand": "AURA Career",
+    "site_logo": None,
+    "welcome_sign": "AURA Career Admin Paneliga xush kelibsiz",
+    "copyright": "AURA Career © 2026",
+    "search_model": ["auth.User", "jobs.Job"],
+    "user_avatar": None,
+    "topmenu_links": [
+        {"name": "Bosh sahifa", "url": "/", "permissions": ["auth.view_user"]},
+        {"name": "Admin Boshqaruv", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"model": "auth.User"},
+    ],
+    "usermenu_links": [
+        {"name": "Platformaga qaytish", "url": "/", "icon": "fas fa-home"},
+    ],
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+    "order_with_respect_to": ["users", "jobs", "ai_advisor", "analytics"],
+    "custom_links": {
+        "jobs": [{
+            "name": "Dashboard",
+            "url": "/admin/dashboard/",
+            "icon": "fas fa-chart-bar",
+            "permissions": ["jobs.view_job"],
+        }],
+    },
+    "icons": {
+        "users.CustomUser": "fas fa-users",
+        "users.Skill": "fas fa-code",
+        "jobs.Job": "fas fa-briefcase",
+        "jobs.Category": "fas fa-tags",
+        "jobs.Country": "fas fa-globe",
+        "ai_advisor.TestResult": "fas fa-brain",
+        "ai_advisor.ChatSession": "fas fa-comments",
+        "auth.Group": "fas fa-users-cog",
+    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    "related_modal_active": True,
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": False,
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {"auth.User": "collapsible", "jobs.Job": "horizontal_tabs"},
+    "language_chooser": False,
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": False,
+    "accent": "accent-primary",
+    "navbar": "navbar-dark",
+    "no_navbar_border": True,
+    "navbar_fixed": True,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": True,
+    "sidebar": "sidebar-dark-primary",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": True,
+    "sidebar_nav_compact_style": True,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": True,
+    "theme": "cyborg",
+    "dark_mode_theme": "cyborg",
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success",
+    },
+}

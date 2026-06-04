@@ -1,147 +1,219 @@
 ﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} - Aura Career{% endblock %}
+
 {% block content %}
-<div class="mb-4">
-    <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
-        &larr; Orqaga Qaytish
-    </a>
-</div>
+<div class="animate-fade-in">
+    <!-- Back & Header -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+            <a href="/" class="inline-flex items-center gap-1.5 text-textSec hover:text-white transition-colors text-[13px] font-medium mb-3">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                Dashboardga qaytish
+            </a>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-bold uppercase tracking-wider mb-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                Kategoriya Tahlili
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">{{ category.name }} <span class="gradient-text text-2xl md:text-3xl">Analitikasi</span></h1>
+            <p class="text-textSec mt-1 text-[15px]">Jami <span class="text-white font-semibold">{{ page_obj.paginator.count }}</span> ta vakansiya</p>
+        </div>
+    </div>
 
-<div class="bg-[#1a1e35] p-8 rounded-xl shadow-lg border border-[#232743]">     
-    <h1 class="text-3xl font-extrabold text-white mb-2 tracking-wide">{{ category.name }} <span class="text-gray-500 font-normal text-xl">Analitikasi</span></h1>
-    <p class="text-gray-400 mb-8 border-b border-gray-800 pb-6">Jami mavjud vakansiyalar soni: <span class="text-blue-400 font-bold text-xl ml-2">{{ page_obj.paginator.count }}</span></p>
-
-    <!-- CHART AND STATS SECTION --> 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-indigo-500 shadow-md">
-            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Talab o'sish treki</div>
-            <div class="text-3xl font-bold text-white">{{ category.trend_score }}% <span class="text-green-500 text-lg">&uarr;</span></div>
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8 stagger-children">
+        <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                </div>
+            </div>
+            <p class="text-3xl font-bold text-white mb-1">{{ category.trend_score }}%</p>
+            <p class="text-textSec text-[13px] font-medium">
+                Talab o'sishi
+                {% if category.trend_score > 0 %}
+                <span class="text-accent-green ml-1">&uarr;</span>
+                {% elif category.trend_score < 0 %}
+                <span class="text-accent-red ml-1">&darr;</span>
+                {% endif %}
+            </p>
         </div>
 
-        <!-- Fake salary calculation -->
-        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-green-500 shadow-md">
-            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">O'rtacha Maosh</div>
-            <div class="text-3xl font-bold text-white">~ $2,500 <span class="text-sm text-gray-500 block normal-case font-normal mt-1">(Bozor tajribasiga qarab)</span></div>
+        <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-accent-green/10 border border-accent-green/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+            </div>
+            <p class="text-3xl font-bold text-white mb-1 font-mono">{% if avg_salary > 0 %}~${{ avg_salary }}{% else %}—{% endif %}</p>
+            <p class="text-textSec text-[13px] font-medium">O'rtacha Maosh</p>
         </div>
 
-        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-pink-500 shadow-md">
-            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Top Davlat</div>
-            <div class="text-3xl font-bold text-white">{% if country_labels %}{{ country_labels.0 }}{% else %}N/A{% endif %}</div>
+        <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-accent-neon/10 border border-accent-neon/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+            </div>
+            <p class="text-3xl font-bold text-white mb-1 truncate">{% if country_labels %}{{ country_labels.0 }}{% else %}N/A{% endif %}</p>
+            <p class="text-textSec text-[13px] font-medium">Top Davlat</p>
         </div>
 
-        <div class="bg-[#131526] p-6 rounded-lg text-center border-t-2 border-yellow-500 shadow-md">
-            <div class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-2">Davlatlar (Statistika)</div>
-            <div class="relative h-32 w-full flex justify-center mt-2">
+        <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-accent-purple/10 border border-accent-purple/20 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-accent-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+            </div>
+            <div class="relative h-[100px] flex items-center justify-center">
                 <canvas id="countryChart"></canvas>
             </div>
+            <p class="text-textSec text-[13px] font-medium mt-2 text-center">Davlatlar bo'yicha</p>
         </div>
+    </div>
+
+    <!-- Vacancies List -->
+    <div class="glass-panel rounded-2xl p-6 animate-slide-up">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-lg font-bold text-white">Vakansiyalar Ro'yxati</h2>
+                <p class="text-textSec text-[13px] mt-0.5">{{ category.name }} yo'nalishi bo'yicha barcha e'lonlar</p>
+            </div>
+        </div>
+
+        {% if page_obj %}
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Kompaniya & Lavozim</th>
+                        <th>Lokatsiya</th>
+                        <th>Maosh</th>
+                        <th class="text-right">Harakat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for job in page_obj %}
+                    <tr class="group hover:bg-white/[0.02] transition-all duration-200">
+                        <td>
+                            <p class="font-semibold text-white group-hover:text-accent transition-colors">{{ job.title }}</p>
+                            <p class="text-textSec text-[12px] mt-0.5">{{ job.company }}</p>
+                        </td>
+                        <td>
+                            <span class="inline-flex items-center gap-1 text-textSec text-[13px]">
+                                <svg class="w-3.5 h-3.5 text-accent-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                {{ job.country.name }}
+                            </span>
+                            <span class="block text-textSec text-[11px] mt-0.5">{{ job.get_job_type_display }}</span>
+                        </td>
+                        <td class="font-mono text-accent-green font-semibold">
+                            {% if job.salary_min %}{{ job.salary_min }} - {{ job.salary_max }} {{ job.currency }}{% else %}<span class="text-textSec">Belgilanmagan</span>{% endif %}
+                        </td>
+                        <td class="text-right">
+                            <a href="{{ job.source_url }}" target="_blank" 
+                               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-accent/10 border border-accent/20 text-accent text-[12px] font-bold hover:bg-accent/20 hover:border-accent/40 transition-all duration-200">
+                                Topshirish
+                                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state py-12">
+            <div class="empty-state-icon mx-auto mb-4">
+                <svg class="w-8 h-8 text-textSec" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+            </div>
+            <p class="text-textSec">Bu kategoriyada hali vakansiyalar mavjud emas.</p>
+        </div>
+        {% endif %}
+
+        <!-- Pagination -->
+        {% if page_obj.paginator.num_pages > 1 %}
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6 pt-6 border-t border-white/5">
+            <p class="text-textSec text-[13px]">
+                Jami <span class="text-white font-semibold">{{ page_obj.paginator.count }}</span> ta vakansiya
+                (Sahifa {{ page_obj.number }} / {{ page_obj.paginator.num_pages }})
+            </p>
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page=1" class="page-link" title="Birinchi">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+                </a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    Orqaga
+                </a>
+                {% else %}
+                <span class="page-link disabled">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+                </span>
+                <span class="page-link disabled">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    Orqaga
+                </span>
+                {% endif %}
+
+                <span class="page-link active">{{ page_obj.number }}</span>
+
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">
+                    Keyingi
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="page-link" title="Oxirgi">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+                </a>
+                {% else %}
+                <span class="page-link disabled">
+                    Keyingi
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </span>
+                <span class="page-link disabled">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+                </span>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 
-<!-- Vakansiyalar ro'yxati -->
-<div class="bg-[#1a1e35] p-6 rounded-xl shadow-lg border border-[#232743] mt-8">
-    <h2 class="text-xl font-bold text-white mb-6">Mavjud Vakansiyalar Ro'yxati</h2>
-    <div class="overflow-x-auto mb-4">
-        <table class="w-full text-left">
-            <thead>
-                <tr class="text-xs font-semibold tracking-wide text-gray-400 uppercase border-b border-gray-800">
-                    <th class="px-4 py-3">Kompaniya & Lavozim</th>
-                    <th class="px-4 py-3">Lokatsiya / Format</th>
-                    <th class="px-4 py-3">Maosh Diapazoni</th>
-                    <th class="px-4 py-3 text-right">Harakat</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-800">
-                {% for job in page_obj %}
-                <tr class="hover:bg-[#131526] transition duration-200">
-                    <td class="px-4 py-4">
-                        <div class="flex items-center">
-                            <div>
-                                <p class="font-bold text-gray-200">{{ job.title }}</p>
-                                <p class="text-xs text-gray-500">{{ job.company }}</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="px-4 py-3 text-sm text-gray-300">
-                        {{ job.country.name }} <span class="text-gray-600 block text-xs mt-1">{{ job.get_job_type_display }}</span>
-                    </td>
-                    <td class="px-4 py-3 text-sm text-green-400 font-mono">     
-                        {% if job.salary_min %}{{ job.salary_min }} - {{ job.salary_max }} {{ job.currency }}{% else %}Belgilanmagan{% endif %}
-                    </td>
-                    <td class="px-4 py-3 text-right">
-                        <a href="{{ job.source_url }}" target="_blank" class="px-3 py-1 bg-cyan-600 text-white rounded text-xs font-bold hover:bg-cyan-500 transition">Topshirish</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    
-    <!-- Paginator UI -->
-    <div class="flex justify-between items-center text-sm text-gray-400 mt-6 border-t border-gray-800 pt-4">
-        <span class="font-semibold text-gray-500">
-            Jami {{ page_obj.paginator.count }} ta vakansiya. (Sahifa: {{ page_obj.number }} / {{ page_obj.paginator.num_pages }})
-        </span>
-        <div class="flex space-x-2">
-            {% if page_obj.has_previous %}
-                <a href="?page=1" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">&laquo; Boshiga</a>
-                <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Orqaga</a>
-            {% else %}
-                <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">&laquo; Boshiga</button>
-                <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Orqaga</button>
-            {% endif %}
-
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Keyingisi</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}" class="px-3 py-1 bg-[#131526] hover:bg-indigo-600 hover:text-white rounded border border-gray-700 transition">Oxiriga &raquo;</a>
-            {% else %}
-                 <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Keyingisi</button>
-                 <button disabled class="px-3 py-1 bg-[#0c0e1a] text-gray-700 rounded border border-gray-800 cursor-not-allowed">Oxiriga &raquo;</button>
-            {% endif %}
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const ctx = document.getElementById('countryChart').getContext('2d');
-        const countryChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: {{ country_labels|safe }},
-                datasets: [{
-                    label: 'Vakansiyalar soni',
-                    data: {{ country_data|safe }},
-                    backgroundColor: [
-                        'rgba(59, 130, 246, 0.8)', // blue-500
-                        'rgba(16, 185, 129, 0.8)', // emerald-500
-                        'rgba(245, 158, 11, 0.8)', // amber-500
-                        'rgba(239, 68, 68, 0.8)',  // red-500
-                        'rgba(139, 92, 246, 0.8)', // violet-500
-                        'rgba(236, 72, 153, 0.8)'  // pink-500
-                    ],
-                    borderColor: '#131526',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false // Hide text to fit small space
-                    },
-                    tooltip: {
-                         callbacks: {
-                            label: function(context) {
-                                return \ \: \ta\;
-                            }
-                        }
-                    }
-                },
-                cutout: '70%'
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('countryChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: {{ country_labels|safe }},
+            datasets: [{
+                data: {{ country_data|safe }},
+                backgroundColor: ['rgba(99,102,241,0.8)', 'rgba(6,182,212,0.8)', 'rgba(168,85,247,0.8)', 'rgba(34,211,160,0.8)', 'rgba(236,72,153,0.8)', 'rgba(251,146,60,0.8)'],
+                borderColor: '#04050A',
+                borderWidth: 2,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '70%',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: 'rgba(4,5,10,0.9)',
+                    titleColor: '#fff',
+                    bodyColor: '#9CA3AF',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    padding: 12,
+                    cornerRadius: 12,
+                }
             }
-        });
+        }
     });
+});
 </script>
 {% endblock %}

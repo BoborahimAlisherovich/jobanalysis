@@ -1,0 +1,4062 @@
+[
+  {
+    "model": "jobs.job",
+    "pk": 6666,
+    "fields": {
+      "title": "Rus tilini biladigan call-markaz operatori4 000 000 - 4 100 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "company": "Rus tilini biladigan call-markaz operatori4 000 000 - 4 100 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rus tilini biladigan call-markaz operatori4 000 000 - 4 100 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-so-znaniem-russkogo-yazyka-ID4akU3.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:03.476434+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6667,
+    "fields": {
+      "title": "Efir video muhandisi 5 000 000 - 15 000 000 so'm Mirobod Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "company": "Efir video muhandisi 5 000 000 - 15 000 000 so'm Mirobod Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Efir video muhandisi 5 000 000 - 15 000 000 so'm Mirobod Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/videoinzhener-translyatsiy-ID4njyR.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:06.339728+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6668,
+    "fields": {
+      "title": "Efir video muhandisi kerak 5 000 000 - 13 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Efir video muhandisi kerak 5 000 000 - 13 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Efir video muhandisi kerak 5 000 000 - 13 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-videoinzhener-translyatsii-ID4n9LK.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:09.583255+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6669,
+    "fields": {
+      "title": "VIP mijozlarni qo'llab-quvvatlash operatori8 000 000 - 20 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 10:06",
+      "company": "VIP mijozlarni qo'llab-quvvatlash operatori8 000 000 - 20 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 10:06",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "VIP mijozlarni qo'llab-quvvatlash operatori8 000 000 - 20 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 10:06",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-sluzhby-podderzhki-dlya-vip-klientov-ID4nP9m.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:13.572699+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6670,
+    "fields": {
+      "title": "To'lovlarni qayta ishlash bo'yicha menejer yordamchisi6 000 000 - 14 000 000 so'mAndijonDoimiy ishTo'liq kunlik ish Masofaviy ishBugun 09:35",
+      "company": "To'lovlarni qayta ishlash bo'yicha menejer yordamchisi6 000 000 - 14 000 000 so'mAndijonDoimiy ishTo'liq kunlik ish Masofaviy ishBugun 09:35",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "To'lovlarni qayta ishlash bo'yicha menejer yordamchisi6 000 000 - 14 000 000 so'mAndijonDoimiy ishTo'liq kunlik ish Masofaviy ishBugun 09:35",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/pomoschnik-menedzhera-po-obrabotke-platezhey-ID4nWSM.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:16.677107+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6671,
+    "fields": {
+      "title": "Call center operatori kerak (qizlar)4 000 000 - 5 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 09:25",
+      "company": "Call center operatori kerak (qizlar)4 000 000 - 5 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 09:25",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori kerak (qizlar)4 000 000 - 5 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 09:25",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-call-tsentra-devushki-ID4nu8V.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:19.345127+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6672,
+    "fields": {
+      "title": "Operator qizlar kerak2 500 000 - 100 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liqsiz Ishga onlayn Bugun soat 08:46",
+      "company": "Operator qizlar kerak2 500 000 - 100 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liqsiz Ishga onlayn Bugun soat 08:46",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator qizlar kerak2 500 000 - 100 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liqsiz Ishga onlayn Bugun soat 08:46",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-qizlar-kerak-ID4oaPO.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:22.464653+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6673,
+    "fields": {
+      "title": "Loyiha koordinatori / reklama agentligi 2 000 000 - 7 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq ish kuniBugun 08:20",
+      "company": "Loyiha koordinatori / reklama agentligi 2 000 000 - 7 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq ish kuniBugun 08:20",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Loyiha koordinatori / reklama agentligi 2 000 000 - 7 000 000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq ish kuniBugun 08:20",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/koordinator-proektov-reklamnoe-agentstvo-ID4oaGx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:25.039769+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6674,
+    "fields": {
+      "title": "operator qiz turizm aviabilet200 - 2 000 000 so'mToshloqDoimiy ishTo'liq ishBugun 08:08",
+      "company": "operator qiz turizm aviabilet200 - 2 000 000 so'mToshloqDoimiy ishTo'liq ishBugun 08:08",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "operator qiz turizm aviabilet200 - 2 000 000 so'mToshloqDoimiy ishTo'liq ishBugun 08:08",
+      "job_type": "full_time",
+      "salary_min": 2,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-qiz-turizm-aviabilet-ID4oayh.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:27.674509+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6675,
+    "fields": {
+      "title": "Shoshilinch ravishda past kuchlanishli mutaxassis kerak (yong'in xavfsizligi signalizatori) 4 000 000 - 10 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq ish kuni Bugun soat 07:50 da",
+      "company": "Shoshilinch ravishda past kuchlanishli mutaxassis kerak (yong'in xavfsizligi signalizatori) 4 000 000 - 10 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq ish kuni Bugun soat 07:50 da",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Shoshilinch ravishda past kuchlanishli mutaxassis kerak (yong'in xavfsizligi signalizatori) 4 000 000 - 10 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq ish kuni Bugun soat 07:50 da",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/srochno-nuzhen-spetsialist-po-slabotochke-pozharno-ohrannye-signalizatsiya-ID4a0Jp.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:30.337588+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6676,
+    "fields": {
+      "title": "Ofisga , shartnoma bo’limiga qizlarni ,ishga taklif qilamiz.4 000 000 - 6 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 07:10",
+      "company": "Ofisga , shartnoma bo’limiga qizlarni ,ishga taklif qilamiz.4 000 000 - 6 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 07:10",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ofisga , shartnoma bo’limiga qizlarni ,ishga taklif qilamiz.4 000 000 - 6 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 07:10",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ofisga-shartnoma-bolimiga-qizlarni-ishga-taklif-qilamiz-ID4ckdq.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:31.597031+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6677,
+    "fields": {
+      "title": "Kompyuter o'qituvchisi kerak Office dasturlarini o'rgatish uchun1 500 000 - 3 000 000 so'mToshkent sh., Yunusobod tumaniVaqtinchalik ishBugun soat 06:34",
+      "company": "Kompyuter o'qituvchisi kerak Office dasturlarini o'rgatish uchun1 500 000 - 3 000 000 so'mToshkent sh., Yunusobod tumaniVaqtinchalik ishBugun soat 06:34",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter o'qituvchisi kerak Office dasturlarini o'rgatish uchun1 500 000 - 3 000 000 so'mToshkent sh., Yunusobod tumaniVaqtinchalik ishBugun soat 06:34",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kompyuter-oqituvchisi-kerak-office-dasturlarini-orgatish-uchun-ID4oafo.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:33.444929+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6678,
+    "fields": {
+      "title": "Operatorlikka kizlarni ishga qabul qilamiz Samarqand logistika3 000 000 - 4 000 000 so'm SamarqandDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "company": "Operatorlikka kizlarni ishga qabul qilamiz Samarqand logistika3 000 000 - 4 000 000 so'm SamarqandDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operatorlikka kizlarni ishga qabul qilamiz Samarqand logistika3 000 000 - 4 000 000 so'm SamarqandDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatorlikka-kizlarni-ishga-kabul-kilamiz-samarand-logistika-ID43xkI.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:36.315003+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6679,
+    "fields": {
+      "title": "SIM karta sotish va Paynet operatoriga ishga olamiz 1 500 000 - 5 000 000 so'mYangiyulDoimiy ish To'liq ish 2026 yil 2 iyun.",
+      "company": "SIM karta sotish va Paynet operatoriga ishga olamiz 1 500 000 - 5 000 000 so'mYangiyulDoimiy ish To'liq ish 2026 yil 2 iyun.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "SIM karta sotish va Paynet operatoriga ishga olamiz 1 500 000 - 5 000 000 so'mYangiyulDoimiy ish To'liq ish 2026 yil 2 iyun.",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/sim-karta-sotish-va-paynet-operator-kizlarni-ishga-olamiz-ID4o1aL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:39.174141+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6680,
+    "fields": {
+      "title": "Call centerga operator qizlar kerak 4 000 000 - 12 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Call centerga operator qizlar kerak 4 000 000 - 12 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centerga operator qizlar kerak 4 000 000 - 12 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kol-tsentrga-operator-kizlar-kerak-ID4o6WM.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:42.532361+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6681,
+    "fields": {
+      "title": "Operator sotuv boʻlimiga Call center 5 500 000 - 6 000 000 soʻm Toshkent, Bektemir tumani Doimiy ish Toʻliq kunlik ish 2026-yil 2-iyun",
+      "company": "Operator sotuv boʻlimiga Call center 5 500 000 - 6 000 000 soʻm Toshkent, Bektemir tumani Doimiy ish Toʻliq kunlik ish 2026-yil 2-iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator sotuv boʻlimiga Call center 5 500 000 - 6 000 000 soʻm Toshkent, Bektemir tumani Doimiy ish Toʻliq kunlik ish 2026-yil 2-iyun",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-sotuv-bolimiga-call-center-ID4o8AS.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:46.901092+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6682,
+    "fields": {
+      "title": "Operatorlikka yigit qizlarni ishga taklif qilaman2 500 000 - 3 000 000 so'mBuxoroDoimiy ishTo'liq ish Bugun 05:38",
+      "company": "Operatorlikka yigit qizlarni ishga taklif qilaman2 500 000 - 3 000 000 so'mBuxoroDoimiy ishTo'liq ish Bugun 05:38",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operatorlikka yigit qizlarni ishga taklif qilaman2 500 000 - 3 000 000 so'mBuxoroDoimiy ishTo'liq ish Bugun 05:38",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatorlikka-yigit-qizlarni-ishga-taklif-qilamz-ID4o45t.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:48.698975+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6683,
+    "fields": {
+      "title": "Operator aloqa markazi taklifiga taklif2 500,000 - 3 500 000 so'mToshkent, Bektemir tumaniDoimiy ishTo'liq ish kuniBugun soat 05:26",
+      "company": "Operator aloqa markazi taklifiga taklif2 500,000 - 3 500 000 so'mToshkent, Bektemir tumaniDoimiy ishTo'liq ish kuniBugun soat 05:26",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator aloqa markazi taklifiga taklif2 500,000 - 3 500 000 so'mToshkent, Bektemir tumaniDoimiy ishTo'liq ish kuniBugun soat 05:26",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://biolife-hr.olx.uz/home/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:51.658812+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6684,
+    "fields": {
+      "title": "Dispetcher operator kerak 4 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni Bugun soat 05:12 da",
+      "company": "Dispetcher operator kerak 4 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni Bugun soat 05:12 da",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Dispetcher operator kerak 4 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni Bugun soat 05:12 da",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://wbdriverpro.olx.uz/home/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:54.986147+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6685,
+    "fields": {
+      "title": "Viza va Green Card ofisiga operatorlarni ishga taklif qilamiz3 000 000 - 6 000 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 04:43",
+      "company": "Viza va Green Card ofisiga operatorlarni ishga taklif qilamiz3 000 000 - 6 000 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 04:43",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Viza va Green Card ofisiga operatorlarni ishga taklif qilamiz3 000 000 - 6 000 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 04:43",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/viza-va-green-card-ofisiga-operatorlarni-ishga-taklif-qilamiz-ID4mI99.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:34:57.756952+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6686,
+    "fields": {
+      "title": "Operator kerak ( qiz bolar uchun )3 000 000 - 7 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 04:29",
+      "company": "Operator kerak ( qiz bolar uchun )3 000 000 - 7 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 04:29",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator kerak ( qiz bolar uchun )3 000 000 - 7 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun 04:29",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-kerak-qiz-bollar-uchun-ID4o9Sv.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:01.055153+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6687,
+    "fields": {
+      "title": "Operator ofisi godi (Ayol va qizlar)4 000 000 - 5 500 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 03:17",
+      "company": "Operator ofisi godi (Ayol va qizlar)4 000 000 - 5 500 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 03:17",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator ofisi godi (Ayol va qizlar)4 000 000 - 5 500 000 so'mSamarqandDoimiy ishTo'liq ish Bugun soat 03:17",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-ofis-hodimi-ael-va-kizlar-ID4l4hC.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:05.678591+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6688,
+    "fields": {
+      "title": "Amerika logistikasi dispetcher va updater3 579 000 so'mBuxoroDoimiy ishTo'liq ish kuniBugun soat 02:51",
+      "company": "Amerika logistikasi dispetcher va updater3 579 000 so'mBuxoroDoimiy ishTo'liq ish kuniBugun soat 02:51",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Amerika logistikasi dispetcher va updater3 579 000 so'mBuxoroDoimiy ishTo'liq ish kuniBugun soat 02:51",
+      "job_type": "full_time",
+      "salary_min": 579,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/amerika-logistikasi-dispatcher-va-updater-ID4j1pb.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:09.339424+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6689,
+    "fields": {
+      "title": "FlutterFlow va android studio ni chunadiganlar2 000 000 - 4 000 000 so'm TermizVaqtinchalik ishTo'liqsiz Lavozim: BoshqaTexnologiya: JavaIshlab chiqarish turi: FullstackBugun soat 02:45",
+      "company": "FlutterFlow va android studio ni chunadiganlar2 000 000 - 4 000 000 so'm TermizVaqtinchalik ishTo'liqsiz Lavozim: BoshqaTexnologiya: JavaIshlab chiqarish turi: FullstackBugun soat 02:45",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "FlutterFlow va android studio ni chunadiganlar2 000 000 - 4 000 000 so'm TermizVaqtinchalik ishTo'liqsiz Lavozim: BoshqaTexnologiya: JavaIshlab chiqarish turi: FullstackBugun soat 02:45",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/flutterflow-va-android-studio-ni-chunadiganlar-ID4o9xG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:12.901386+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6690,
+    "fields": {
+      "title": "Yandex ofisiga xodim kerak 3 000 000 - 4 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "company": "Yandex ofisiga xodim kerak 3 000 000 - 4 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex ofisiga xodim kerak 3 000 000 - 4 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-ofisga-ishchi-kerak-ID498Wp.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:15.529065+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6691,
+    "fields": {
+      "title": "Operator qizlarni ishga taklif qilamiz3 500 000 - 7 000 000 so'm QarshiDoimiy ishTo'liq ish 02 iyun 2026",
+      "company": "Operator qizlarni ishga taklif qilamiz3 500 000 - 7 000 000 so'm QarshiDoimiy ishTo'liq ish 02 iyun 2026",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator qizlarni ishga taklif qilamiz3 500 000 - 7 000 000 so'm QarshiDoimiy ishTo'liq ish 02 iyun 2026",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-qizlarni-ishga-taklif-qilamiz-ID4744F.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:19.259253+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6692,
+    "fields": {
+      "title": "O'quv markaziga operator kerak 5 000 000 - 12 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "O'quv markaziga operator kerak 5 000 000 - 12 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "O'quv markaziga operator kerak 5 000 000 - 12 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-v-uchebnyy-tsentr-ID45eaV.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:22.459556+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6693,
+    "fields": {
+      "title": "Spa saloniga operator kerak10 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ishTo'liqsiz 2026 yil 02 iyun",
+      "company": "Spa saloniga operator kerak10 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ishTo'liqsiz 2026 yil 02 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Spa saloniga operator kerak10 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ishTo'liqsiz 2026 yil 02 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-v-spa-salon-ID4nUCq.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:25.283257+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6694,
+    "fields": {
+      "title": "Infinity game club ga ishga kizlarni taklif qilamiz4 000 000 - 5 000 000 so'mBuxoroDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "company": "Infinity game club ga ishga kizlarni taklif qilamiz4 000 000 - 5 000 000 so'mBuxoroDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Infinity game club ga ishga kizlarni taklif qilamiz4 000 000 - 5 000 000 so'mBuxoroDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/infinity-game-club-ga-ishga-kizlarni-taklif-kilamiz-ID4o948.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:28.940470+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6695,
+    "fields": {
+      "title": "CALL - MARKAZGA operatorlariga kerak 5 000 000 - 20 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ishga onlayn ishga qabul qilish 2 iyun 2026 yil",
+      "company": "CALL - MARKAZGA operatorlariga kerak 5 000 000 - 20 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ishga onlayn ishga qabul qilish 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "CALL - MARKAZGA operatorlariga kerak 5 000 000 - 20 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ishga onlayn ishga qabul qilish 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-markazga-operatorlar-kerak-ID4n9bL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:40.657776+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6696,
+    "fields": {
+      "title": "Ijtimoiy tarmoqlarga operator javobi yigit 8 000 000 - 9 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ish Vaqtinchalik 2026 yil 02 iyun",
+      "company": "Ijtimoiy tarmoqlarga operator javobi yigit 8 000 000 - 9 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ish Vaqtinchalik 2026 yil 02 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ijtimoiy tarmoqlarga operator javobi yigit 8 000 000 - 9 000 000 so'm Toshkent, Yashnobod tumani Vaqtinchalik ish Vaqtinchalik 2026 yil 02 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-otvechat-v-sots-setyah-paren-ID4nZTz.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:43.104315+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6697,
+    "fields": {
+      "title": "Aloqa markazi operatori 3 500 000 - 4 000 000 so'm Toshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 02 iyun",
+      "company": "Aloqa markazi operatori 3 500 000 - 4 000 000 so'm Toshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 02 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Aloqa markazi operatori 3 500 000 - 4 000 000 so'm Toshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 02 iyun",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-kontakt-tsentra-ID4o8LY.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:45.273046+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6698,
+    "fields": {
+      "title": "Salesdoctor programmasida ishlay boshlaydi operator kere4000000 - 5000000 so'mMirobodDoimiy ishTo'liq ish 02 Iyun 2026",
+      "company": "Salesdoctor programmasida ishlay boshlaydi operator kere4000000 - 5000000 so'mMirobodDoimiy ishTo'liq ish 02 Iyun 2026",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Salesdoctor programmasida ishlay boshlaydi operator kere4000000 - 5000000 so'mMirobodDoimiy ishTo'liq ish 02 Iyun 2026",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/salesdoctor-programmasida-ishlay-oladigan-operator-kere-ID4o8Lx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:49.242901+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6699,
+    "fields": {
+      "title": "Kompyuter operatori kerak (ish oson, noldan o'qitamiz!) 200 000 - 200 001 so'm Samarqand Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "company": "Kompyuter operatori kerak (ish oson, noldan o'qitamiz!) 200 000 - 200 001 so'm Samarqand Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter operatori kerak (ish oson, noldan o'qitamiz!) 200 000 - 200 001 so'm Samarqand Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-za-kompyuter-rabota-legkaya-obuchaem-s-nulya-ID4o8D6.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:52.626007+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6700,
+    "fields": {
+      "title": "RIVL-LIMITED kompaniyasiga call-center xodimlari kerak2 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "company": "RIVL-LIMITED kompaniyasiga call-center xodimlari kerak2 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "RIVL-LIMITED kompaniyasiga call-center xodimlari kerak2 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/nuzhny-sotrudniki-na-call-center-v-kompaniyu-rivl-limited-ID4o8wS.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:55.934524+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6701,
+    "fields": {
+      "title": "Sushi Wok restorani operatori Master 6 000 000 - 7 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Sushi Wok restorani operatori Master 6 000 000 - 7 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Sushi Wok restorani operatori Master 6 000 000 - 7 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-v-restoran-sushi-vok-master-ID4iiIU.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:35:59.175182+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6702,
+    "fields": {
+      "title": "Turar.uz ga ob'ektlarni jalb qilish bo'yicha mutaxassis5 000 000 - 12 000 000 so'mXivaVaqtinchalik ishTo'liq kunlik ish Masofaviy ish 2026 yil 02 iyun",
+      "company": "Turar.uz ga ob'ektlarni jalb qilish bo'yicha mutaxassis5 000 000 - 12 000 000 so'mXivaVaqtinchalik ishTo'liq kunlik ish Masofaviy ish 2026 yil 02 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Turar.uz ga ob'ektlarni jalb qilish bo'yicha mutaxassis5 000 000 - 12 000 000 so'mXivaVaqtinchalik ishTo'liq kunlik ish Masofaviy ish 2026 yil 02 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/spetsialist-po-privlecheniyu-obektov-v-turar-uz-ID4n8vW.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:36:01.747479+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6703,
+    "fields": {
+      "title": "Operator call center4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "company": "Operator call center4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator call center4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-centre-ID4dsyq.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:36:04.477760+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6704,
+    "fields": {
+      "title": "Qiz qidiraman 2 800 000 - 3 200 000 so'm Mirobod Doimiy ish To'liq ish 2 iyun 2026 yil",
+      "company": "Qiz qidiraman 2 800 000 - 3 200 000 so'm Mirobod Doimiy ish To'liq ish 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qiz qidiraman 2 800 000 - 3 200 000 so'm Mirobod Doimiy ish To'liq ish 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 800,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-devushka-ID4nuMG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:12.967820+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6705,
+    "fields": {
+      "title": "Paynet ishchi kerak Urganch shahridan. Painet ga ishchi kera2 200 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "company": "Paynet ishchi kerak Urganch shahridan. Painet ga ishchi kera2 200 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Paynet ishchi kerak Urganch shahridan. Painet ga ishchi kera2 200 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 200,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/paynet-ishchi-kerak-urgench-shahridan-paynet-ga-ishchi-kera-ID365Ux.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:15.877098+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6706,
+    "fields": {
+      "title": "Operatorga qo'ng'iroq 3 000 000 - 4 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq kunlik Onlayn ishga qabul qilish02 iyun 2026 yil",
+      "company": "Operatorga qo'ng'iroq 3 000 000 - 4 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq kunlik Onlayn ishga qabul qilish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operatorga qo'ng'iroq 3 000 000 - 4 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq kunlik Onlayn ishga qabul qilish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-sentr-ID4o82m.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:18.964774+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6707,
+    "fields": {
+      "title": "Operator dispetcher kerak6 000 000 - 8 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni02 iyun 2026 yil",
+      "company": "Operator dispetcher kerak6 000 000 - 8 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator dispetcher kerak6 000 000 - 8 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-dispetcher-kerak-ID4o81z.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:21.319807+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6708,
+    "fields": {
+      "title": "Bizga RUS TILINI biladigan vebsaytlar uchun kopirayter kerak 3 000 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "company": "Bizga RUS TILINI biladigan vebsaytlar uchun kopirayter kerak 3 000 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Bizga RUS TILINI biladigan vebsaytlar uchun kopirayter kerak 3 000 000 - 4 000 000 so'mUrganchDoimiy ishTo'liq kunlik ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/nuzhen-kopirayter-dlya-saytov-so-znaniem-russkogo-yazyka-ID4bfTc.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:24.675161+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6709,
+    "fields": {
+      "title": "TELECOM DEVICES PRO korkhonasiga IT mutahssis yigit ishga mahsulot7 000 000 - 9 000 000 so'mCho'ntakDoimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "company": "TELECOM DEVICES PRO korkhonasiga IT mutahssis yigit ishga mahsulot7 000 000 - 9 000 000 so'mCho'ntakDoimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "TELECOM DEVICES PRO korkhonasiga IT mutahssis yigit ishga mahsulot7 000 000 - 9 000 000 so'mCho'ntakDoimiy ishTo'liq kunlik ish02 iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/telecom-devices-pro-korhonasiga-it-mutahssis-yigit-ishga-olinadi-ID4n88s.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:27.726116+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6710,
+    "fields": {
+      "title": "Qo'ng'iroq qiling markazga ogilbolani 6 000 000 - 10 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil.",
+      "company": "Qo'ng'iroq qiling markazga ogilbolani 6 000 000 - 10 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qo'ng'iroq qiling markazga ogilbolani 6 000 000 - 10 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/4kCEy/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-03T10:37:31.858473+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6711,
+    "fields": {
+      "title": "Markazga xodim kerak. Call-markazga xodim talab qilinadi. 2 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Markazga xodim kerak. Call-markazga xodim talab qilinadi. 2 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Markazga xodim kerak. Call-markazga xodim talab qilinadi. 2 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-markazga-xodim-kerak-v-koll-tsentr-trebuetsya-sotrudnik-ID4nWWt.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:16.801945+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6712,
+    "fields": {
+      "title": "Call centerga qiz bola kerak turmishga chichmagan 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish Vaqtinchalik ish 2026 yil 3 iyun",
+      "company": "Call centerga qiz bola kerak turmishga chichmagan 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish Vaqtinchalik ish 2026 yil 3 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centerga qiz bola kerak turmishga chichmagan 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish Vaqtinchalik ish 2026 yil 3 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-centerga-qiz-bola-kerak-turmishga-chiqmagan-ID4fb5v.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:19.948781+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6713,
+    "fields": {
+      "title": "Shogird olamiz, kompyuter servisga1 000 000 - 5 000 000 so'mQo'riqchi Doimiy ishTo'liq ish kuniBugun soat 05:08",
+      "company": "Shogird olamiz, kompyuter servisga1 000 000 - 5 000 000 so'mQo'riqchi Doimiy ishTo'liq ish kuniBugun soat 05:08",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Shogird olamiz, kompyuter servisga1 000 000 - 5 000 000 so'mQo'riqchi Doimiy ishTo'liq ish kuniBugun soat 05:08",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/shogird-olamiz-kompyuter-servisga-ID3B9TC.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:22.434502+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6714,
+    "fields": {
+      "title": "Call-markaz operatori, masofaviy 11 953 500 - 23 907 000 so'mToshkent, Yakkasaroy tumaniDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilishBugun soat 04:24",
+      "company": "Call-markaz operatori, masofaviy 11 953 500 - 23 907 000 so'mToshkent, Yakkasaroy tumaniDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilishBugun soat 04:24",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call-markaz operatori, masofaviy 11 953 500 - 23 907 000 so'mToshkent, Yakkasaroy tumaniDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilishBugun soat 04:24",
+      "job_type": "full_time",
+      "salary_min": 953,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-koll-tsentra-udalenno-ID4ocHB.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:25.667227+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6715,
+    "fields": {
+      "title": "Photoshopni yaxshi biladigan xush muomilali qizlarni ishga olamiz2 000 000 - 7 000 000 сумТашкент, Сергелийский районПостоянная работаРабота на полную ставкуУдалённая работаСегодня в 03:56",
+      "company": "Photoshopni yaxshi biladigan xush muomilali qizlarni ishga olamiz2 000 000 - 7 000 000 сумТашкент, Сергелийский районПостоянная работаРабота на полную ставкуУдалённая работаСегодня в 03:56",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Photoshopni yaxshi biladigan xush muomilali qizlarni ishga olamiz2 000 000 - 7 000 000 сумТашкент, Сергелийский районПостоянная работаРабота на полную ставкуУдалённая работаСегодня в 03:56",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/photoshopni-yaxshi-biladigan-xush-muomilali-qizlarni-ishga-olamiz-ID4ocRW.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:26.874126+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6716,
+    "fields": {
+      "title": "Call center operatori4 500 000 - 5 500 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 03:31",
+      "company": "Call center operatori4 500 000 - 5 500 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 03:31",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori4 500 000 - 5 500 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 03:31",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-ID4eetE.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:29.659443+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6717,
+    "fields": {
+      "title": "Ish bor. Elektron plata yig'ish kod mahsulot Robotexnika arduino ESP328 000 000 - 12 000 000 so'mQo'qonDoimiy ishTo'liq ish kuniBugun 02:15",
+      "company": "Ish bor. Elektron plata yig'ish kod mahsulot Robotexnika arduino ESP328 000 000 - 12 000 000 so'mQo'qonDoimiy ishTo'liq ish kuniBugun 02:15",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ish bor. Elektron plata yig'ish kod mahsulot Robotexnika arduino ESP328 000 000 - 12 000 000 so'mQo'qonDoimiy ishTo'liq ish kuniBugun 02:15",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ish-bor-elektron-plata-yigish-kod-yozish-robototexnika-arduino-esp32-ID4ocUJ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:32.637758+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6718,
+    "fields": {
+      "title": "Kompyuter klubi ma'muri 5 000 000 - 8 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "company": "Kompyuter klubi ma'muri 5 000 000 - 8 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter klubi ma'muri 5 000 000 - 8 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/administrator-kompyuternogo-kluba-ID4nddD.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:34.937326+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6719,
+    "fields": {
+      "title": "Ishna Kabul kilamiz Ucell Uzmobile Ofisiga studentlar bezovqa qimasin, 2 500 000 - 3 500 000 so'm SamarqandDoimiy ishTo'liq ish kuni Masofaviy ish03 iyun 2026 yil",
+      "company": "Ishna Kabul kilamiz Ucell Uzmobile Ofisiga studentlar bezovqa qimasin, 2 500 000 - 3 500 000 so'm SamarqandDoimiy ishTo'liq ish kuni Masofaviy ish03 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ishna Kabul kilamiz Ucell Uzmobile Ofisiga studentlar bezovqa qimasin, 2 500 000 - 3 500 000 so'm SamarqandDoimiy ishTo'liq ish kuni Masofaviy ish03 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ishna-kabul-kilamiz-ucell-uzmobile-ofisiga-studentlar-bezovqa-qimasin-ID2uF51.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:38.137527+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6720,
+    "fields": {
+      "title": "Operator talab qilinadi PV_Sol, Quyosh panellash PVSOL operatori.3,000,000 - 12,000,000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ish03 iyun 2026-yil",
+      "company": "Operator talab qilinadi PV_Sol, Quyosh panellash PVSOL operatori.3,000,000 - 12,000,000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ish03 iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator talab qilinadi PV_Sol, Quyosh panellash PVSOL operatori.3,000,000 - 12,000,000 so'mToshkent, Mirobod tumaniDoimiy ishTo'liq kunlik Masofaviy ish03 iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-pv-sol-quyosh-panel-loyihalash-pvsol-operatori-ID4moYG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:40.942890+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6721,
+    "fields": {
+      "title": "Myebyelkorxonasi uchun dizaynyer konstruktor4 500 000 - 8 000 000 sumGyulabadPostoyannaya rabotaRabota na polnuyu stavku01 iyunya 2026 g.",
+      "company": "Mebelkorkhonasi uchun dizayner konstruktor4 500 000 - 8 000 000 so'm GulobodDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mebelkorkhonasi uchun dizayner konstruktor4 500 000 - 8 000 000 so'm GulobodDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/mebelkorhonasi-uchun-dizayner-konstruktor-ID4o5nS.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:44.595302+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6722,
+    "fields": {
+      "title": "Excelda professional ish4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Lavozim: BoshqaTexnologiya: Boshqa 03 iyun 2026 yil",
+      "company": "Excelda professional ish4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Lavozim: BoshqaTexnologiya: Boshqa 03 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Excelda professional ish4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik Lavozim: BoshqaTexnologiya: Boshqa 03 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/profession-aya-rabota-v-excel-ID4nPbU.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:47.523696+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6723,
+    "fields": {
+      "title": "Operator - Connections AI Call Operator1 195 350 - 11 953 500 sumToshkent, Yashnobod tumani Doimiy ishToʻliqsiz ish Masofaviy ishOnlayn ishga qabul qilish03-iyun 2026-yil",
+      "company": "Operator - Connections AI Call Operator1 195 350 - 11 953 500 sumToshkent, Yashnobod tumani Doimiy ishToʻliqsiz ish Masofaviy ishOnlayn ishga qabul qilish03-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator - Connections AI Call Operator1 195 350 - 11 953 500 sumToshkent, Yashnobod tumani Doimiy ishToʻliqsiz ish Masofaviy ishOnlayn ishga qabul qilish03-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 195,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-podklyucheniya-ai-call-operator-ID4o5ZX.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:51.978199+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6724,
+    "fields": {
+      "title": "Call center operatori3 000 000 - 4 500 000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq kunlik ish03-iyun 2026-yil",
+      "company": "Call center operatori3 000 000 - 4 500 000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq kunlik ish03-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori3 000 000 - 4 500 000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq kunlik ish03-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-center-ID4ncvH.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:54.829786+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6725,
+    "fields": {
+      "title": "Game clubga ishka olamiz4 000 000 - 4 500 000 so'mKelesDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "company": "Game clubga ishka olamiz4 000 000 - 4 500 000 so'mKelesDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Game clubga ishka olamiz4 000 000 - 4 500 000 so'mKelesDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/game-clubga-ishka-olamiz-ID4o3Dx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:17:57.712476+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6726,
+    "fields": {
+      "title": "Mobilogrof Smmchi kerak3 000 000 - 4 000 000 so'mNavoiDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "company": "Mobilogrof Smmchi kerak3 000 000 - 4 000 000 so'mNavoiDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mobilogrof Smmchi kerak3 000 000 - 4 000 000 so'mNavoiDoimiy ishTo'liqsiz 2026 yil 3 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/mobilogrof-smmchi-kerak-ID4obMv.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:00.625080+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6727,
+    "fields": {
+      "title": "Operator qiz kerak2 000 000 - 7 000 000 so'mSamarqandDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 03-iyun 2026-yil",
+      "company": "Operator qiz kerak2 000 000 - 7 000 000 so'mSamarqandDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 03-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator qiz kerak2 000 000 - 7 000 000 so'mSamarqandDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 03-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-qiz-kerak-ID4obIK.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:03.417330+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6728,
+    "fields": {
+      "title": "Call-markaz operatori4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish03-iyun 2026-yil",
+      "company": "Call-markaz operatori4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish03-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call-markaz operatori4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq kunlik ish03-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-centre-ID4o5mD.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:06.866812+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6729,
+    "fields": {
+      "title": "Biz Artist qidiramiz (UE5.6).5 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ishTo'liq kunlik ish03 iyun 2026 yil",
+      "company": "Biz Artist qidiramiz (UE5.6).5 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ishTo'liq kunlik ish03 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Biz Artist qidiramiz (UE5.6).5 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ishTo'liq kunlik ish03 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ischem-character-artist-ue5-6-ID4obov.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:09.648751+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6730,
+    "fields": {
+      "title": "Elektronika va ishga tushirish bo'yicha mutaxassis 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "company": "Elektronika va ishga tushirish bo'yicha mutaxassis 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Elektronika va ishga tushirish bo'yicha mutaxassis 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 3 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/spetsialist-po-elektronike-i-puskonaladke-ID4nZmM.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:12.353591+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6731,
+    "fields": {
+      "title": "Mijozlarga xizmat ko'rsatish menejeri aloqa markazi 3 000 000 - 10 000 000 so'm Guliston Doimiy ish To'liq ish kuni 2026 yil 18 may",
+      "company": "Mijozlarga xizmat ko'rsatish menejeri aloqa markazi 3 000 000 - 10 000 000 so'm Guliston Doimiy ish To'liq ish kuni 2026 yil 18 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mijozlarga xizmat ko'rsatish menejeri aloqa markazi 3 000 000 - 10 000 000 so'm Guliston Doimiy ish To'liq ish kuni 2026 yil 18 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/menedzher-raboty-s-klientami-kontakt-tsentra-ID4lQLg.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T05:18:15.241580+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6732,
+    "fields": {
+      "title": "Sotuvchi",
+      "company": "",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "",
+      "job_type": "full_time",
+      "salary_min": null,
+      "salary_max": null,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://tashkent.hh.uz/vacancy/132193383?query=Machine+Learning&hhtmFrom=vacancy_search_list",
+      "source": "hh.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:05:45.083271+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6733,
+    "fields": {
+      "title": "Sotuvchi",
+      "company": "",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "",
+      "job_type": "full_time",
+      "salary_min": null,
+      "salary_max": null,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://tashkent.hh.uz/vacancy/132193383?query=ML&hhtmFrom=vacancy_search_list",
+      "source": "hh.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:05:47.179721+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6734,
+    "fields": {
+      "title": "Kiruvchi liniya operatori",
+      "company": "",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "",
+      "job_type": "full_time",
+      "salary_min": null,
+      "salary_max": null,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://tashkent.hh.uz/vacancy/131103913?query=Mobile&hhtmFrom=vacancy_search_list",
+      "source": "hh.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:05:52.541379+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6735,
+    "fields": {
+      "title": "Call Center ga Operatorlar kerak!4 000 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "company": "Call Center ga Operatorlar kerak!4 000 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call Center ga Operatorlar kerak!4 000 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-center-ga-operatorlar-kerak-ID3WrPV.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:08.466401+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6736,
+    "fields": {
+      "title": "Video kuzatuv o'rnatuvchi ACS SCS4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun 09:41",
+      "company": "Video kuzatuv o'rnatuvchi ACS SCS4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun 09:41",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Video kuzatuv o'rnatuvchi ACS SCS4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun 09:41",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/5IOJu/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:11.447980+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6737,
+    "fields": {
+      "title": "Kamera ustanovka fargona80 000 - 180 000 so'mFarg'onaDoimiy ishTo'liq ish Bugun 09:31",
+      "company": "Kamera ustanovka fargona80 000 - 180 000 so'mFarg'onaDoimiy ishTo'liq ish Bugun 09:31",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kamera ustanovka fargona80 000 - 180 000 so'mFarg'onaDoimiy ishTo'liq ish Bugun 09:31",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kamera-ustanovka-fargona-ID4oec6.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:14.934502+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6738,
+    "fields": {
+      "title": "30-55 yoshli ayollar uchun masofaviy ish1 195 350 - 10 758 150 so'mToshkent, Yunusobod tumani Doimiy ishTo'liqsiz ish Masofaviy ishOnlayn ishga qabul qilish Bugun 07:32",
+      "company": "30-55 yoshli ayollar uchun masofaviy ish1 195 350 - 10 758 150 so'mToshkent, Yunusobod tumani Doimiy ishTo'liqsiz ish Masofaviy ishOnlayn ishga qabul qilish Bugun 07:32",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "30-55 yoshli ayollar uchun masofaviy ish1 195 350 - 10 758 150 so'mToshkent, Yunusobod tumani Doimiy ishTo'liqsiz ish Masofaviy ishOnlayn ishga qabul qilish Bugun 07:32",
+      "job_type": "full_time",
+      "salary_min": 195,
+      "salary_max": 150,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/udalennaya-rabota-dlya-zhenschin-3055-let-ID4eEXA.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:18.027125+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6739,
+    "fields": {
+      "title": "Savdo bo'limi boshlig'i7 000 000 - 9 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 07:08",
+      "company": "Savdo bo'limi boshlig'i7 000 000 - 9 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 07:08",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Savdo bo'limi boshlig'i7 000 000 - 9 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuniBugun soat 07:08",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rukovoditel-otdela-prodazh-ID44L9U.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:20.121689+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6740,
+    "fields": {
+      "title": "Operatorlikka ishga qabul qilamiz3 000 000 - 9 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuniBugun 07:06",
+      "company": "Operatorlikka ishga qabul qilamiz3 000 000 - 9 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuniBugun 07:06",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operatorlikka ishga qabul qilamiz3 000 000 - 9 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuniBugun 07:06",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatorlikka-ishga-qabul-qilamiz-ID4ne3b.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:23.398582+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6741,
+    "fields": {
+      "title": "Operator (ishlab chikarish/ishlab chiqarish 5 000 000 - 6 000 000 so'mToshkent, Olmazor tumaniDoimiy ishTo'liq ish kuniBugun soat 06:52",
+      "company": "Operator (ishlab chikarish/ishlab chiqarish 5 000 000 - 6 000 000 so'mToshkent, Olmazor tumaniDoimiy ishTo'liq ish kuniBugun soat 06:52",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator (ishlab chikarish/ishlab chiqarish 5 000 000 - 6 000 000 so'mToshkent, Olmazor tumaniDoimiy ishTo'liq ish kuniBugun soat 06:52",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-ishlab-chiarish-proizvodstva-ID4dfmZ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:27.268273+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6742,
+    "fields": {
+      "title": "Call center operatori moslashuvchan ish jadvali rasmiy bandlik 3 000 000 - 5 500 000 so'm QarshiDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 06:14 da",
+      "company": "Call center operatori moslashuvchan ish jadvali rasmiy bandlik 3 000 000 - 5 500 000 so'm QarshiDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 06:14 da",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori moslashuvchan ish jadvali rasmiy bandlik 3 000 000 - 5 500 000 so'm QarshiDoimiy ishTo'liq kunlik Masofaviy ishBugun soat 06:14 da",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-koll-tsentra-gibkiy-grafik-ofitsialnoe-trudoustroystvo-ID4nh5p.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:30.628425+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6743,
+    "fields": {
+      "title": "Call-markaz operatori (Qizlar)/ Operator 3 500 000 - 6 500 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "company": "Call-markaz operatori (Qizlar)/ Operator 3 500 000 - 6 500 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call-markaz operatori (Qizlar)/ Operator 3 500 000 - 6 500 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuniBugun soat 05:47",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/65uiw/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:33.766084+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6744,
+    "fields": {
+      "title": "Ish o‘rni: Kompyuter xizmatlari bo‘yicha xodim1 000 000 - 4 000 000 sumTashkyent, Almazarskiy rayonPostoyannaya rabotaRabota na polnuyu stavkuSyegodnya v 05:31",
+      "company": "Ish joyi: Kompyuter xizmati xodimi1 000 000 - 4 000 000 so'mToshkent, Olmazor tumaniDoimiy ishTo'liq ish kuniBugun soat 05:31 da",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ish joyi: Kompyuter xizmati xodimi1 000 000 - 4 000 000 so'mToshkent, Olmazor tumaniDoimiy ishTo'liq ish kuniBugun soat 05:31 da",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ish-orni-kompyuter-xizmatlari-boyicha-xodim-ID3YgqF.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:36.846849+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6745,
+    "fields": {
+      "title": "Savdo bo'yicha menejer, operator 5 000 000 - 30 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Savdo bo'yicha menejer, operator 5 000 000 - 30 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Savdo bo'yicha menejer, operator 5 000 000 - 30 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://fairmetal.olx.uz/home/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:06:40.557880+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6746,
+    "fields": {
+      "title": "Yandex Operatorda ishlash2 500 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuniBugun 10:26 da",
+      "company": "Yandex Operatorda ishlash2 500 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuniBugun 10:26 da",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Operatorda ishlash2 500 000 - 5 000 000 so'mSamarqandDoimiy ishTo'liq ish kuniBugun 10:26 da",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rabota-v-yandekse-operator-ID3N2g4.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:35.827766+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6747,
+    "fields": {
+      "title": "Tajribali operatorlarni ishga taklif qilamiz.5 000 000 - 8 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 10:20",
+      "company": "Tajribali operatorlarni ishga taklif qilamiz.5 000 000 - 8 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 10:20",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Tajribali operatorlarni ishga taklif qilamiz.5 000 000 - 8 000 000 сумТашкент, Алмазарский районПостоянная работаРабота на полную ставкуСегодня в 10:20",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/tajribali-operatorlarni-ishga-taklif-qilamiz-ID48Xs0.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:37.800105+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6748,
+    "fields": {
+      "title": "qo'ng'iroq markaz sotuv menejeri operatori call center4 000 000 - 15 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun soat 10:18",
+      "company": "qo'ng'iroq markaz sotuv menejeri operatori call center4 000 000 - 15 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun soat 10:18",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "qo'ng'iroq markaz sotuv menejeri operatori call center4 000 000 - 15 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuniBugun soat 10:18",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 0,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-markaz-sotuv-menejeri-operator-koll-tsentr-ID4i9Nx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:40.999922+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6749,
+    "fields": {
+      "title": "Call-markaz operatori2 000 000 - 3 500 000 so'mQarshiDoimiy ishTo'liq ish kuni Onlayn ishga qabul qilish 2026 yil 26 may",
+      "company": "Call-markaz operatori2 000 000 - 3 500 000 so'mQarshiDoimiy ishTo'liq ish kuni Onlayn ishga qabul qilish 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call-markaz operatori2 000 000 - 3 500 000 so'mQarshiDoimiy ishTo'liq ish kuni Onlayn ishga qabul qilish 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-centre-operator-ID4nvwy.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:44.362158+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6750,
+    "fields": {
+      "title": "Vakansiya: VoIP mutaxassisi / Telekom muhandisi 3 000 000 - 10 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Vakansiya: VoIP mutaxassisi / Telekom muhandisi 3 000 000 - 10 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Vakansiya: VoIP mutaxassisi / Telekom muhandisi 3 000 000 - 10 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/vakansiya-voip-spetsialist-telecom-engineer-ID4o71T.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:47.425469+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6751,
+    "fields": {
+      "title": "Klubda kompyuterda ishlash Admin4 000 000 - 5 000 000 so'mBeruniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "Klubda kompyuterda ishlash Admin4 000 000 - 5 000 000 so'mBeruniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Klubda kompyuterda ishlash Admin4 000 000 - 5 000 000 so'mBeruniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rabota-v-kompyuternom-v-klube-admin-ID4nMYd.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:54.667336+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6752,
+    "fields": {
+      "title": "Qizlar kerak Savdo markazida do'kon Festival Mall4 000 000 - 8 000 000 so'm SamarqandDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "company": "Qizlar kerak Savdo markazida do'kon Festival Mall4 000 000 - 8 000 000 so'm SamarqandDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qizlar kerak Savdo markazida do'kon Festival Mall4 000 000 - 8 000 000 so'm SamarqandDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-devushki-magazin-v-tts-festival-mall-ID4m9ZM.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:40:58.739733+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6753,
+    "fields": {
+      "title": "DIQQAT,Fasad dyekorlari ishlab chiqarishga 3D Dizaynyer  va Ustalar kyerak4 000 000 - 7 000 000 sumSamarkandPostoyannaya rabotaRabota na polnuyu stavku02 iyunya 2026 g.",
+      "company": "ДИҚҚАТ,Фасад декорлари ишлаб чиқаришга 3D Дизайнер  ва Усталар керак4 000 000 - 7 000 000 сумСамаркандПостоянная работаРабота на полную ставку02 июня 2026 г.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "ДИҚҚАТ,Фасад декорлари ишлаб чиқаришга 3D Дизайнер  ва Усталар керак4 000 000 - 7 000 000 сумСамаркандПостоянная работаРабота на полную ставку02 июня 2026 г.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/diat-fasad-dekorlari-ishlab-chiarishga-3d-dizayner-va-ustalar-kerak-ID4ntu8.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:00.467866+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6754,
+    "fields": {
+      "title": "Rus tilini bilgan call-markaz operatori 3 700 000 - 3 800 000 so'mFarg'onaDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "company": "Rus tilini bilgan call-markaz operatori 3 700 000 - 3 800 000 so'mFarg'onaDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rus tilini bilgan call-markaz operatori 3 700 000 - 3 800 000 so'mFarg'onaDoimiy ishTo'liq ish 02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 700,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-so-znaniem-russkogo-yazyka-ID4aR2k.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:04.402735+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6755,
+    "fields": {
+      "title": "Rus tilini bilgan Call-markaz operatori 3 600 000 - 3 700 000 so'm Chirchiq Doimiy ish To'liq ish kuni 2 iyun 2026 y.",
+      "company": "Rus tilini bilgan Call-markaz operatori 3 600 000 - 3 700 000 so'm Chirchiq Doimiy ish To'liq ish kuni 2 iyun 2026 y.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rus tilini bilgan Call-markaz operatori 3 600 000 - 3 700 000 so'm Chirchiq Doimiy ish To'liq ish kuni 2 iyun 2026 y.",
+      "job_type": "full_time",
+      "salary_min": 600,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-so-znaniem-russkogo-yazyka-ID47exY.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:08.600920+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6756,
+    "fields": {
+      "title": "Mebellarni chizadigan Chizmachi kere4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Vaqtinchalik ishTo'liq kunlik Masofaviy ish02 iyun 2026 yil",
+      "company": "Mebellarni chizadigan Chizmachi kere4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Vaqtinchalik ishTo'liq kunlik Masofaviy ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mebellarni chizadigan Chizmachi kere4 000 000 - 5 000 000 so'mToshkent, Yunusobod tumani Vaqtinchalik ishTo'liq kunlik Masofaviy ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/mebellarni-chizadigan-chizmachi-kere-ID4lPaH.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:11.715518+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6757,
+    "fields": {
+      "title": "Rus tilini bilgan call-markaz operatori 3 500 000 - 3 600 000 so'm Nukus Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "company": "Rus tilini bilgan call-markaz operatori 3 500 000 - 3 600 000 so'm Nukus Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rus tilini bilgan call-markaz operatori 3 500 000 - 3 600 000 so'm Nukus Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-so-znaniem-russkogo-yazyka-ID4aRpR.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:16.942729+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6758,
+    "fields": {
+      "title": "Rus tilini bilgan Call-markaz operatori 4 000 000 - 4 100 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Rus tilini bilgan Call-markaz operatori 4 000 000 - 4 100 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rus tilini bilgan Call-markaz operatori 4 000 000 - 4 100 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-tsentra-so-znaniem-russkogo-yazyka-ID48oW6.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:21.410427+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6759,
+    "fields": {
+      "title": "maktab o'quvchilari uchun avtasolon operatori 6 000 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "maktab o'quvchilari uchun avtasolon operatori 6 000 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "maktab o'quvchilari uchun avtasolon operatori 6 000 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/maktab-oquvchilari-uchun-avtasolon-operatorlik-ID4kXoe.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:25.283342+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6760,
+    "fields": {
+      "title": "Savdo menejerlarini (operatorlarni) ishga olamiz! 11 953 500 - 20 320 950 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "Savdo menejerlarini (operatorlarni) ishga olamiz! 11 953 500 - 20 320 950 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Savdo menejerlarini (operatorlarni) ishga olamiz! 11 953 500 - 20 320 950 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 953,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/sotuv-menedjerlari-operatorlar-ishga-qabul-qilamiz-ID4ntnf.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:28.976008+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6761,
+    "fields": {
+      "title": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "company": "Biz boramiz talab:Qo'ng'iroq - markaz operatorlari2 500 000 so'mBuxoroDoimiy ishTo'liq ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Biz boramiz talab:Qo'ng'iroq - markaz operatorlari2 500 000 so'mBuxoroDoimiy ishTo'liq ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/hodim-talab-ilinadicall-markaz-operatori-ID3jiWj.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:39.281054+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6762,
+    "fields": {
+      "title": "Yandex Lisunova ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "company": "Yandex Lisunova ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Lisunova ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-lisunova-officega-operator-ishga-olamiz-ID4o706.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:43.659959+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6763,
+    "fields": {
+      "title": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Vaqtinchalik ishTo'liq kunlik ish02 iyun 2026 yil",
+      "company": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Vaqtinchalik ishTo'liq kunlik ish02 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Vaqtinchalik ishTo'liq kunlik ish02 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-olmazor-officega-operator-ishga-olamiz-ID4o6VD.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:47.323290+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6764,
+    "fields": {
+      "title": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "company": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Olmazor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Olmazor tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-olmazor-officega-operator-ishga-olamiz-ID4o6Tw.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:50.626959+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6765,
+    "fields": {
+      "title": "Yandex Kadisheva ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "company": "Yandex Kadisheva ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Kadisheva ofisiga operator ishga olamiz 3 000 000 - 4 500 000 so'mToshkent, Yashnobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-kadisheva-officega-operator-ishga-olamiz-ID4o6Tg.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:54.000166+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6766,
+    "fields": {
+      "title": "Yandex Yunusobod ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "company": "Yandex Yunusobod ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Yunusobod ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish Vaqtinchalik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-yunusobod-officega-operator-ishga-olamiz-ID4o6SR.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:41:58.524919+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6767,
+    "fields": {
+      "title": "Yandex Chilonzor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Chilonzor tumani Doimiy ish Vaqtinchalik 02.06.2026 yil",
+      "company": "Yandex Chilonzor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Chilonzor tumani Doimiy ish Vaqtinchalik 02.06.2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Chilonzor ofisiga operator ishga olamiz 2 000 000 - 3 500 000 so'mToshkent, Chilonzor tumani Doimiy ish Vaqtinchalik 02.06.2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-chilonzor-officega-operator-ishga-olamiz-ID4o6Sw.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:01.908026+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6768,
+    "fields": {
+      "title": "erkaklar uchun call-markaz operatori 8 000 000 - 15 000 000 so'mToshkent, Yashnobod tumaniDoimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "company": "erkaklar uchun call-markaz operatori 8 000 000 - 15 000 000 so'mToshkent, Yashnobod tumaniDoimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "erkaklar uchun call-markaz operatori 8 000 000 - 15 000 000 so'mToshkent, Yashnobod tumaniDoimiy ish To'liq kunlik ish 2026 yil 2 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-koll-tsentr-kizlar-uchun-ID3ArfW.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:06.060708+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6769,
+    "fields": {
+      "title": "Paynetga no'mer ulab biladigan qiz va bollarni ishga taklif qilamiz2 500 000 - 3 500 000 сумУргенчПостоянная работаРабота на полную ставкуУдалённая работаРекрутинг онлайн01 июня 2026 г.",
+      "company": "Paynetga no'mer ulab biladigan qiz va bollarni ishga taklif qilamiz2 500 000 - 3 500 000 сумУргенчПостоянная работаРабота на полную ставкуУдалённая работаРекрутинг онлайн01 июня 2026 г.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Paynetga no'mer ulab biladigan qiz va bollarni ishga taklif qilamiz2 500 000 - 3 500 000 сумУргенчПостоянная работаРабота на полную ставкуУдалённая работаРекрутинг онлайн01 июня 2026 г.",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/paynetga-nomer-ulab-biladigan-qiz-va-bollarni-ishga-taklif-qilamiz-ID3CYiI.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:07.504208+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6770,
+    "fields": {
+      "title": "1C dasturchi talab qilinadi10 000 000 - 30 000 000 so'm Toshkent, Olmazor tumani Doimiy ishTo'liq kunlik Masofaviy ish Lavozim: DasturchiTexnologiya: 1C01 iyun 2026 yil",
+      "company": "1C dasturchi talab qilinadi10 000 000 - 30 000 000 so'm Toshkent, Olmazor tumani Doimiy ishTo'liq kunlik Masofaviy ish Lavozim: DasturchiTexnologiya: 1C01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "1C dasturchi talab qilinadi10 000 000 - 30 000 000 so'm Toshkent, Olmazor tumani Doimiy ishTo'liq kunlik Masofaviy ish Lavozim: DasturchiTexnologiya: 1C01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-1s-programmist-ID42IDx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:11.704286+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6771,
+    "fields": {
+      "title": "FOTO STUDIO va bosmaxonada mijozlarga xizmat ko‘rsatish bo‘yicha dizayner 5 000 000 - 6 000 000 so‘mToshkent, Yashnobod tumaniDoimiy ishTo‘liq kunlik ish01-iyun 2026-yil",
+      "company": "FOTO STUDIO va bosmaxonada mijozlarga xizmat ko‘rsatish bo‘yicha dizayner 5 000 000 - 6 000 000 so‘mToshkent, Yashnobod tumaniDoimiy ishTo‘liq kunlik ish01-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "FOTO STUDIO va bosmaxonada mijozlarga xizmat ko‘rsatish bo‘yicha dizayner 5 000 000 - 6 000 000 so‘mToshkent, Yashnobod tumaniDoimiy ishTo‘liq kunlik ish01-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/dizayner-po-rabote-s-klientami-v-fotostudiyu-i-poligrafiyu-ID3Mwgx.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:14.771637+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6772,
+    "fields": {
+      "title": "Kompyuter xizmatlari 3 000 000 - 5 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Kompyuter xizmatlari 3 000 000 - 5 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter xizmatlari 3 000 000 - 5 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kompyuternye-uslugi-ID438O5.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:17.123113+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6773,
+    "fields": {
+      "title": "Operator ishga olamiz4 000 000 - 6 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Operator ishga olamiz4 000 000 - 6 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator ishga olamiz4 000 000 - 6 000 000 so'm Toshkent, Mirzo-Ulug'bek tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatorlikka-ishga-kabul-kilamiza-ID4nXGz.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:20.810524+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6774,
+    "fields": {
+      "title": "Ayolarni ishga taklif qilamiz3 000 000 - 3 500 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "company": "Ayolarni ishga taklif qilamiz3 000 000 - 3 500 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ayolarni ishga taklif qilamiz3 000 000 - 3 500 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/aellarni-ishga-taklif-kilamiz-ID4nMMl.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:23.879730+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6775,
+    "fields": {
+      "title": "Texnik ta'minot mutaxassisi kerak 8 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Texnik ta'minot mutaxassisi kerak 8 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Texnik ta'minot mutaxassisi kerak 8 000 000 - 12 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-spetsialist-tehnicheskoy-podderzhki-ID4o59q.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:27.212062+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6776,
+    "fields": {
+      "title": "Menejer yordamchisi5 000 000 - 15 000 000 soʻmSamarqandDoimiy ishToʻliqsiz ish Masofaviy ish 01.06.2026",
+      "company": "Menejer yordamchisi5 000 000 - 15 000 000 soʻmSamarqandDoimiy ishToʻliqsiz ish Masofaviy ish 01.06.2026",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Menejer yordamchisi5 000 000 - 15 000 000 soʻmSamarqandDoimiy ishToʻliqsiz ish Masofaviy ish 01.06.2026",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/pomoschnik-menedzhera-ID4nPtT.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:30.157932+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6777,
+    "fields": {
+      "title": "Toshkent shahrida ishlash3 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish01 iyun 2026 yil",
+      "company": "Toshkent shahrida ishlash3 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Toshkent shahrida ishlash3 000 000 - 8 000 000 so'mToshkent, Yunusobod tumani Doimiy ishTo'liq kunlik ish01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rabota-v-tashkente-ID36Laz.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:33.477773+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6778,
+    "fields": {
+      "title": "Call Center operatori Kerak!3 000 000 - 7 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Call Center operatori Kerak!3 000 000 - 7 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call Center operatori Kerak!3 000 000 - 7 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-center-operator-kerak-ID4fquW.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:37.312552+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6779,
+    "fields": {
+      "title": "OPERATOR dispetcher ishga olamiz 3 000 000 - 4 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "company": "OPERATOR dispetcher ishga olamiz 3 000 000 - 4 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "OPERATOR dispetcher ishga olamiz 3 000 000 - 4 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-dispecherlar-ishga-olamiz-ID4mDeU.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:40.793184+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6780,
+    "fields": {
+      "title": "Yandex Taxida Ishlagan Operatorlar Kerak. 4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "company": "Yandex Taxida Ishlagan Operatorlar Kerak. 4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Taxida Ishlagan Operatorlar Kerak. 4 000 000 - 6 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-taxida-ishlagan-operatorlar-kerak-ID4o4Wb.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:44.900048+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6781,
+    "fields": {
+      "title": "Yandex taksi operatorlarini ishga oladi. 4 000 000 - 6 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Yandex taksi operatorlarini ishga oladi. 4 000 000 - 6 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex taksi operatorlarini ishga oladi. 4 000 000 - 6 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-taxi-operatorlar-uchun-ish-tallif-qiladi-ID4o4Ub.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:50.024690+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6782,
+    "fields": {
+      "title": "Biznes uchun IT infratuzilmasiga texnik xizmat ko'rsatamiz 1 - 10 so'm Mirobod Doimiy ish Yarim kunlik ish Masofaviy ish Onlayn ishga yollash Lavozim: Dasturchi Texnologiya: Boshqa + ko'proq 101-iyun 2026-yil",
+      "company": "Biznes uchun IT infratuzilmasiga texnik xizmat ko'rsatamiz 1 - 10 so'm Mirobod Doimiy ish Yarim kunlik ish Masofaviy ish Onlayn ishga yollash Lavozim: Dasturchi Texnologiya: Boshqa + ko'proq 101-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Biznes uchun IT infratuzilmasiga texnik xizmat ko'rsatamiz 1 - 10 so'm Mirobod Doimiy ish Yarim kunlik ish Masofaviy ish Onlayn ishga yollash Lavozim: Dasturchi Texnologiya: Boshqa + ko'proq 101-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 10,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/okazyvaem-obsluzhivanie-it-infrastruktury-dlya-biznesa-ID4o4Ca.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:53.775866+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6783,
+    "fields": {
+      "title": "qo'ng'iroq qilish markaz operatori4 000 000 - 5 000 000 so'mNazarbekDoimiy ishTo'liq ish kuni 01 iyun 2026 yil",
+      "company": "qo'ng'iroq qilish markaz operatori4 000 000 - 5 000 000 so'mNazarbekDoimiy ishTo'liq ish kuni 01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "qo'ng'iroq qilish markaz operatori4 000 000 - 5 000 000 so'mNazarbekDoimiy ishTo'liq ish kuni 01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-sentr-operator-ID4o4ne.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:56.686035+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6784,
+    "fields": {
+      "title": "Call centerga operator kerak 5 000 000 - 15 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Call centerga operator kerak 5 000 000 - 15 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centerga operator kerak 5 000 000 - 15 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://ihub.olx.uz/home/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:42:58.921147+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6785,
+    "fields": {
+      "title": "Qadr kerak \"Compass education center\" oʻquv markazi uchun800.000 - 1.500.000 soʻmSamarqandDoimiy ishToʻliqsiz 2026-yil 01-iyun.",
+      "company": "Qadr kerak \"Compass education center\" oʻquv markazi uchun800.000 - 1.500.000 soʻmSamarqandDoimiy ishToʻliqsiz 2026-yil 01-iyun.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qadr kerak \"Compass education center\" oʻquv markazi uchun800.000 - 1.500.000 soʻmSamarqandDoimiy ishToʻliqsiz 2026-yil 01-iyun.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kadr-kerak-compass-education-center-oquv-markazi-uchun-ID4n4og.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:01.768997+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6786,
+    "fields": {
+      "title": "Turoperator ish uchun 3 000 000 - 10 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Turoperator ish uchun 3 000 000 - 10 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Turoperator ish uchun 3 000 000 - 10 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/turoperator-na-rabotu-ID4n42B.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:06.039662+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6787,
+    "fields": {
+      "title": "Quyosh panellar ofisiga perator kerak yegit qizlarni ishga olamiz3,000,000 - 5,000,000 so'mNavoiDoimiy ishTo'liq kunlik Masofaviy ish01 iyun 2026 yil",
+      "company": "Quyosh panellar ofisiga perator kerak yegit qizlarni ishga olamiz3,000,000 - 5,000,000 so'mNavoiDoimiy ishTo'liq kunlik Masofaviy ish01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Quyosh panellar ofisiga perator kerak yegit qizlarni ishga olamiz3,000,000 - 5,000,000 so'mNavoiDoimiy ishTo'liq kunlik Masofaviy ish01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/quyosh-panellar-ofisiga-perator-kerak-yegit-qizlarni-ishga-olamiz-ID4o4pZ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:09.966922+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6788,
+    "fields": {
+      "title": "Fotosalonga ishchi kerak1000 - 2000 so'mSamarqandDoimiy ishTo'liq ish 01-iyun 2026-yil",
+      "company": "Fotosalonga ishchi kerak1000 - 2000 so'mSamarqandDoimiy ishTo'liq ish 01-iyun 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Fotosalonga ishchi kerak1000 - 2000 so'mSamarqandDoimiy ishTo'liq ish 01-iyun 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/fotosalonga-ishchi-kerak-ID4hSUq.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:14.052832+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6789,
+    "fields": {
+      "title": "Operator Sal markazi \n\nSiz muloyim, stressga yordam va3 500 000 - 4 500 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "company": "Operator Sal markazi \n\nSiz muloyim, stressga yordam va3 500 000 - 4 500 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator Sal markazi \n\nSiz muloyim, stressga yordam va3 500 000 - 4 500 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-sal-tsentre-siz-muloyim-stressga-chidamli-va-ID4o46o.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:17.336332+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6790,
+    "fields": {
+      "title": "Game clubga ishchi kerak3 000 000 - 7 000 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "company": "Game clubga ishchi kerak3 000 000 - 7 000 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Game clubga ishchi kerak3 000 000 - 7 000 000 so'mBuxoroDoimiy ishTo'liq ish 01 iyun 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/game-clubga-ishchi-kerak-ID4o44R.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:20.473480+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6791,
+    "fields": {
+      "title": "Operator Sal markazi 3 500 000 - 4 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Operator Sal markazi 3 500 000 - 4 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator Sal markazi 3 500 000 - 4 500 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-sal-tsentre-ID4nbJG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:23.860403+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6792,
+    "fields": {
+      "title": "VIP TAXI Hunterlika(operatotlik) ishga taklif qilinadi\n\nbiz\n\nO'g'il bola: 7 500 000 - 12 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "VIP TAXI Hunterlika(operatotlik) ishga taklif qilinadi\n\nbiz\n\nO'g'il bola: 7 500 000 - 12 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "VIP TAXI Hunterlika(operatotlik) ishga taklif qilinadi\n\nbiz\n\nO'g'il bola: 7 500 000 - 12 000 000 so'mToshkent, Sergeli tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/vip-taxi-hunterlikaoperatotlikishga-taklifetamiz-ogil-bola-ID4iNFJ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:27.688525+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6793,
+    "fields": {
+      "title": "Hujjatlar bo'yicha mutaxassis 4 000 000 - 5 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "company": "Hujjatlar bo'yicha mutaxassis 4 000 000 - 5 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Hujjatlar bo'yicha mutaxassis 4 000 000 - 5 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 1 iyun",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/spetsialist-po-dokumentatsii-ID4o3QD.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:30.987503+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6794,
+    "fields": {
+      "title": "KVAN SOLAR kompaniyasiga Call Center operatori (Qizlar)4 000 000 - 6 000 000 so'mZangiataDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "KVAN SOLAR kompaniyasiga Call Center operatori (Qizlar)4 000 000 - 6 000 000 so'mZangiataDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "KVAN SOLAR kompaniyasiga Call Center operatori (Qizlar)4 000 000 - 6 000 000 so'mZangiataDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kvan-solar-kompaniyasiga-call-center-operator-qizlar-ID4o3G4.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:34.851753+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6795,
+    "fields": {
+      "title": "sotuv opertrli 16-20yoshgacha ogil/qiz500 000 - 4 500 000 so'mToshkent, Sergeli tumani Doimiy ishTo'liq kunlik masofadan ishlash Onlayn ishga qabul qilish 31 may 2026 yil",
+      "company": "sotuv opertrli 16-20yoshgacha ogil/qiz500 000 - 4 500 000 so'mToshkent, Sergeli tumani Doimiy ishTo'liq kunlik masofadan ishlash Onlayn ishga qabul qilish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "sotuv opertrli 16-20yoshgacha ogil/qiz500 000 - 4 500 000 so'mToshkent, Sergeli tumani Doimiy ishTo'liq kunlik masofadan ishlash Onlayn ishga qabul qilish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/sotuv-opertrli-16-20yoshgacha-ogil-qiz-ID4mBQ4.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:38.417584+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6796,
+    "fields": {
+      "title": "Chirchiq manzil 9-mikrarayon3 500 000 - 5 000 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "Chirchiq manzil 9-mikrarayon3 500 000 - 5 000 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Chirchiq manzil 9-mikrarayon3 500 000 - 5 000 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/chirchiq-manzil-9-mikrarayon-ID4o3r7.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:43.920717+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6797,
+    "fields": {
+      "title": "Kol sentrga ishga olamiz qiz va ayollani кол сентрга ишга оламиз кизла3 000 000 - 4 000 000 сумТашкент, Бектемирский районПостоянная работаРабота на полную ставкуУдалённая работа31 мая 2026 г.",
+      "company": "Kol sentrga ishga olamiz qiz va ayollani кол сентрга ишга оламиз кизла3 000 000 - 4 000 000 сумТашкент, Бектемирский районПостоянная работаРабота на полную ставкуУдалённая работа31 мая 2026 г.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kol sentrga ishga olamiz qiz va ayollani кол сентрга ишга оламиз кизла3 000 000 - 4 000 000 сумТашкент, Бектемирский районПостоянная работаРабота на полную ставкуУдалённая работа31 мая 2026 г.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kol-sentrga-ishga-olamiz-qiz-va-ayollani-kol-sentrga-ishga-olamiz-kizla-ID4i5yY.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:45.330855+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6798,
+    "fields": {
+      "title": "ADMINKA kere Game Clubga!4 000 000 - 7 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "ADMINKA kere Game Clubga!4 000 000 - 7 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "ADMINKA kere Game Clubga!4 000 000 - 7 000 000 so'mToshkent, Yunusobod tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/adminka-kere-game-clubga-ID4o35p.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:48.399724+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6799,
+    "fields": {
+      "title": "Mobilogr qiz kere yoku norim yigit100 - 100 000 000 so'mFarg'onaDoimiy ish to'liq ish 31 may 2026 yil",
+      "company": "Mobilogr qiz kere yoku norim yigit100 - 100 000 000 so'mFarg'onaDoimiy ish to'liq ish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mobilogr qiz kere yoku norim yigit100 - 100 000 000 so'mFarg'onaDoimiy ish to'liq ish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 100,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/mobilogr-qiz-kere-yoku-norim-yigit-ID4o2PG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:51.630203+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6800,
+    "fields": {
+      "title": "Bosh dasturchi / Loyiha me'mori (PropTech / Startap) 3 000 000 - 30 000 000 so'm Toshkent, Sergeli tumani Doimiy ish Yarim kunlik Lavozim: Tizim administratori Texnologiya: HTML Ishlanma turi: Fullstack 31-may, 2026 yil",
+      "company": "Bosh dasturchi / Loyiha me'mori (PropTech / Startap) 3 000 000 - 30 000 000 so'm Toshkent, Sergeli tumani Doimiy ish Yarim kunlik Lavozim: Tizim administratori Texnologiya: HTML Ishlanma turi: Fullstack 31-may, 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Bosh dasturchi / Loyiha me'mori (PropTech / Startap) 3 000 000 - 30 000 000 so'm Toshkent, Sergeli tumani Doimiy ish Yarim kunlik Lavozim: Tizim administratori Texnologiya: HTML Ishlanma turi: Fullstack 31-may, 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/lead-developer-arhitektor-proekta-proptech-startap-ID4o2KC.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:54.906612+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6801,
+    "fields": {
+      "title": "Optimum Kredit Lombard1 - 2 so'mFarg'onaDoimiy ishTo'liq kunlik ish 2026 yil 31-may",
+      "company": "Optimum Kredit Lombard1 - 2 so'mFarg'onaDoimiy ishTo'liq kunlik ish 2026 yil 31-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Optimum Kredit Lombard1 - 2 so'mFarg'onaDoimiy ishTo'liq kunlik ish 2026 yil 31-may",
+      "job_type": "full_time",
+      "salary_min": 2,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/optimum-kredit-lombard-ID4o2FL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:43:58.426372+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6802,
+    "fields": {
+      "title": "O'quv Markaz Call Center Qizlarni ishga olamiz 3 000 000 - 10 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil.",
+      "company": "O'quv Markaz Call Center Qizlarni ishga olamiz 3 000 000 - 10 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "O'quv Markaz Call Center Qizlarni ishga olamiz 3 000 000 - 10 000 000 so'mToshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/oquv-markaz-call-centerga-qiz-bollarni-ishga-olamiz-ID4nKlO.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:01.970008+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6803,
+    "fields": {
+      "title": "Kompyuter klub va playstationga administrator kerak200 000 - 300 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "Kompyuter klub va playstationga administrator kerak200 000 - 300 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter klub va playstationga administrator kerak200 000 - 300 000 so'mChirchiqDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-administrator-v-komp-klub-i-pleysteyshin-ID3XUtJ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:05.290653+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6804,
+    "fields": {
+      "title": "YouTube videosiga tajribali muharrir kerak1 700 000 - 8 000 000 so'mVabkentDoimiy ish Yarim kunlik onlayn ishga qabul 2026 yil 31-may",
+      "company": "YouTube videosiga tajribali muharrir kerak1 700 000 - 8 000 000 so'mVabkentDoimiy ish Yarim kunlik onlayn ishga qabul 2026 yil 31-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "YouTube videosiga tajribali muharrir kerak1 700 000 - 8 000 000 so'mVabkentDoimiy ish Yarim kunlik onlayn ishga qabul 2026 yil 31-may",
+      "job_type": "full_time",
+      "salary_min": 700,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-opytnyy-mantazhor-dlya-youtube-video-ID4o2wz.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:07.849271+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6805,
+    "fields": {
+      "title": "Operator ayol kerak 160 - 220 so'm Samarqand Doimiy ish To'liq ish 31 may 2026 yil",
+      "company": "Operator ayol kerak 160 - 220 so'm Samarqand Doimiy ish To'liq ish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator ayol kerak 160 - 220 so'm Samarqand Doimiy ish To'liq ish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 220,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-devushka-ID4nNfQ.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:10.365110+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6806,
+    "fields": {
+      "title": "Call center uchun xodimlar 4 000 000 - 7 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "company": "Call center uchun xodimlar 4 000 000 - 7 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center uchun xodimlar 4 000 000 - 7 000 000 so'm Toshkent, Olmazor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/sotrudniki-dlya-kol-tsentra-ID40XPn.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:14.053679+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6807,
+    "fields": {
+      "title": "Videokuzatuv, kirish nazorati va h.k. o'rnatish uchun shogirdlar jamoasini ishga olamiz 4 500 000 - 7 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "company": "Videokuzatuv, kirish nazorati va h.k. o'rnatish uchun shogirdlar jamoasini ishga olamiz 4 500 000 - 7 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Videokuzatuv, kirish nazorati va h.k. o'rnatish uchun shogirdlar jamoasini ishga olamiz 4 500 000 - 7 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/nabiraem-v-kamandu-uchinikov-dlya-ustanovki-videonablyudenie-skud-i-t-d-ID4ivn7.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:17.366305+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6808,
+    "fields": {
+      "title": "Video kuzatuv kamerasi o'rnatish ishga qabul qilindi SCUD / video kuzatuv3 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ish Ish to'liq stavkada 31 may 2026 yil.",
+      "company": "Video kuzatuv kamerasi o'rnatish ishga qabul qilindi SCUD / video kuzatuv3 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ish Ish to'liq stavkada 31 may 2026 yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Video kuzatuv kamerasi o'rnatish ishga qabul qilindi SCUD / video kuzatuv3 000 000 - 10 000 000 so'mToshkent, Shayxontoxur tumani Doimiy ish Ish to'liq stavkada 31 may 2026 yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/videokuzatuv-kamera-rnatishga-ishga-abul-ilamiz-skud-videonablyudeniya-ID3EbIi.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:21.141412+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6809,
+    "fields": {
+      "title": "Dispetcher savdo markazi4 000 000 - 5 000 000 so'mAndijonDoimiy ish to'liq kunlik ish 2026 yil 31 may",
+      "company": "Dispetcher savdo markazi4 000 000 - 5 000 000 so'mAndijonDoimiy ish to'liq kunlik ish 2026 yil 31 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Dispetcher savdo markazi4 000 000 - 5 000 000 so'mAndijonDoimiy ish to'liq kunlik ish 2026 yil 31 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/distpetcher-sall-sentr-ID4jdlm.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:25.004672+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6810,
+    "fields": {
+      "title": "Qulay grafik va akolen maosh kiyeunmi? 4 500 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "company": "Qulay grafik va akolen maosh kiyeunmi? 4 500 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qulay grafik va akolen maosh kiyeunmi? 4 500 000 - 10 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/qulay-grafik-va-yuqori-maosh-qiziqmi-ID4gZtK.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:28.801792+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6811,
+    "fields": {
+      "title": "kassapraft,0 shogird500000 - 8,00,000 so'mToshkent, Yash 00,000 so'mToshkent, Ya 00,000 so'mToshkent, Ya'ni.O'nobod tumani.To'liq vaqtli ish Masofaviy ish 2026 yil 31-may",
+      "company": "kassapraft,0 shogird500000 - 8,00,000 so'mToshkent, Yash 00,000 so'mToshkent, Ya 00,000 so'mToshkent, Ya'ni.O'nobod tumani.To'liq vaqtli ish Masofaviy ish 2026 yil 31-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "kassapraft,0 shogird500000 - 8,00,000 so'mToshkent, Yash 00,000 so'mToshkent, Ya 00,000 so'mToshkent, Ya'ni.O'nobod tumani.To'liq vaqtli ish Masofaviy ish 2026 yil 31-may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kassapraft-sohasida-shogird-ID4o1cB.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:32.696812+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6812,
+    "fields": {
+      "title": "IT tizimlarini amalga oshirish menejeri / IT tizimlarini joriy qilish mutaxassisi4 000 000 - 6 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "company": "IT tizimlarini amalga oshirish menejeri / IT tizimlarini joriy qilish mutaxassisi4 000 000 - 6 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "IT tizimlarini amalga oshirish menejeri / IT tizimlarini joriy qilish mutaxassisi4 000 000 - 6 000 000 so'mToshkent, Sergeli tumaniDoimiy ishTo'liq ish kuni 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/menedzher-po-vnedreniyu-it-sistem-it-tizimlar-joriy-qilish-mutaxassisi-ID4nxMI.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:36.194780+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6813,
+    "fields": {
+      "title": "Call center oparatori ishga qabul qilish3,000,000 - 4,000,000 so'mFarg'onaDoimiy ishTo'liq ish kuni 31 may 2026 y.",
+      "company": "Call center oparatori ishga qabul qilish3,000,000 - 4,000,000 so'mFarg'onaDoimiy ishTo'liq ish kuni 31 may 2026 y.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center oparatori ishga qabul qilish3,000,000 - 4,000,000 so'mFarg'onaDoimiy ishTo'liq ish kuni 31 may 2026 y.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-center-oparetori-ishga-qabul-qilinadi-ID4nIRt.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:39.638045+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6814,
+    "fields": {
+      "title": "Telemetriya va suv hisoblagichlarini ta'mirlash uchun muhandis kerak 3 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "company": "Telemetriya va suv hisoblagichlarini ta'mirlash uchun muhandis kerak 3 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Telemetriya va suv hisoblagichlarini ta'mirlash uchun muhandis kerak 3 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-inzhener-po-telemetrii-i-po-remontu-schetchiki-vody-ID2rJgY.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:43.843773+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6815,
+    "fields": {
+      "title": "Malakali Basis dasturchi kerak7 000 000 - 10 000 000 so'mFarg'onaDoimiy ishTo'liq ish 31 may 2026 yil",
+      "company": "Malakali Basis dasturchi kerak7 000 000 - 10 000 000 so'mFarg'onaDoimiy ishTo'liq ish 31 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Malakali Basis dasturchi kerak7 000 000 - 10 000 000 so'mFarg'onaDoimiy ishTo'liq ish 31 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/malakali-basis-dasturchi-kerak-ID4nOl3.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:48.009043+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6816,
+    "fields": {
+      "title": "Ofissga aperator kerak6 000 000 so'mKibrayDoimiy ishTo'liq kunlik Masofaviy ish 2026 yil 30-may",
+      "company": "Ofissga aperator kerak6 000 000 so'mKibrayDoimiy ishTo'liq kunlik Masofaviy ish 2026 yil 30-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ofissga aperator kerak6 000 000 so'mKibrayDoimiy ishTo'liq kunlik Masofaviy ish 2026 yil 30-may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ofissga-aperator-kerak-ID48FZo.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:50.656476+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6817,
+    "fields": {
+      "title": "IP telefoniya (mikoPBX/sip call) sozlash uchun IT mutaxassisi kerak 1 - 2 so'm Samarqand Vaqtinchalik ish Yarim kunlik ish Masofaviy ish 2026 yil 30 may",
+      "company": "IP telefoniya (mikoPBX/sip call) sozlash uchun IT mutaxassisi kerak 1 - 2 so'm Samarqand Vaqtinchalik ish Yarim kunlik ish Masofaviy ish 2026 yil 30 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "IP telefoniya (mikoPBX/sip call) sozlash uchun IT mutaxassisi kerak 1 - 2 so'm Samarqand Vaqtinchalik ish Yarim kunlik ish Masofaviy ish 2026 yil 30 may",
+      "job_type": "full_time",
+      "salary_min": 2,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/nuzhen-it-spetsialist-po-nastroyke-ip-telefoniya-mikopbx-sip-obzvon-ID4nLjL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:54.594137+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6818,
+    "fields": {
+      "title": "kompyuter klubida kunlik admin150 000 - 170 000 so'mSamarqandDoimiy ishTo'liq ish Onlayn ishga qabul qilish 30 may 2026 yil",
+      "company": "kompyuter klubida kunlik admin150 000 - 170 000 so'mSamarqandDoimiy ishTo'liq ish Onlayn ishga qabul qilish 30 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "kompyuter klubida kunlik admin150 000 - 170 000 so'mSamarqandDoimiy ishTo'liq ish Onlayn ishga qabul qilish 30 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/dnevnoy-admin-v-kompyuternyy-klub-ID4lQRY.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:44:58.007812+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6819,
+    "fields": {
+      "title": "Grafik dizayner CorelDRAW, Photoshop1 so‘mBuxoroDoimiy ishTo‘liq kunlik ish 2026-yil 30-may",
+      "company": "Grafik dizayner CorelDRAW, Photoshop1 so‘mBuxoroDoimiy ishTo‘liq kunlik ish 2026-yil 30-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Grafik dizayner CorelDRAW, Photoshop1 so‘mBuxoroDoimiy ishTo‘liq kunlik ish 2026-yil 30-may",
+      "job_type": "full_time",
+      "salary_min": 2026,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/graficheskiy-dizayner-coreldraw-photoshop-ID4nTcw.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:01.502559+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6820,
+    "fields": {
+      "title": "Operator kerak!2 500 000 - 3 000 000 so'mNavoiyDoimiy ishTo'liq kunlik ish 30 may 2026 yil",
+      "company": "Operator kerak!2 500 000 - 3 000 000 so'mNavoiyDoimiy ishTo'liq kunlik ish 30 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator kerak!2 500 000 - 3 000 000 so'mNavoiyDoimiy ishTo'liq kunlik ish 30 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-operator-ID4ni3g.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:05.039158+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6821,
+    "fields": {
+      "title": "Rabota sekretarya4,000,000 - 5,500,000 so'mQuyganyarDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 2026 yil 30-may",
+      "company": "Rabota sekretarya4,000,000 - 5,500,000 so'mQuyganyarDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 2026 yil 30-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rabota sekretarya4,000,000 - 5,500,000 so'mQuyganyarDoimiy ishTo'liq kunlik Ishga onlayn ishga qabul qilish 2026 yil 30-may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rabota-sekretarya-ID4nZGd.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:08.413460+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6822,
+    "fields": {
+      "title": "Call center operatori (ruscha/inglizcha)5.976.750 - 17.930.250 soʻmNavoiyDoimiy ishToʻliq kunlik ishOnlayn ishga qabul qilish 2026-yil 30-may",
+      "company": "Call center operatori (ruscha/inglizcha)5.976.750 - 17.930.250 soʻmNavoiyDoimiy ishToʻliq kunlik ishOnlayn ishga qabul qilish 2026-yil 30-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori (ruscha/inglizcha)5.976.750 - 17.930.250 soʻmNavoiyDoimiy ishToʻliq kunlik ishOnlayn ishga qabul qilish 2026-yil 30-may",
+      "job_type": "full_time",
+      "salary_min": 976,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-koll-tsentra-russkiy-angliyskiy-yazyk-ID4nZ3A.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:12.456696+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6823,
+    "fields": {
+      "title": "Sotuv operatorini ishga olamiz! 5 000 000 - 7 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "company": "Sotuv operatorini ishga olamiz! 5 000 000 - 7 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Sotuv operatorini ishga olamiz! 5 000 000 - 7 000 000 so'mToshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/sotuv-operatorini-ishga-olamiz-ID4kIce.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:17.087656+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6824,
+    "fields": {
+      "title": "operator ishga olamiz paynet sim3,000 - 30 000 so'mNavoiDoimiy ishTo'liq ish 30 may 2026 yil",
+      "company": "operator ishga olamiz paynet sim3,000 - 30 000 so'mNavoiDoimiy ishTo'liq ish 30 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "operator ishga olamiz paynet sim3,000 - 30 000 so'mNavoiDoimiy ishTo'liq ish 30 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-ishga-olamiz-paynet-sim-ID4lpb1.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:20.581890+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6825,
+    "fields": {
+      "title": "Sizni Yandex taksi ofisiga DAY operatori bo'lib ishlashga TAKLIF ETAMIZ 3 500 000 - 4 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 30 may 2026 yil",
+      "company": "Sizni Yandex taksi ofisiga DAY operatori bo'lib ishlashga TAKLIF ETAMIZ 3 500 000 - 4 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 30 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Sizni Yandex taksi ofisiga DAY operatori bo'lib ishlashga TAKLIF ETAMIZ 3 500 000 - 4 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq kunlik ish 30 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/priglashaem-na-rabotu-dnevnogo-operatora-v-ofis-yandeks-taksi-ID4lMru.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:24.078589+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6826,
+    "fields": {
+      "title": "10dan kechki 6gacha Farhadsiyda qo'ng'iroq operatorlar uchun daromadli ish6 000 000 - 10 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 30 may 2026 yil",
+      "company": "10dan kechki 6gacha Farhadsiyda qo'ng'iroq operatorlar uchun daromadli ish6 000 000 - 10 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 30 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "10dan kechki 6gacha Farhadsiyda qo'ng'iroq operatorlar uchun daromadli ish6 000 000 - 10 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 30 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/10dan-kechki-6gacha-farhadsiyda-call-operatorlar-uchun-daromadli-ish-ID4nFYK.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:28.635412+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6827,
+    "fields": {
+      "title": "3d Menyu restoranlar uchun, Led ekran, svetozvuk, zvuk operator23 907 - 1 195 350 so'm TermizVaqtinchalik ishTo'liq stavka: DasturchiTexnologiya: Boshqa Ishlanma turi: Fullstack 30-may 2026 yil",
+      "company": "3d Menyu restoranlar uchun, Led ekran, svetozvuk, zvuk operator23 907 - 1 195 350 so'm TermizVaqtinchalik ishTo'liq stavka: DasturchiTexnologiya: Boshqa Ishlanma turi: Fullstack 30-may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "3d Menyu restoranlar uchun, Led ekran, svetozvuk, zvuk operator23 907 - 1 195 350 so'm TermizVaqtinchalik ishTo'liq stavka: DasturchiTexnologiya: Boshqa Ishlanma turi: Fullstack 30-may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 907,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/3d-menyu-restoranlar-uchun-led-ekran-svetozvuk-zvuk-operator-ID46NZv.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:31.875337+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6828,
+    "fields": {
+      "title": "Men Arerator lavozimiga qabul qilindim. 4 000 000 - 6 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "company": "Men Arerator lavozimiga qabul qilindim. 4 000 000 - 6 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Men Arerator lavozimiga qabul qilindim. 4 000 000 - 6 000 000 so'm Samarqand Doimiy ish To'liq kunlik ish 2026 yil 30 may.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/arerator-lavozimiga-ishga-kabul-kilaman-ID4mqWr.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:37.736164+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6829,
+    "fields": {
+      "title": "Qiz qidiraman9 000 000 - 12 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "company": "Qiz qidiraman9 000 000 - 12 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qiz qidiraman9 000 000 - 12 000 000 so'mToshkent, Mirzo-Ulug'bek tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-devushka-ID4nXQa.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:41.347036+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6830,
+    "fields": {
+      "title": "Call centerga qiz yigit qidiraman4 000 000 - 15 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "company": "Call centerga qiz yigit qidiraman4 000 000 - 15 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centerga qiz yigit qidiraman4 000 000 - 15 000 000 so'mToshkent, Yashnobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-devushka-paren-v-koll-tsentr-ID3NduA.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:45.268201+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6831,
+    "fields": {
+      "title": "Taksi operatori 4 000 000 - 5 000 000 so'm Toshkent, Uchtepa tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "company": "Taksi operatori 4 000 000 - 5 000 000 so'm Toshkent, Uchtepa tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Taksi operatori 4 000 000 - 5 000 000 so'm Toshkent, Uchtepa tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/9Suod/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:49.127022+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6832,
+    "fields": {
+      "title": "Python-telegram_bot-Django-SQL-POSTGRE_SQL100,000 - 1,000,000 so'mFarg'onaVaqtinchalik ishTo'liqsiz ishMasofadagi ishLavozim: BoshqaIshlab chiqish turi: Backend, 29-may, 2026 yil",
+      "company": "Python-telegram_bot-Django-SQL-POSTGRE_SQL100,000 - 1,000,000 so'mFarg'onaVaqtinchalik ishTo'liqsiz ishMasofadagi ishLavozim: BoshqaIshlab chiqish turi: Backend, 29-may, 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Python-telegram_bot-Django-SQL-POSTGRE_SQL100,000 - 1,000,000 so'mFarg'onaVaqtinchalik ishTo'liqsiz ishMasofadagi ishLavozim: BoshqaIshlab chiqish turi: Backend, 29-may, 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/python-telegram-bot-django-sql-postgre-sql-ID4nXem.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:53.817997+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6833,
+    "fields": {
+      "title": "Operatorlikka ishga qabul qilamiz1 000 000 - 10 000 000 so'mBuxoroVaqtinchalik ish to'liq bo'lmagan onlayn ishga qabul qilish 2026 yil 29 may",
+      "company": "Operatorlikka ishga qabul qilamiz1 000 000 - 10 000 000 so'mBuxoroVaqtinchalik ish to'liq bo'lmagan onlayn ishga qabul qilish 2026 yil 29 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operatorlikka ishga qabul qilamiz1 000 000 - 10 000 000 so'mBuxoroVaqtinchalik ish to'liq bo'lmagan onlayn ishga qabul qilish 2026 yil 29 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatorlikka-ishga-qabul-qilamiz-ID4nX0f.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:56.192579+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6834,
+    "fields": {
+      "title": "Call Centerda ish taklif qilamiz 4 000 000 - 8 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29-may 2026-yil.",
+      "company": "Call Centerda ish taklif qilamiz 4 000 000 - 8 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29-may 2026-yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call Centerda ish taklif qilamiz 4 000 000 - 8 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29-may 2026-yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/koll-tsentrga-ishka-taklif-klamiz-ID4nGMU.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:45:59.280927+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6835,
+    "fields": {
+      "title": "Olmaliq shahridagi kompyuter klubiga administrator kerak2 500 000 - 3 000 000 so'm Toshkent, Mirobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "company": "Olmaliq shahridagi kompyuter klubiga administrator kerak2 500 000 - 3 000 000 so'm Toshkent, Mirobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Olmaliq shahridagi kompyuter klubiga administrator kerak2 500 000 - 3 000 000 so'm Toshkent, Mirobod tumani Doimiy ishTo'liq ish 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/v-kompyuternyy-klub-trebuetsya-admin-g-almalyk-ID4nVoL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:02.657064+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6836,
+    "fields": {
+      "title": "Kompaniyaga hunarmandlar uchun domofon va kuzatuv kameralarini o'rnatish ishga qabul qilinadi8 000 000 - 15 000 000 so'mMirobodDoimiy ishTo'liq ish kuni 29-may 2026-yil",
+      "company": "Kompaniyaga hunarmandlar uchun domofon va kuzatuv kameralarini o'rnatish ishga qabul qilinadi8 000 000 - 15 000 000 so'mMirobodDoimiy ishTo'liq ish kuni 29-may 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompaniyaga hunarmandlar uchun domofon va kuzatuv kameralarini o'rnatish ishga qabul qilinadi8 000 000 - 15 000 000 so'mMirobodDoimiy ishTo'liq ish kuni 29-may 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kompaniya-nabiraet-ustanovka-domofona-i-kamery-nablyudenie-masterov-ID44ezt.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:06.508493+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6837,
+    "fields": {
+      "title": "Yandex Call Center 2 000 000 - 5 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "company": "Yandex Call Center 2 000 000 - 5 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex Call Center 2 000 000 - 5 000 000 so'mToshkent, Chilonzor tumaniDoimiy ishTo'liq ish kuni 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-call-center-ID4nWZ4.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:09.659714+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6838,
+    "fields": {
+      "title": "Call centerga texnik yordam xodimi qidiramiz 4 000 000 - 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "company": "Call centerga texnik yordam xodimi qidiramiz 4 000 000 - 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centerga texnik yordam xodimi qidiramiz 4 000 000 - 8 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ischem-sotrudnika-tehnicheskoy-podderzhki-v-koll-tsentr-ID4nDp3.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:13.351683+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6839,
+    "fields": {
+      "title": "Bellissimo Pizza kompaniyasiga Call Center operatori ishga qabul qilinadi 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 29-may 2026-yil",
+      "company": "Bellissimo Pizza kompaniyasiga Call Center operatori ishga qabul qilinadi 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 29-may 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Bellissimo Pizza kompaniyasiga Call Center operatori ishga qabul qilinadi 3 000 000 - 4 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 29-may 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/bellissimo-pizza-kompaniyasi-call-center-operatori-ishga-oladi-ID4nD27.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:19.800553+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6840,
+    "fields": {
+      "title": "Kompyuter xizmatlariga ishga olamiz 2 200 000 - 3 600 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29 may 2026 yil",
+      "company": "Kompyuter xizmatlariga ishga olamiz 2 200 000 - 3 600 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kompyuter xizmatlariga ishga olamiz 2 200 000 - 3 600 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 29 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 200,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kompyuter-xizmatlariga-ishga-olamiz-ID4gRwN.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:23.562888+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6841,
+    "fields": {
+      "title": "Kerakli Streamer, Sharhlovchi 100 - 100 000 so'm Samarqand Vaqtinchalik ish stavkasi 29-may 2026-yil",
+      "company": "Kerakli Streamer, Sharhlovchi 100 - 100 000 so'm Samarqand Vaqtinchalik ish stavkasi 29-may 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Kerakli Streamer, Sharhlovchi 100 - 100 000 so'm Samarqand Vaqtinchalik ish stavkasi 29-may 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 100,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-strimer-kommentator-ID4nWlL.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:26.621179+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6842,
+    "fields": {
+      "title": "To'qimachilik ishlab chiqarishga printer kerak 3 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 28 may 2026 yil",
+      "company": "To'qimachilik ishlab chiqarishga printer kerak 3 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 28 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "To'qimachilik ishlab chiqarishga printer kerak 3 000 000 - 5 000 000 so'm Toshkent, Yakkasaroy tumani Doimiy ish To'liq ish kuni 28 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/nuzhen-pechatnik-v-tekstilnoe-proizvodstva-ID3LPnk.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:29.928019+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6843,
+    "fields": {
+      "title": "Call sentrga qizlani ishga taklif qilamiz3 000 000 - 12 000 000 сумТашкент, Чиланзарский районПостоянная работаНеполная занятость28 мая 2026 г.",
+      "company": "Call sentrga qizlani ishga taklif qilamiz3 000 000 - 12 000 000 сумТашкент, Чиланзарский районПостоянная работаНеполная занятость28 мая 2026 г.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call sentrga qizlani ishga taklif qilamiz3 000 000 - 12 000 000 сумТашкент, Чиланзарский районПостоянная работаНеполная занятость28 мая 2026 г.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-sentrga-qizlani-ishga-taklif-qilamiz-ID4nUw6.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:31.381578+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6844,
+    "fields": {
+      "title": "Magazinga ishchi olamz3 000 000 - 10 000 000 so'mToshkent, Olmazor tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil.",
+      "company": "Magazinga ishchi olamz3 000 000 - 10 000 000 so'mToshkent, Olmazor tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Magazinga ishchi olamz3 000 000 - 10 000 000 so'mToshkent, Olmazor tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/magazinga-ishchi-olamz-ID4nU8N.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:35.190610+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6845,
+    "fields": {
+      "title": "Call center operatori3 000 000 - 10 000 000 soʻmToshkent, Sergeli tumaniDoimiy ishToʻliq ish kuni 28-may 2026-yil",
+      "company": "Call center operatori3 000 000 - 10 000 000 soʻmToshkent, Sergeli tumaniDoimiy ishToʻliq ish kuni 28-may 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori3 000 000 - 10 000 000 soʻmToshkent, Sergeli tumaniDoimiy ishToʻliq ish kuni 28-may 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/47lc9/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:38.695385+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6846,
+    "fields": {
+      "title": "Peshin | Arab tilidagi Call Center operatori talab qilinadi | Ayol-qizlar4 000 000 - 9 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 28 may",
+      "company": "Peshin | Arab tilidagi Call Center operatori talab qilinadi | Ayol-qizlar4 000 000 - 9 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 28 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Peshin | Arab tilidagi Call Center operatori talab qilinadi | Ayol-qizlar4 000 000 - 9 000 000 so'm Toshkent, Shayxontoxur tumani Doimiy ish To'liq kunlik ish 2026 yil 28 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/noon-arabskogo-yazyka-trebuetsya-operator-call-tsentra-ayol-qizlar-ID4nTxb.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:42.221437+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6847,
+    "fields": {
+      "title": "Mebel ishlab chiqarish bo'yicha ombor mudiri/operatori 4 000 000 - 6 000 000 so'm Toshkent, Bektemir tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil",
+      "company": "Mebel ishlab chiqarish bo'yicha ombor mudiri/operatori 4 000 000 - 6 000 000 so'm Toshkent, Bektemir tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Mebel ishlab chiqarish bo'yicha ombor mudiri/operatori 4 000 000 - 6 000 000 so'm Toshkent, Bektemir tumani Doimiy ish To'liq kunlik ish 28 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/list/user/3iQ27/",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:45.629246+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6848,
+    "fields": {
+      "title": "Operator Call Center 2.500.000 soʻm Toshkent sh., Yunusobod tumani Doimiy ish Vaqtinchalik 28-may 2026-yil",
+      "company": "Operator Call Center 2.500.000 soʻm Toshkent sh., Yunusobod tumani Doimiy ish Vaqtinchalik 28-may 2026-yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Operator Call Center 2.500.000 soʻm Toshkent sh., Yunusobod tumani Doimiy ish Vaqtinchalik 28-may 2026-yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operator-call-center-ID4j8KN.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:49.727014+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6849,
+    "fields": {
+      "title": "Qo'ng'iroq qiling markazga operatorlarni ishga olamiz3 000 000 - 10 000 000 so'mQibrayDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "company": "Qo'ng'iroq qiling markazga operatorlarni ishga olamiz3 000 000 - 10 000 000 so'mQibrayDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qo'ng'iroq qiling markazga operatorlarni ishga olamiz3 000 000 - 10 000 000 so'mQibrayDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-sentrga-operatorlarni-ishga-olamiz-ID4nT9r.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:52.960188+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6850,
+    "fields": {
+      "title": "Call center ga qizlar kerak 4 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 28 may 2026 yil.",
+      "company": "Call center ga qizlar kerak 4 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 28 may 2026 yil.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center ga qizlar kerak 4 000 000 - 5 000 000 so'm Toshkent, Chilonzor tumani Doimiy ish To'liq ish kuni 28 may 2026 yil.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-center-ga-qizlar-kerak-ID4nSYe.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:55.876816+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6851,
+    "fields": {
+      "title": "Call centrega operator kerak1 - 10 so'mAngrenDoimiy ishTo'liq ish kuni 2026 yil 28-may",
+      "company": "Call centrega operator kerak1 - 10 so'mAngrenDoimiy ishTo'liq ish kuni 2026 yil 28-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call centrega operator kerak1 - 10 so'mAngrenDoimiy ishTo'liq ish kuni 2026 yil 28-may",
+      "job_type": "full_time",
+      "salary_min": 10,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-centrega-operator-kerak-ID4nDiH.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:46:59.691754+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6852,
+    "fields": {
+      "title": "Buxoro shahar xususiy klinikasida call center operatori kerak3 000 000 - 4 000 000 so'mBuxoroDoimiy ishTo'liq ish 28 may 2026 yil",
+      "company": "Buxoro shahar xususiy klinikasida call center operatori kerak3 000 000 - 4 000 000 so'mBuxoroDoimiy ishTo'liq ish 28 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Buxoro shahar xususiy klinikasida call center operatori kerak3 000 000 - 4 000 000 so'mBuxoroDoimiy ishTo'liq ish 28 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/buhoro-shahar-hususiy-klinikasida-operator-koll-tsentr-kerak-ID4ivBM.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:02.926059+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6853,
+    "fields": {
+      "title": "Qo'ng'iroq onlayn yuborildi ish80 000 - 200 000 so'mSamarqandDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "company": "Qo'ng'iroq onlayn yuborildi ish80 000 - 200 000 so'mSamarqandDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qo'ng'iroq onlayn yuborildi ish80 000 - 200 000 so'mSamarqandDoimiy ishTo'liq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 28 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-sent-online-ish-ID4nSm8.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:06.030245+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6854,
+    "fields": {
+      "title": "Officega srochna operator qizla kere3 000 000 - 5 000 000 so'mChirchiqDoimiy ish to'liqsiz 27 may 2026 yil",
+      "company": "Officega srochna operator qizla kere3 000 000 - 5 000 000 so'mChirchiqDoimiy ish to'liqsiz 27 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Officega srochna operator qizla kere3 000 000 - 5 000 000 so'mChirchiqDoimiy ish to'liqsiz 27 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/officega-srochna-operator-qizla-kere-ID4m3ns.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:09.093143+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6855,
+    "fields": {
+      "title": "Cap cut pro 1 oy40 000 so'mNurafshon (To'ytepa)Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 27 may",
+      "company": "Cap cut pro 1 oy40 000 so'mNurafshon (To'ytepa)Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 27 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Cap cut pro 1 oy40 000 so'mNurafshon (To'ytepa)Doimiy ishTo'liq kunlik Masofaviy ish 2026 yil 27 may",
+      "job_type": "full_time",
+      "salary_min": 1,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/cap-cut-pro-1-oy-ID4kITN.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:12.171855+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6856,
+    "fields": {
+      "title": "Ishchi kerak talabalar uchun ish5 000 000 - 15 000 000 so'mBuxoroDoimiy ishTo'liq ish 27 may 2026 yil",
+      "company": "Ishchi kerak talabalar uchun ish5 000 000 - 15 000 000 so'mBuxoroDoimiy ishTo'liq ish 27 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ishchi kerak talabalar uchun ish5 000 000 - 15 000 000 so'mBuxoroDoimiy ishTo'liq ish 27 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/ishchi-kerak-talabalar-uchun-ish-ID4nR1k.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:15.776978+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6857,
+    "fields": {
+      "title": "Smart House saloni tizimi bo'yicha maslahatchi 3 000 000 - 8 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 27 may 2026 yil",
+      "company": "Smart House saloni tizimi bo'yicha maslahatchi 3 000 000 - 8 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 27 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Smart House saloni tizimi bo'yicha maslahatchi 3 000 000 - 8 000 000 so'mToshkent, Yakkasaroy tumani Doimiy ish To'liq kunlik ish 27 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/konsultant-v-shourum-sistemy-umnyy-dom-ID4mmvp.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:19.456619+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6858,
+    "fields": {
+      "title": "Cal Centrga operator qizlar kerak4 000 000 - 8 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish Vaqtinchalik 27 may 2026 yil",
+      "company": "Cal Centrga operator qizlar kerak4 000 000 - 8 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish Vaqtinchalik 27 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Cal Centrga operator qizlar kerak4 000 000 - 8 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish Vaqtinchalik 27 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/cal-centrga-operator-qizlar-kerak-ID4nQYG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:22.525979+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6859,
+    "fields": {
+      "title": "Rover stanokida ishlashni oʻrgataman2 988 375 - 5 976 750 soʻmUrganchDoimiy ishToʻliq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 2026-yil 27-may",
+      "company": "Rover stanokida ishlashni oʻrgataman2 988 375 - 5 976 750 soʻmUrganchDoimiy ishToʻliq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 2026-yil 27-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Rover stanokida ishlashni oʻrgataman2 988 375 - 5 976 750 soʻmUrganchDoimiy ishToʻliq kunlik ish Masofaviy ishOnlayn ishga qabul qilish 2026-yil 27-may",
+      "job_type": "full_time",
+      "salary_min": 988,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/rover-stanokida-ishlashni-orgataman-ID4lllP.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:27.064754+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6860,
+    "fields": {
+      "title": "\"LEGION\" kompyuter klubi kassiri 3 000 000 so'mUrganchDoimiy ishTo'liq ish kuni 2026 yil 26 may",
+      "company": "\"LEGION\" kompyuter klubi kassiri 3 000 000 so'mUrganchDoimiy ishTo'liq ish kuni 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "\"LEGION\" kompyuter klubi kassiri 3 000 000 so'mUrganchDoimiy ishTo'liq ish kuni 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/kassir-v-kompyuternyy-klub-legion-ID4nQFT.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:31.131375+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6861,
+    "fields": {
+      "title": "DATA analitik kerak10.000.000 - 20.000.000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq ish kuni, 2026-yil 26-may",
+      "company": "DATA analitik kerak10.000.000 - 20.000.000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq ish kuni, 2026-yil 26-may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "DATA analitik kerak10.000.000 - 20.000.000 soʻmToshkent, Mirzo-Ulugʻbek tumaniDoimiy ishToʻliq ish kuni, 2026-yil 26-may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/data-analitik-kerak-ID4nQrT.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:34.303654+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6862,
+    "fields": {
+      "title": "Game clubga Admin yordamchisi kere qiz bola! 4 000 000 - 8 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may",
+      "company": "Game clubga Admin yordamchisi kere qiz bola! 4 000 000 - 8 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Game clubga Admin yordamchisi kere qiz bola! 4 000 000 - 8 000 000 so'm Toshkent, Yunusobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/game-clubga-admin-yordamchisi-kere-qiz-bola-ID4mNKc.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:38.887355+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6863,
+    "fields": {
+      "title": "Yandex ofisiga Operator lavozimiga ishga taklif qilamiz. 3 000 000 - 4 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may.",
+      "company": "Yandex ofisiga Operator lavozimiga ishga taklif qilamiz. 3 000 000 - 4 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Yandex ofisiga Operator lavozimiga ishga taklif qilamiz. 3 000 000 - 4 000 000 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq kunlik ish 2026 yil 26 may.",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/yandex-ofisiga-operatorlikga-ishga-taklif-qilamiz-ID4nPBI.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:42.745610+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6864,
+    "fields": {
+      "title": "ishga talab qilinadi Tizim administratori 4 000 000 - 7 000 000 so'm Samarqand Doimiy ish To'liq ish kuni 2026 yil 26 may",
+      "company": "ishga talab qilinadi Tizim administratori 4 000 000 - 7 000 000 so'm Samarqand Doimiy ish To'liq ish kuni 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "ishga talab qilinadi Tizim administratori 4 000 000 - 7 000 000 so'm Samarqand Doimiy ish To'liq ish kuni 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-na-rabotu-sistemnyy-administrator-ID4nPbw.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:46.297231+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6865,
+    "fields": {
+      "title": "Ishlab chiqarish sexidagi operatorlar4 000 000 - 8 000 000 so'mKelesDoimiy ishTo'liq kunlik ish 2026 yil 26 may",
+      "company": "Ishlab chiqarish sexidagi operatorlar4 000 000 - 8 000 000 so'mKelesDoimiy ishTo'liq kunlik ish 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Ishlab chiqarish sexidagi operatorlar4 000 000 - 8 000 000 so'mKelesDoimiy ishTo'liq kunlik ish 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/operatory-v-proizvodstvennyy-tseh-ID4nxaU.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:49.039415+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6866,
+    "fields": {
+      "title": "Qo'ng'iroq qiling markaz ishga xodim avtosalonga4 781 400 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2026 yil 26 may.",
+      "company": "Qo'ng'iroq qiling markaz ishga xodim avtosalonga4 781 400 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2026 yil 26 may.",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Qo'ng'iroq qiling markaz ishga xodim avtosalonga4 781 400 so'm Toshkent, Yashnobod tumani Doimiy ish To'liq ish kuni 2026 yil 26 may.",
+      "job_type": "full_time",
+      "salary_min": 781,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-sentr-ishga-xodim-avtosalonga-ID4nOR9.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:52.429560+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6867,
+    "fields": {
+      "title": "Fizioterapiya mutaxassisi kerak 4 500 000 - 10 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish To'liq ish kuni 26 may 2026 yil",
+      "company": "Fizioterapiya mutaxassisi kerak 4 500 000 - 10 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish To'liq ish kuni 26 may 2026 yil",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Fizioterapiya mutaxassisi kerak 4 500 000 - 10 000 000 so'm Toshkent, Mirzo Ulug'bek tumani Doimiy ish To'liq ish kuni 26 may 2026 yil",
+      "job_type": "full_time",
+      "salary_min": 500,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/trebuetsya-lfk-spetsialist-ID4g5ml.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:56.584928+00:00"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6868,
+    "fields": {
+      "title": "Call center operatori2 000 000 - 3 500 000 so'm ShahrisabzDoimiy ishTo'liq kunlik ishOnlayn ishga qabul qilish 2026 yil 26 may",
+      "company": "Call center operatori2 000 000 - 3 500 000 so'm ShahrisabzDoimiy ishTo'liq kunlik ishOnlayn ishga qabul qilish 2026 yil 26 may",
+      "category": "IT / Dasturlash",
+      "country": "O'zbekiston",
+      "description": "Call center operatori2 000 000 - 3 500 000 so'm ShahrisabzDoimiy ishTo'liq kunlik ishOnlayn ishga qabul qilish 2026 yil 26 may",
+      "job_type": "full_time",
+      "salary_min": 0,
+      "salary_max": 2026,
+      "currency": "UZS",
+      "required_skills": [],
+      "source_url": "https://www.olx.uz/obyavlenie/rabota/call-centre-operator-ID4nvyG.html",
+      "source": "olx.uz",
+      "is_active": true,
+      "posted_at": "2026-06-04T10:47:59.413472+00:00"
+    }
+  }
+]
