@@ -22,6 +22,7 @@ Qoidalar:
 - Faqat toza O'zbek lotin tilida yoz. Inglizcha yoki boshqa tillarni aralashtirma.
 - Foydalanuvchi ismini faqat "Ism" maydonidan ol, boshqa ism o'ylab topma.
 - Test natijasini eslab tur, lekin har javobda uni qayta-qayta takrorlama.
+- Foydalanuvchi har qanday mavzuda savol bersa, avval shu savolga javob ber, keyin kerak bo'lsa karyera bilan bog'la.
 - Javoblarni faqat punktlar (bullet points) bo'yicha, juda qisqa, aniq va lo'nda ber.
 - Juda uzun va murakkab gaplar tuzma. Foydalanuvchini chalg'itadigan ortiqcha va umumiy ma'lumot berma.
 - Keyingi suhbatlarda foydalanuvchi aynan nima so'rasa, faqat shu savolga javob ber.
@@ -58,8 +59,11 @@ ROLE_KEYWORDS = {
 UZ_HINTS = {
     "backend": "Backend Developer",
     "back-end": "Backend Developer",
+    "django": "Backend Developer",
+    "api": "Backend Developer",
     "frontend": "Frontend Developer",
     "front-end": "Frontend Developer",
+    "react": "Frontend Developer",
     "mobil": "Mobile App Developer",
     "android": "Mobile App Developer",
     "ios": "Mobile App Developer",
@@ -78,6 +82,71 @@ UZ_HINTS = {
     "security": "Cybersecurity Specialist",
     "blockchain": "Blockchain Developer",
     "game": "Game Developer",
+}
+
+ROLE_PROFILES = {
+    "Backend Developer": {
+        "summary": "server, API, baza va biznes logikani qurish",
+        "skills": ["Python/Django", "REST API", "SQL", "Git", "Docker"],
+        "project": "login, CRUD, admin panel va API bo'lgan kichik ish e'lonlari servisi",
+    },
+    "Frontend Developer": {
+        "summary": "foydalanuvchi ko'radigan interfeys va interaktiv sahifalarni yaratish",
+        "skills": ["HTML/CSS", "JavaScript", "React", "API bilan ishlash", "responsive dizayn"],
+        "project": "dashboard, filter va chartlari bor vakansiya analitika sahifasi",
+    },
+    "Mobile App Developer": {
+        "summary": "Android/iOS uchun ilova yaratish",
+        "skills": ["Flutter yoki React Native", "API", "state management", "UI", "push notification"],
+        "project": "vakansiyalarni qidirish va saqlash imkoniyatiga ega mobil ilova",
+    },
+    "Data Analyst": {
+        "summary": "ma'lumotdan xulosa chiqarish va dashboard tayyorlash",
+        "skills": ["SQL", "Excel", "Power BI", "Python/Pandas", "vizualizatsiya"],
+        "project": "vakansiyalar bo'yicha maosh, davlat va skill dashboardi",
+    },
+    "Data Scientist": {
+        "summary": "ma'lumotlar asosida bashorat va model qurish",
+        "skills": ["Python", "Pandas", "Statistika", "Scikit-learn", "model baholash"],
+        "project": "vakansiya matnidan kategoriya bashorat qiladigan model",
+    },
+    "DevOps Engineer": {
+        "summary": "server, deploy, monitoring va avtomatlashtirish",
+        "skills": ["Linux", "Docker", "CI/CD", "Nginx", "Cloud asoslari"],
+        "project": "Django loyihani Docker bilan deploy qilish va log monitoring qo'shish",
+    },
+    "AI Engineer": {
+        "summary": "AI model, prompt, lokal LLM va avtomatlashtirilgan tavsiya tizimlari",
+        "skills": ["Python", "LLM", "prompt engineering", "RAG asoslari", "model evaluation"],
+        "project": "lokal Ollama va Django orqali karyera maslahatchi chatini yaxshilash",
+    },
+    "Prompt Engineer": {
+        "summary": "AI javoblarini boshqarish, baholash va foydali prompt tizimlari qurish",
+        "skills": ["prompt yozish", "test ssenariylari", "LLM baholash", "JSON output", "agent flow"],
+        "project": "turli foydalanuvchi savollariga mos prompt va fallback tizimi",
+    },
+    "UI/UX Designer": {
+        "summary": "foydalanuvchi tajribasi va interfeys dizaynini loyihalash",
+        "skills": ["Figma", "wireframe", "user flow", "prototyping", "design system"],
+        "project": "AI test va chat sahifasi uchun toza user flow va prototip",
+    },
+    "Product Manager": {
+        "summary": "mahsulot muammosi, prioritet va roadmapni boshqarish",
+        "skills": ["discovery", "roadmap", "user story", "analytics", "prioritization"],
+        "project": "AURA Career uchun foydalanuvchi ehtiyojlari va MVP roadmap hujjati",
+    },
+    "QA Engineer": {
+        "summary": "xatolarni topish, test reja va sifat nazoratini yuritish",
+        "skills": ["test case", "bug report", "Postman", "Playwright/Selenium", "regression test"],
+        "project": "login, AI test va chat uchun avtomatlashtirilgan testlar",
+    },
+}
+
+PAEI_ROLE_CATEGORIES = {
+    'P': ['Backend Developer', 'Software Engineer', 'DevOps Engineer', 'Mobile App Developer', 'Game Developer'],
+    'A': ['QA Engineer', 'Data Analyst', 'Business Analyst', 'Cybersecurity Specialist'],
+    'E': ['AI Engineer', 'Prompt Engineer', 'UI/UX Designer', 'Product Manager', 'Product Designer', 'Blockchain Developer'],
+    'I': ['Project Manager', 'Business Intelligence (BI) Developer', 'Frontend Developer'],
 }
 
 
@@ -133,22 +202,29 @@ def _infer_role_hint(text, test_recommendation=None):
                 return role_name
 
     for keyword, role_name in UZ_HINTS.items():
-        if keyword in low:
+        if re.search(r'(?<![a-z0-9])' + re.escape(keyword) + r'(?![a-z0-9])', low):
             return role_name
     return None
 
 
 def _intent_from_text(text):
     low = _normalize_text(text)
-    if any(word in low for word in ["roadmap", "yo'l xarita", "reja", "qanday o'rgan", "qanday organ"]):
+    
+    def has_word(words):
+        for w in words:
+            if re.search(r'\b' + re.escape(w) + r'\b', low):
+                return True
+        return False
+
+    if has_word(["roadmap", "yo'l xarita", "reja", "qanday o'rgan", "qanday organ"]):
         return "roadmap"
-    if any(word in low for word in ["vakansiya", "ish", "topish", "mos", "lavozim"]):
+    if has_word(["vakansiya", "ish", "topish", "mos", "lavozim"]):
         return "vacancy"
-    if any(word in low for word in ["bozor", "talab", "trend", "statistika"]):
+    if has_word(["bozor", "talab", "trend", "statistika", "biznes", "biznesga", "yo'nalish", "yunalish"]):
         return "market"
-    if any(word in low for word in ["skill", "konikma", "ko'nikma", "nima o'rgan", "nima organ", "qaysi", "python", "django", "drf", "react", "java", "node", "flutter", "c++", "c#", "golang", "php"]):
+    if has_word(["skill", "konikma", "ko'nikma", "nima o'rgan", "nima organ", "qaysi", "python", "django", "drf", "react", "java", "node", "flutter", "c++", "c#", "golang", "php"]):
         return "skills"
-    if any(word in low for word in ["salom", "assalomu alaykum", "hello", "hi"]):
+    if has_word(["salom", "assalomu alaykum", "hello", "hi"]):
         return "greeting"
     return "general"
 
@@ -286,6 +362,204 @@ def _simple_local_reply(full_name, user_message, test_recommendation):
     return None
 
 
+def _stream_text(text, chunk_size=9):
+    """Matnni UI uchun mayda bo'laklarda uzatadi."""
+    words = re.split(r'(\s+)', text)
+    buffer = ""
+    for part in words:
+        buffer += part
+        if len(buffer) >= chunk_size or "\n" in buffer:
+            yield buffer
+            buffer = ""
+    if buffer:
+        yield buffer
+
+
+def _paei_code_from_recommendation(test_recommendation):
+    rec_job_title = ""
+    reason = ""
+    if test_recommendation:
+        rec_job_title = test_recommendation.get('recommended_job', '')
+        reason = test_recommendation.get('reason', '')
+    text = f"{rec_job_title} {reason}"
+
+    if any(word in text for word in ['Producer', 'Dasturchi', 'DevOps', 'Injinir']):
+        return 'P'
+    if any(word in text for word in ['Administrator', 'QA', 'Data Analyst', 'SysAdmin']):
+        return 'A'
+    if any(word in text for word in ['Entrepreneur', 'AI', 'Product Manager', 'UX/UI']):
+        return 'E'
+    if any(word in text for word in ['Integrator', 'Scrum', 'Project Manager', 'HR']):
+        return 'I'
+    return ''
+
+
+def _role_details(role_name):
+    default = {
+        "summary": "IT yo'nalishida amaliy muammolarni yechish",
+        "skills": ["Python", "SQL", "Git", "portfolio", "muloqot"],
+        "project": "real muammoni yechadigan kichik portfolio loyihasi",
+    }
+    return ROLE_PROFILES.get(role_name or "", default)
+
+
+def _best_role_for_user(user_message, test_recommendation):
+    role_hint = _infer_role_hint(user_message, test_recommendation)
+    if role_hint:
+        return role_hint
+
+    paei_code = _paei_code_from_recommendation(test_recommendation)
+    candidate_roles = PAEI_ROLE_CATEGORIES.get(paei_code, [])
+    if not candidate_roles:
+        return "Software Engineer"
+    return candidate_roles[0]
+
+
+def _job_stats_for_role(role_name):
+    jobs = Job.objects.filter(is_active=True, category__name=role_name)
+    skill_qs = Skill.objects.filter(job__in=jobs).annotate(
+        demand=Count('job')
+    ).order_by('-demand', 'name')[:5]
+    keywords = ROLE_KEYWORDS.get(role_name, [])
+    examples = []
+    seen_examples = set()
+    for job in jobs.select_related('country').order_by('-posted_at', '-id')[:30]:
+        haystack = job.title.lower()
+        example_key = (job.title.strip().lower(), job.company.strip().lower())
+        if example_key in seen_examples:
+            continue
+        if not keywords or any(keyword.lower() in haystack for keyword in keywords):
+            examples.append(job)
+            seen_examples.add(example_key)
+        if len(examples) >= 3:
+            break
+    return {
+        "count": jobs.count(),
+        "skills": [s.name for s in skill_qs if s.name],
+        "examples": examples,
+    }
+
+
+def _extract_question_focus(user_message):
+    low = _normalize_text(user_message)
+    focus_map = [
+        (["cv", "resume", "rezyume"], "CV"),
+        (["portfolio", "loyiha", "project"], "portfolio"),
+        (["intervyu", "suhbat", "interview"], "intervyu"),
+        (["maosh", "salary", "oylik"], "maosh"),
+        (["backend", "django", "api"], "backend"),
+        (["frontend", "react", "javascript"], "frontend"),
+        (["data", "sql", "analitika"], "data"),
+        (["ai", "llm", "prompt"], "AI"),
+        (["ingliz", "english"], "ingliz tili"),
+        (["matematika", "math"], "matematika"),
+    ]
+    for words, label in focus_map:
+        if any(word in low for word in words):
+            return label
+    words = re.findall(r"[a-zA-Z0-9+'#.-]{3,}", low)
+    return " ".join(words[:5]) if words else "savolingiz"
+
+
+def _local_chat_answer(full_name, test_recommendation, bozor_data, user_message, initial=False):
+    """API keysiz ishlaydigan, savolga moslangan lokal javob generatori."""
+    role_name = _best_role_for_user(user_message, test_recommendation)
+    role_info = _role_details(role_name)
+    stats = _job_stats_for_role(role_name)
+    intent = _intent_from_text(user_message)
+    focus = _extract_question_focus(user_message)
+    skill_list = stats["skills"] or role_info["skills"]
+
+    if initial:
+        return (
+            f"## {full_name}, test natijangiz bo'yicha tahlil\n\n"
+            f"- Sizga eng yaqin yo'nalish: **{role_name}**.\n"
+            f"- Bu yo'nalishning mazmuni: {role_info['summary']}.\n"
+            f"- Bazada shu yo'nalish bo'yicha {stats['count']} ta aktiv vakansiya bor.\n"
+            f"- Boshlash uchun 3 ta asosiy skill: {', '.join(skill_list[:3])}.\n"
+            f"- Birinchi portfolio ishi: {role_info['project']}.\n"
+            "- Keyingi savolingizni bemalol yozing, javobni shu natijangizga moslab beraman."
+        )
+
+    if intent == "roadmap":
+        return (
+            f"## {role_name} uchun qisqa roadmap\n\n"
+            f"1. Asos: {', '.join(skill_list[:3])} ni mustahkamlang.\n"
+            f"2. Amaliyot: {role_info['project']} qiling.\n"
+            "3. Portfolio: GitHub yoki PDF ko'rinishida natijani joylang.\n"
+            "4. Ishga tayyorgarlik: har kuni 3 ta vakansiya talabini tahlil qiling.\n"
+            f"5. Fokus: test natijangizga ko'ra sizga {role_name} yo'nalishi yaqinroq."
+        )
+
+    if intent == "vacancy":
+        examples = []
+        for job in stats["examples"]:
+            country = job.country.name if job.country else "Noma'lum"
+            examples.append(f"- {job.title} | {job.company} | {country}")
+        example_text = "\n".join(examples) if examples else "- Hozir bu yo'nalishda namunaviy vakansiya topilmadi."
+        return (
+            f"## Sizga mos vakansiya yo'nalishi\n\n"
+            f"- Tavsiya: **{role_name}**.\n"
+            f"- Bazada mos aktiv e'lonlar: {stats['count']} ta.\n"
+            f"- Talab qilinadigan skilllar: {', '.join(skill_list[:5])}.\n\n"
+            f"Namuna vakansiyalar:\n{example_text}\n\n"
+            "- CVda aynan shu skilllar va 1-2 ta amaliy loyiha ko'rinsin."
+        )
+
+    if intent == "market":
+        return (
+            "## Bozor bo'yicha javob\n\n"
+            f"{bozor_data}\n\n"
+            f"- Sizning profilingizga mos asosiy yo'nalish: **{role_name}**.\n"
+            "- Qaror qabul qilishda faqat nomga emas, vakansiyadagi skill talablariga qarang."
+        )
+
+    if intent == "skills":
+        return (
+            f"## {focus} bo'yicha kerakli ko'nikmalar\n\n"
+            f"- Sizga mos yo'nalish: **{role_name}**.\n"
+            f"- Birinchi navbatda: {', '.join(skill_list[:5])}.\n"
+            f"- Mashq uchun: {role_info['project']}.\n"
+            "- O'rganayotganda har bir skillni kichik loyiha bilan mustahkamlang."
+        )
+
+    if focus == "CV":
+        return (
+            "## CV bo'yicha tavsiya\n\n"
+            f"- CV sarlavhasini {role_name} yo'nalishiga mos yozing.\n"
+            f"- Skilllar blokida {', '.join(skill_list[:5])} bo'lsin.\n"
+            "- Har bir loyiha yonida natija yozing: nima qildingiz, qaysi texnologiya, qanday foyda.\n"
+            "- 1 sahifalik, aniq va ortiqcha umumiy gaplarsiz CV kuchliroq ko'rinadi."
+        )
+
+    if focus == "portfolio":
+        return (
+            "## Portfolio uchun g'oya\n\n"
+            f"- Sizga mos loyiha: {role_info['project']}.\n"
+            "- Loyihada muammo, yechim, texnologiya va natijani alohida ko'rsating.\n"
+            "- Demo skrinshot yoki video qo'shing.\n"
+            f"- Bu {role_name} vakansiyalarida sizni ancha ishonchli ko'rsatadi."
+        )
+
+    if focus == "intervyu":
+        return (
+            "## Intervyuga tayyorgarlik\n\n"
+            f"- Avval {role_name} uchun asosiy skilllarni takrorlang: {', '.join(skill_list[:4])}.\n"
+            "- 5 ta loyiha savoliga tayyor bo'ling: nima qildingiz, nega shunday qildingiz, natija nima bo'ldi.\n"
+            "- Javoblarni qisqa formula bilan bering: muammo -> yechim -> natija.\n"
+            "- Har kuni 20 daqiqa ovoz chiqarib mashq qiling."
+        )
+
+    return (
+        f"## {focus.capitalize()} bo'yicha javob\n\n"
+        f"- Savolingizni tushundim, {full_name}. Qisqa javob: buni {role_name} maqsadingiz bilan bog'lab o'rganish foydali.\n"
+        f"- Sabab: sizga mos yo'nalish {role_info['summary']} bilan bog'liq.\n"
+        f"- Amaliy qadam: {role_info['project']} ichida shu mavzuni qo'llab ko'ring.\n"
+        f"- Kerakli skilllar: {', '.join(skill_list[:5])}.\n"
+        "- Savolni yanada aniqroq bersangiz, men javobni reja yoki misol ko'rinishida maydalab beraman."
+    )
+
+
 def _call_ollama_with_timeout(callable_obj, timeout_seconds=OLLAMA_CHAT_TIMEOUT_SECONDS):
     executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
     future = executor.submit(callable_obj)
@@ -417,28 +691,26 @@ def get_ai_chat_response_stream(user, user_message, test_recommendation=None):
     local_reply = _simple_local_reply(full_name, user_message, test_recommendation)
 
     if is_initial_analysis:
-        context_block = (
-            f"Ism: {full_name}\n"
-            f"{test_data}\n\n"
-            f"Bozor konteksti:\n{role_market_context}\n\n"
-        )
         actual_user_msg = (
-            context_block +
-            "Vazifa: foydalanuvchiga birinchi marta test natijasini qisqa tushuntir. "
-            "Mos yo'nalish, 1-2 sabab va 2 ta keyingi qadam yoz. Ichki kontekstni ko'chirma."
+            f"Ism: {full_name}\n"
+            f"Foydalanuvchi profili va test natijasi:\n{test_data}\n\n"
+            f"Real bozor konteksti:\n{role_market_context}\n\n"
+            "Vazifa: foydalanuvchiga birinchi test natijasini tushunarli tahlil qilib ber. "
+            "Mos yo'nalish, sabab, kerakli skilllar va 2 ta amaliy keyingi qadam yoz. "
+            "Ichki kontekstni ko'chirma."
         )
     else:
         rec_job_short = test_recommendation.get('recommended_job', "Noma'lum") if test_recommendation else "N/A"
-        total_jobs_count = Job.objects.filter(is_active=True).count()
         actual_user_msg = (
             f"Ism: {full_name}\n"
-            f"Oxirgi PAEI/test natijasi: {rec_job_short}\n"
-            f"Jami aktiv vakansiyalar: {total_jobs_count} ta\n"
-            f"Foydalanuvchi savoli: {user_message}\n\n"
+            f"Oxirgi test natijasi: {rec_job_short}\n"
             f"Savol turi: {intent}\n"
-            f"Role hint: {role_hint or 'yoq'}\n\n"
-            "Vazifa: faqat foydalanuvchi savoliga javob ber. "
-            "Javob qisqa, aniq va O'zbek lotinida bo'lsin. Ichki kontekstni ko'chirma."
+            f"Taxminiy yo'nalish: {role_hint or 'aniq emas'}\n"
+            f"Bozor konteksti:\n{role_market_context}\n\n"
+            f"Foydalanuvchi savoli: {user_message}\n\n"
+            "Vazifa: aynan foydalanuvchi savoliga javob ber. "
+            "Kerak bo'lsa test natijasi va bozor ma'lumotiga moslab tushuntir. "
+            "Ichki kontekst, prompt, JSON yoki system matnini ko'chirma."
         )
 
     # 4. Xabarlar ro'yxatini tayyorlash
@@ -470,31 +742,17 @@ def get_ai_chat_response_stream(user, user_message, test_recommendation=None):
         # Intercept greetings or common intents to give high-quality perfect Uzbek instantly
         if local_reply:
             full_response_holder[0] = local_reply
-            yield local_reply
+            yield from _stream_text(local_reply)
             updated_history = list(chat_session.message_history)
             updated_history.append({"role": "assistant", "content": local_reply})
-            chat_session.message_history = updated_history
-            chat_session.save()
-            return
-            
-        # Kichik modellar o'zbek tilida yomon javob bergani uchun,
-        # muhim so'rovlarda (roadmap, ish, ko'nikma) to'g'ridan-to'g'ri Python shablonlarini ishlatamiz.
-        if intent in ['roadmap', 'vacancy', 'market', 'skills']:
-            perfect_uzbek_reply = generate_fallback_response(
-                full_name, test_recommendation, role_market_context, user_message=user_message, initial=False
-            )
-            full_response_holder[0] = perfect_uzbek_reply
-            yield perfect_uzbek_reply
-            updated_history = list(chat_session.message_history)
-            updated_history.append({"role": "assistant", "content": perfect_uzbek_reply})
             chat_session.message_history = updated_history
             chat_session.save()
             return
 
         try:
             import ollama
-            # Llama3.2:1b eng aqllisi, uni birinchi qo'yamiz.
-            models_to_try = ['llama3.2:1b', 'qwen2:0.5b', 'aura-agent', 'tinyllama']
+            # Lokal model ishlatiladi. Tashqi API key talab qilinmaydi.
+            models_to_try = ['aura-agent', 'llama3.2:1b', 'qwen2:0.5b', 'tinyllama']
             chosen_model = None
             for model_name in models_to_try:
                 try:
@@ -506,50 +764,62 @@ def get_ai_chat_response_stream(user, user_message, test_recommendation=None):
 
             if chosen_model:
                 try:
-                    stream = ollama.chat(
-                        model=chosen_model,
-                        messages=messages,
-                        stream=True,
-                        options={
-                            'temperature': 0.3, # Pastroq harorat (kamroq xato)
-                            'top_p': 0.85,
-                            'repeat_penalty': 1.15,
-                            'num_predict': MAX_AI_PREDICT_TOKENS,
-                            'num_ctx': 2048,
-                            'stop': ['\nSavol:', '\nUser:', '\nFoydalanuvchi:'],
-                        }
-                    )
-                    
-                    full_resp = ""
-                    for chunk in stream:
-                        word = chunk.get('message', {}).get('content', '')
-                        if word:
-                            full_resp += word
-                            yield word
-                    
-                    # Save to history
-                    cleaned_resp = _clean_ai_response(full_resp)
+                    def call_model():
+                        return ollama.chat(
+                            model=chosen_model,
+                            messages=messages,
+                            stream=False,
+                            options={
+                                'temperature': 0.25,
+                                'top_p': 0.85,
+                                'repeat_penalty': 1.2,
+                                'num_predict': MAX_AI_PREDICT_TOKENS,
+                                'num_ctx': 2048,
+                                'stop': ['\nSavol:', '\nUser:', '\nFoydalanuvchi:', '<system', '<user'],
+                            }
+                        )
+
+                    response = _call_ollama_with_timeout(call_model)
+                    raw_resp = response.get('message', {}).get('content', '') if isinstance(response, dict) else ""
+                    cleaned_resp = _clean_ai_response(raw_resp)
+
+                    # Kichik lokal model savoldan qochsa yoki promptni qaytarsa,
+                    # foydalanuvchiga xato javob ko'rsatmasdan lokal fallback ishlaydi.
+                    if not _is_good_ai_response(user_message or "test natijasi", cleaned_resp):
+                        cleaned_resp = _local_chat_answer(
+                            full_name,
+                            test_recommendation,
+                            role_market_context,
+                            user_message,
+                            initial=is_initial_analysis,
+                        )
+
                     full_response_holder[0] = cleaned_resp
-                    
+                    yield from _stream_text(cleaned_resp)
+
                 except Exception as e:
                     print("Ollama error:", e)
-                    fallback = generate_fallback_response(
-                        full_name, test_recommendation, role_market_context, user_message=user_message, initial=is_initial_analysis
+                    fallback = _local_chat_answer(
+                        full_name,
+                        test_recommendation,
+                        role_market_context,
+                        user_message,
+                        initial=is_initial_analysis,
                     )
                     full_response_holder[0] = fallback
-                    yield fallback
+                    yield from _stream_text(fallback)
             else:
                 raise Exception("Hech qanday model mavjud emas")
         except Exception:
-            fallback = generate_fallback_response(
+            fallback = _local_chat_answer(
                 full_name,
                 test_recommendation,
                 role_market_context,
-                user_message=user_message,
+                user_message,
                 initial=is_initial_analysis,
             )
             full_response_holder[0] = fallback
-            yield fallback
+            yield from _stream_text(fallback)
 
         updated_history = list(chat_session.message_history)
         updated_history.append({"role": "assistant", "content": full_response_holder[0]})
